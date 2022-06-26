@@ -12,7 +12,7 @@ $address2 =$_POST['address1'];
 //echo $name2, $email2, $subject2, $message2, $number2, $address2;
 
 
-$to = "queries@skyhaamburg.com";
+$to = "jatintiwari1203@gmail.com";
 $subject = "This is Contact/Complaint Query Form of $name2 ";
 
 $message = "<h1>Details of the Applicant <b> $name2 </b></h1>";
@@ -25,8 +25,8 @@ $message .= "<h5>Subject   : $subject2</h5>";
 $message .= "<h5>Message   : $message2</h5>";
 
 
-$header = "From:queries@skyhaamburg.com \r\n";
-// $header .= "Cc:info@skyhaamburg.com \r\n";
+$header = "From:jatintiwari1203@gmail.com \r\n";
+// $header .= "Cc:jatintiwari1203@gmail.com \r\n";
 $header .= "MIME-Version: 1.0\r\n";
 $header .= "Content-type: text/html\r\n";
 
@@ -38,7 +38,7 @@ if ($retval == true) {
     
     echo "Fill the form properly.";
 
-    echo $message;
+   // echo $message;
 
 }
 
