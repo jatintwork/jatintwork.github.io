@@ -1,18 +1,18 @@
 $(document).ready(function () {
     $("#submit").click(function () {
 
-        var urls = window.location.href
-        var urls = urls.substr(29)
-        alert(urls);
 
-
+        var url = window.location.href ;
+        var urls = url.substr(24);
+         
+       // alert(urls);
 
 
 
         //apply page
         if (urls == 'apply.html') {
 
-            console.log(apply)
+             
 
             var name = $("#name").val();
             var email = $("#email").val();
@@ -49,6 +49,7 @@ $(document).ready(function () {
 
 
 
+
         //refund
         else if (urls == 'refund.html') {
 
@@ -71,7 +72,8 @@ $(document).ready(function () {
 
             else {
 
-               
+                $(this).attr('disabled', 'disabled');
+
 
                 // Returns successful data submission message when the entered information is stored in database.
                 $.post("database.php", {
@@ -88,6 +90,8 @@ $(document).ready(function () {
                     receiptno1: receiptno,
                     message1: message,
                 }, function (data) {
+                    var btn = document.getElementById("submit");
+                    btn.disabled = false;
                     alert(data);
                     $('#form')[0].reset(); // To reset form fields
                 });
@@ -101,12 +105,15 @@ $(document).ready(function () {
         else {
 
 
+
             var name = $("#name").val();
             var email = $("#email").val();
             var subject = $("#subject").val();
             var message = $("#message").val();
             var address = $("#address").val();
             var phone = $("#phone").val();
+            var login = $("#login").val();
+            var serial = $("#serial").val();
 
 
             if (name == '' || email == '' || subject == '' || message == '') {
@@ -115,7 +122,9 @@ $(document).ready(function () {
 
 
             else {
-           
+
+                $(this).attr('disabled', 'disabled'); //This function disable the submit  button 
+
                 // Returns successful data submission message when the entered information is stored in database.
                 $.post("database.php", {
 
@@ -125,8 +134,15 @@ $(document).ready(function () {
                     subject1: subject,
                     message1: message,
                     address1: address,
-                    phone1: phone
+                    phone1: phone,
+                    login1 : login,
+                    serial1 : serial
+                    
+                    
                 }, function (data) {
+
+                    var btn = document.getElementById("submit");
+                    btn.disabled = false;
                     alert(data);
                     $('#form')[0].reset(); // To reset form fields
                 });

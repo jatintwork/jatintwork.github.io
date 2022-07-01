@@ -205,7 +205,7 @@ margin-bottom: 12px;
 
 .jb-ps{
 
-    padding: 20px;
+    padding-top: 30px;
 }
 
 .button-effects{
@@ -217,9 +217,18 @@ width: 150px;
 padding-left: 20px;
 padding-right: 20px;
 
-color:black ;
+border-radius: 20px;
+font-size: 20px;
+ 
+}
+
+.button-effects:hover{
+
+    background-color: #f8c41a;
+ 
 
 }
+
 
 .crousel-photos-resize{
 
