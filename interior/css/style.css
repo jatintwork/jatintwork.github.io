@@ -9,12 +9,17 @@
 
  .whatsapp_float {
 
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
+
+    position: fixed;
+    /* display: none; */
+    right: 30px;
+    bottom: 95px;
+    z-index: 11;
+    animation: action 1s infinite alternate;
+  }
+  
 
 
-}
 
 
 
