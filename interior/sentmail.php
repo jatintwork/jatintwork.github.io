@@ -13,9 +13,9 @@ $address2 =$_POST['address1'];
 
 
 $to = "jatintiwari1203@gmail.com";
-$subject = "This is Contact/Complaint Query Form of $name2 ";
+$subject = "This is Enquiry of $name2 ";
 
-$message = "<h1>Details of the Applicant <b> $name2 </b></h1>";
+$message = "<h1>Message from Mr./Mrs. <b> $name2 </b></h1>";
 $message .= "<h5>Name      : $name2</h5>";
 $message .= "<h5>Email     : $email2</h5>";
 $message .= "<h5>Mobile No : $number2</h5>";
