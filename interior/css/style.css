@@ -7,13 +7,15 @@
  */
 
 
+
+
  .whatsapp_float {
 
 
     position: fixed;
     /* display: none; */
     right: 30px;
-    bottom: 95px;
+    bottom: 55px;
     z-index: 11;
     animation: action 1s infinite alternate;
   }
@@ -9281,6 +9283,15 @@ button.bg-dark:focus {
 
 .text-white {
   color: #fff !important;
+}
+
+.text-green {
+  color: rgb(0,247,63);
+}
+
+.text-interior{
+
+  color: rgb(21,6,779);
 }
 
 .text-primary {
