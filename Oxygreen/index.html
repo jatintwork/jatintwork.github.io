@@ -6,9 +6,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxygreen Hi-Tech India Pvt. Ltd.</title>
+
+ 
+
+
+
+
+
+
+
+
+             
+<link rel="stylesheet" href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  
+ 
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+ 
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
@@ -26,6 +49,70 @@
     <meta name="description"
         content="We collect waste from Residential Societies, Hotels, Malls, Collages and Commercial Corporates Park and Segregate">
 
+        
+
+<!-- photo gallery -->
+
+
+
+
+
+
+
+
+
+
+    <style>
+
+        img {
+            border-radius: 8px;
+        }
+        
+        .container-fluid {
+            margin-left: 12px;
+            margin-right: 12px
+        }
+        
+        .contain {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        
+        /* For overriding box-shadow and other default
+        effects of modal and it's children */
+        .modal,
+        .modal-content,
+        .modal-header,
+        .modal-footer {
+            background-color: transparent;
+            border: 0px;
+            color: white;
+            
+            /* Disable box shadow for different browsers */
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+            box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+        }
+        
+        .modal-dialog {
+            width: 100%;
+            height: 50%;
+            margin-top: 8px;
+        }
+        
+        .close {
+            color: white;
+            opacity: 0.8;
+        }
+        
+        .modal-body {
+            height: 75%;
+        }
+    </style>
+    
+
+
+<!-- photo gallery end -->
 
 </head>
 
@@ -170,6 +257,115 @@
     </section>
 
 
+
+
+
+
+<!-- gallery -->
+
+<div class="gallery_photos">
+
+<br>
+<center>
+    <h1 class="text text-success"> <b>Product List</b> </h1>
+    <b>Our Equipments</b>
+</center>
+<br>
+<br>
+<div class="container-fluid">
+    <center>
+        <div id=gallery>
+            
+            <!-- Content is appended here -->
+        </div>
+    </center>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal">
+                    ×
+                    </button>
+
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                     
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<script>
+            
+// Taking Array of Image Addresses
+// Suppose it as information from the server
+// Modify this for different address
+a = [
+'images/machine/1.jpeg',
+'images/machine/2.jpeg',
+'images/machine/3.jpeg',
+'images/machine/4.jpeg',
+'images/machine/5.jpeg',
+'images/machine/6.jpeg',
+'images/machine/7.jpeg',
+'images/machine/8.jpeg',
+
+'images/machine/10.jpeg',
+'images/machine/9.jpeg',
+'images/machine/11.jpeg',
+//'images/machine/12.jpeg',
+//'images/machine/13.jpeg',  
+'images/machine/14.jpeg',
+];
+var x = 0;
+for (var i = 0; x < a.length; i++) {
+    var append = "<div class='row'>";
+    for (var j = 0; j < 3 && x < a.length; j++) {
+        append += `
+<div class="contain col-sm-4 col-md-4">
+    <img class="img-responsive" src=` + a[x++] + `>
+</div>
+`;
+    }
+    append += '</div>';
+    appender(append);
+}
+
+// Function to append the data
+function appender(x) {
+    $('#gallery').html(function(i, original_html) {
+        return (original_html + x);
+    });
+}
+
+// For Image Modal
+$(document).on('click', 'img', function() {
+    imgAddr = $(this).attr('src');
+    data = "<center><img src=" + imgAddr + " width='50%'>";
+    $('#myModal').find('.modal-body').html(data);
+    $('#myModal').modal();
+});
+</script>
+
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+    
+    <script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+    </script>
+
+
+</div>
+
+<!-- gallery end -->
 
 
 
@@ -526,24 +722,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="script.js"></script>
+    
 </body>
 
 </html>
