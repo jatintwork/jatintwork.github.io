@@ -114,9 +114,25 @@
 
 <!-- photo gallery end -->
 
+<script async src="https://api.countapi.xyz/hit/http://127.0.0.1:5501//visits?  callback=callbackName"></script>
+
 </head>
 
 <body>
+
+ 
+    <h1>This page got <span id="visits"></span> views.</h1>
+
+    
+    <script type="text/javascript">
+        function callbackName(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+       
+        //window.onload = incrementAndShowValue;
+
+    </script>
+
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
