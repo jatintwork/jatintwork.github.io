@@ -17,6 +17,111 @@
     animation: sk-rotateplane 1.2s infinite ease-in-out;
 }
 
+
+
+
+/* My Css */
+
+
+
+
+.left-most-position {
+
+  
+    padding-left: 10px;
+     width:auto;
+     display: inline-block;
+     
+     
+ }
+ .middle-position {
+     padding-left: 10px;
+  
+     width:auto;
+     display: inline-block;
+ }
+ .right-most-position {
+ 
+     padding-left: 10px;
+ 
+     width:auto;
+     display: inline-block;
+ }
+ 
+ .edit-icon {
+ color: #f3ac31;
+ padding-top: 20px;
+ margin-right: 7px;
+ margin-bottom: 12px;
+ 
+ }
+ 
+ .jobs-list {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     
+ }
+ 
+ .jb-ps{
+ 
+     padding-top: 30px;
+ }
+ 
+ .button-effects{
+ 
+ cursor: pointer;
+ height: 65px;
+ width: 150px;
+ 
+ padding-left: 20px;
+ padding-right: 20px;
+ 
+ border-radius: 20px;
+ font-size: 20px;
+  
+ }
+ 
+ .button-effects:hover{
+ 
+     background-color: #f8c41a;
+  
+ 
+ }
+ 
+
+
+
+
+
+/* My Css */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @-webkit-keyframes sk-rotateplane {
     0% {
         -webkit-transform: perspective(120px)
