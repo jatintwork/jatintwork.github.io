@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<style>
+    .graph_maker {
+
+        background: rgb(228, 233, 226);
+        margin: 10px;
+
+    }
+
+    .show_data {
+
+        background: rgb(238, 74, 9);
+        margin: 6px;
+
+
+    }
+</style>
+
+
+{% endblock head %}
+
+{% block title %} {% endblock title %}
+
+{% block body %}
+<div class="graph_maker">
+
+    <div class="show_data" style="width: 100%; height: 20px; background-color: rgb(35, 209, 47); float:right;">
+    </div>
+    <div class="show_data" style="width: 49%; height: 410px; background-color: rgb(217, 181, 235); float:left;">
+
+        <img src="static\img\Graph_images\graph_actual.png" alt="Stock Price Summury" width="100%" height="410px">
+
+    </div>
+
+    <div class="show_data" style="width: 49%; height: 410px; background-color: rgb(30, 21, 158); float:right;">
+
+        <img src="static\img\Graph_images\predicted_graph.png" alt="Stock Price Summury" width="100%" height="410px">
+    </div>
+
+
+    <div class="show_data" style="width: 98%; align: center; height: 620px; clear:both">
+
+        <div style="padding-top:15px;">
+            <img src="static\img\Graph_images\prediction_actual_graph.png" alt="Stock Price Summury" width="101%"
+                height="610px">
+        </div>
+
+    </div>
+
+    <div
+        style="width: 99%;  background-color: #4018f0; margin: top 30px; border-radius:15px; ">
+        <center>
+            <h1 style="color: rgb(251, 251, 253);"> 
+                {% for data in prediction_price %}
+              
+                    Current Price of {{data.comapny_name}} is <span style="color: rgb(8, 241, 39);"> {{data.close_price}} Rs.</span>
+                    <br>
+                    <span style="color:aqua;">
+                    Perhaps, After One Week
+                </span>
+                    <br>
+                
+                Future Price of {{data.comapny_name}} is <span style="color: rgb(8, 241, 39);">{{data.prediction_price}} Rs.</span>
+                {% endfor %}
+            </h1>
+        </center>
+    </div>
+
+
+    {% endblock body %}

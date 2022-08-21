@@ -1,0 +1,3577 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block head %}
+
+<title>Home</title>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+<style>
+  .search_list {
+    box-sizing: border-box;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+  }
+
+  #myInput {
+    text-align: center;
+    background-position: 8px 10px;
+    background-repeat: no-repeat;
+    width: 30%;
+    font-size: 18px;
+    margin-left: 35%;
+    padding: 8px 15px 10px 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 6px;
+  }
+
+  #myUL {
+    list-style-type: none;
+    text-align: center;
+    padding: 10;
+    margin: 2;
+  }
+
+  #myUL li a {
+    text-align: center;
+    border: 2px solid rgb(149, 123, 190);
+    margin-top: -1px;
+    background-color: #eee;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block
+  }
+
+  #myUL li a:hover:not(.header) {
+    text-align: center;
+    background-color: #3393FF;
+  }
+</style>
+
+
+{% endblock head %}
+
+
+{% block body %}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner" data-bs-interval="2000">
+    <div class="carousel-item active" >
+      <img src="\static\img\1.jpg" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item" data-bs-interval="3000" >
+      <img src="\static\img\2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="\static\img\3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="3000">
+      <img src="\static\img\4.jpg" class="d-block w-100" alt="...">
+    </div><div class="carousel-item" data-bs-interval="2000">
+      <img src="\static\img\5.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<!-- ////// -->
+
+{% comment %} Searchable box {% endcomment %}
+
+<h1 style="color:blue;" align="center">Investing Ka Search Engine</h1>
+<!-- <h1 style  font-weight:1000 line-height :1.5 color: #0d6efd>Investing Ka Search Engine</h1> -->
+<h6 style="color:#0078FF;" align="center">The Modern Stock Screener that helps you pick better stocks.</h6>
+
+<!-- search bar for stocks -->
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search names.." title="Type in a name">
+
+<div class="search_list" style="cursor: pointer;" >
+  <ul id="myUL" onclick="stock_name(event);">
+    <li><a>ABB</a></li>
+    <li><a>AEGISLOG</a></li>
+    <li><a>AMARAJABAT</a></li>
+    <li><a>HDFC</a></li>
+    <li><a>BOMDYEING</a></li>
+    <li><a>ATUL</a></li>
+    <li><a>BAJAJELEC</a></li>
+    <li><a>BAJAJHIND</a></li>
+    <li><a>FORCEMOT</a></li>
+    <li><a>BAJFINANCE</a></li>
+    <li><a>BALRAMCHIN</a></li>
+    <li><a>CENTURYTEX</a></li>
+    <li><a>BANARISUG</a></li>
+    <li><a>BASF</a></li>
+    <li><a>BATAINDIA</a></li>
+    <li><a>BEML</a></li>
+    <li><a>BEL</a></li>
+    <li><a>BEPL</a></li>
+    <li><a>BLUESTARCO</a></li>
+    <li><a>CESC</a></li>
+    <li><a>CHAMBLFERT</a></li>
+    <li><a>EXIDEIND</a></li>
+    <li><a>CIPLA</a></li>
+    <li><a>CRISIL</a></li>
+    <li><a>DABUR</a></li>
+    <li><a>DALMIASUG</a></li>
+    <li><a>ARVIND</a></li>
+    <li><a>BHEL</a></li>
+    <li><a>HINDPETRO</a></li>
+    <li><a>IFCI</a></li>
+    <li><a>MTNL</a></li>
+    <li><a>MRPL</a></li>
+    <li><a>CHENNPETRO</a></li>
+    <li><a>SBIN</a></li>
+    <li><a>SAIL</a></li>
+    <li><a>TITAN</a></li>
+    <li><a>IDBI</a></li>
+    <li><a>DHAMPURSUG</a></li>
+    <li><a>DRREDDY</a></li>
+    <li><a>EIDPARRY</a></li>
+    <li><a>PGHL</a></li>
+    <li><a>ESABINDIA</a></li>
+    <li><a>EPL</a></li>
+    <li><a>FINCABLES</a></li>
+    <li><a>UFLEX</a></li>
+    <li><a>GODFRYPHLP</a></li>
+    <li><a>GODREJIND</a></li>
+    <li><a>KANSAINER</a></li>
+    <li><a>GHCL</a></li>
+    <li><a>HDFCBANK</a></li>
+    <li><a>HEROMOTOCO</a></li>
+    <li><a>HFCL</a></li>
+    <li><a>HSCL</a></li>
+    <li><a>HCC</a></li>
+    <li><a>HINDOILEXP</a></li>
+    <li><a>HSIL</a></li>
+    <li><a>HINDZINC</a></li>
+    <li><a>INDIAGLYCO</a></li>
+    <li><a>INFY</a></li>
+    <li><a>INGERRAND</a></li>
+    <li><a>IONEXCHANG</a></li>
+    <li><a>ATFL</a></li>
+    <li><a>JISLJALEQS</a></li>
+    <li><a>JINDALPOLY</a></li>
+    <li><a>JSWSTEEL</a></li>
+    <li><a>KAJARIACER</a></li>
+    <li><a>KSL</a></li>
+    <li><a>WHIRLPOOL</a></li>
+    <li><a>KIRLOSBROS</a></li>
+    <li><a>KIRLFER</a></li>
+    <li><a>KOTAKBANK</a></li>
+    <li><a>KSB</a></li>
+    <li><a>LGBBROSLTD</a></li>
+    <li><a>TRENT</a></li>
+    <li><a>LAXMIMACH</a></li>
+    <li><a>LICHSGFIN</a></li>
+    <li><a>LUPIN</a></li>
+    <li><a>RAMCOCEM</a></li>
+    <li><a>MAHSEAMLES</a></li>
+    <li><a>MAHSCOOTER</a></li>
+    <li><a>MFSL</a></li>
+    <li><a>SPICEJET</a></li>
+    <li><a>MOREPENLAB</a></li>
+    <li><a>MRF</a></li>
+    <li><a>HEIDELBERG</a></li>
+    <li><a>NCC</a></li>
+    <li><a>VEDL</a></li>
+    <li><a>GRASIM</a></li>
+    <li><a>PEL</a></li>
+    <li><a>NIITLTD</a></li>
+    <li><a>ONGC</a></li>
+    <li><a>RELIANCE</a></li>
+    <li><a>RAYMOND</a></li>
+    <li><a>PIDILITIND</a></li>
+    <li><a>BIRLACORPN</a></li>
+    <li><a>SURYAROSNI</a></li>
+    <li><a>PRSMJOHNSN</a></li>
+    <li><a>RAIN</a></li>
+    <li><a>RALLIS</a></li>
+    <li><a>JINDALSAW</a></li>
+    <li><a>JKLAKSHMI</a></li>
+    <li><a>SHREECEM</a></li>
+    <li><a>TATAPOWER</a></li>
+    <li><a>SUNDRMFAST</a></li>
+    <li><a>SUNFLAG</a></li>
+    <li><a>SUPPETRO</a></li>
+    <li><a>SWARAJENG</a></li>
+    <li><a>TATAELXSI</a></li>
+    <li><a>ACC</a></li>
+    <li><a>THERMAX</a></li>
+    <li><a>TIRUMALCHM</a></li>
+    <li><a>THOMASCOOK</a></li>
+    <li><a>TORNTPHARM</a></li>
+    <li><a>AMBUJACEM</a></li>
+    <li><a>HINDALCO</a></li>
+    <li><a>WSTCSTPAPR</a></li>
+    <li><a>PGHH</a></li>
+    <li><a>BBOX</a></li>
+    <li><a>FEDERALBNK</a></li>
+    <li><a>TATASTEEL</a></li>
+    <li><a>SKFINDIA</a></li>
+    <li><a>ASHOKLEY</a></li>
+    <li><a>CUMMINSIND</a></li>
+    <li><a>TATACOMM</a></li>
+    <li><a>ABBOTINDIA</a></li>
+    <li><a>BAJAJHLDNG</a></li>
+    <li><a>BHARATFORG</a></li>
+    <li><a>ESCORTS</a></li>
+    <li><a>LT</a></li>
+    <li><a>M&M</a></li>
+    <li><a>BOSCHLTD</a></li>
+    <li><a>BPCL</a></li>
+    <li><a>SIEMENS</a></li>
+    <li><a>TATAMOTORS</a></li>
+    <li><a>VOLTAS</a></li>
+    <li><a>GESHIP*</a></li>
+    <li><a>DEEPAKFERT</a></li>
+    <li><a>GRWRHITECH</a></li>
+    <li><a>GLAXO</a></li>
+    <li><a>GNFC</a></li>
+    <li><a>SANOFI</a></li>
+    <li><a>PFIZER</a></li>
+    <li><a>GSFC</a></li>
+    <li><a>HINDUNILVR</a></li>
+    <li><a>AKZOINDIA</a></li>
+    <li><a>NOCIL</a></li>
+    <li><a>TATACHEM</a></li>
+    <li><a>TNPETRO</a></li>
+    <li><a>NESTLEIND</a></li>
+    <li><a>TATACONSUM</a></li>
+    <li><a>ASIANPAINT</a></li>
+    <li><a>BRITANNIA</a></li>
+    <li><a>COLPAL</a></li>
+    <li><a>EIHOTEL</a></li>
+    <li><a>INDHOTEL</a></li>
+    <li><a>CASTROLIND</a></li>
+    <li><a>ITC</a></li>
+    <li><a>APOLLOTYRE</a></li>
+    <li><a>CEATLTD</a></li>
+    <li><a>FINOLEXIND</a></li>
+    <li><a>CENTRUM</a></li>
+    <li><a>TATAINVEST</a></li>
+    <li><a>BBTC</a></li>
+    <li><a>GREAVESCOT</a></li>
+    <li><a>MANGLMCEM</a></li>
+    <li><a>NCLIND</a></li>
+    <li><a>BORORENEW</a></li>
+    <li><a>BALKRISIND</a></li>
+    <li><a>KESORAMIND</a></li>
+    <li><a>VTL</a></li>
+    <li><a>PHOENIXLTD</a></li>
+    <li><a>SWANENERGY</a></li>
+    <li><a>SRF</a></li>
+    <li><a>ZENSARTECH</a></li>
+    <li><a>TINPLATE</a></li>
+    <li><a>CHOLAHLDNG</a></li>
+    <li><a>EICHERMOT</a></li>
+    <li><a>GMM</a></li>
+    <li><a>KIRLPNU</a></li>
+    <li><a>NESCO</a></li>
+    <li><a>RESPONIND</a></li>
+    <li><a>WESTLIFE</a></li>
+    <li><a>ZEEL</a></li>
+    <li><a>ELECON</a></li>
+    <li><a>GABRIEL</a></li>
+    <li><a>IFBIND</a></li>
+    <li><a>SCHAEFFLER</a></li>
+    <li><a>KENNAMET</a></li>
+    <li><a>PRAKASH</a></li>
+    <li><a>GRINDWELL</a></li>
+    <li><a>BLISSGVS</a></li>
+    <li><a>ALEMBICLTD</a></li>
+    <li><a>BAYERCROP</a></li>
+    <li><a>COROMANDEL</a></li>
+    <li><a>DEEPAKNI</a></li>
+    <li><a>PCBL</a></li>
+    <li><a>PUNJABCHEM</a></li>
+    <li><a>SUDARSCHEM</a></li>
+    <li><a>UNICHEMLAB</a></li>
+    <li><a>ALKYLAMINE</a></li>
+    <li><a>ASTRAZEN</a></li>
+    <li><a>JBCHEPHARM</a></li>
+    <li><a>WIPRO</a></li>
+    <li><a>DHANUKA</a></li>
+    <li><a>GILLETTE</a></li>
+    <li><a>VIPIND</a></li>
+    <li><a>HAWKINCOOK</a></li>
+    <li><a>COSMOFILMS</a></li>
+    <li><a>APOLLOHOSP</a></li>
+    <li><a>NAVNETEDUL</a></li>
+    <li><a>TVSSRICHAK</a></li>
+    <li><a>BERGEPAINT</a></li>
+    <li><a>GRAPHITE</a></li>
+    <li><a>ITDCEM</a></li>
+    <li><a>GARFIBRES</a></li>
+    <li><a>HEG</a></li>
+    <li><a>HIL</a></li>
+    <li><a>HUHTAMAKI</a></li>
+    <li><a>SUPREMEIND</a></li>
+    <li><a>VSTIND</a></li>
+    <li><a>CANFINHOME</a></li>
+    <li><a>SRTRANSFIN</a></li>
+    <li><a>CHOLAFIN</a></li>
+    <li><a>VAKRANGEE</a></li>
+    <li><a>UPL</a></li>
+    <li><a>SUNTECK</a></li>
+    <li><a>JAICORPLTD</a></li>
+    <li><a>SEQUENT</a></li>
+    <li><a>AVANTI</a></li>
+    <li><a>ADANIENT</a></li>
+    <li><a>TATASTLLP</a></li>
+    <li><a>NBVENTURES</a></li>
+    <li><a>CARBORUNIV</a></li>
+    <li><a>MMTC</a></li>
+    <li><a>TATAMETALI</a></li>
+    <li><a>HINDCOPPER</a></li>
+    <li><a>NLCINDIA</a></li>
+    <li><a>HIMATSEIDE</a></li>
+    <li><a>WELSPUNIND</a></li>
+    <li><a>ASAHIINDIA</a></li>
+    <li><a>ANANTRAJ</a></li>
+    <li><a>VINDHYATEL</a></li>
+    <li><a>USHAMART</a></li>
+    <li><a>SUBROS</a></li>
+    <li><a>HONAUT</a></li>
+    <li><a>MOTHERSUMI</a></li>
+    <li><a>HAVELLS</a></li>
+    <li><a>SYMPHONY</a></li>
+    <li><a>TTKPRESTIG</a></li>
+    <li><a>KEI</a></li>
+    <li><a>TASTYBIT</a></li>
+    <li><a>HNDFDS</a></li>
+    <li><a>HERITGFOOD</a></li>
+    <li><a>CCL</a></li>
+    <li><a>JAMNAAUTO</a></li>
+    <li><a>SUNCLAYLTD</a></li>
+    <li><a>JTEKTINDIA</a></li>
+    <li><a>RATNAMANI</a></li>
+    <li><a>VESUVIUS</a></li>
+    <li><a>ICIL</a></li>
+    <li><a>ALOKTEXT</a></li>
+    <li><a>ELGIEQUIP</a></li>
+    <li><a>TIMKEN</a></li>
+    <li><a>PRAJIND</a></li>
+    <li><a>HLEGLAS</a></li>
+    <li><a>MAYURUNIQ</a></li>
+    <li><a>GET&D</a></li>
+    <li><a>KALPATPOWR</a></li>
+    <li><a>VENKYS</a></li>
+    <li><a>BALMLAWRIE</a></li>
+    <li><a>DCMSHRIRAM</a></li>
+    <li><a>NILKAMAL</a></li>
+    <li><a>3MINDIA</a></li>
+    <li><a>JCHAC</a></li>
+    <li><a>JMFINANCIL</a></li>
+    <li><a>RIIL</a></li>
+    <li><a>LINDEINDIA</a></li>
+    <li><a>SCI</a></li>
+    <li><a>ITI</a></li>
+    <li><a>NFL</a></li>
+    <li><a>PIIND</a></li>
+    <li><a>APCOTEXIND</a></li>
+    <li><a>MASTEK</a></li>
+    <li><a>POONAWALLA</a></li>
+    <li><a>POLYPLEX</a></li>
+    <li><a>ACRYSIL</a></li>
+    <li><a>IOLCP</a></li>
+    <li><a>VINATIORGA</a></li>
+    <li><a>AARTIIND</a></li>
+    <li><a>GAEL</a></li>
+    <li><a>RCF</a></li>
+    <li><a>AARTIDRUGS</a></li>
+    <li><a>BODALCHEM</a></li>
+    <li><a>MARKSANS</a></li>
+    <li><a>IPCALAB</a></li>
+    <li><a>NEULANDLAB</a></li>
+    <li><a>HESTERBIO</a></li>
+    <li><a>SUNPHARMA</a></li>
+    <li><a>HIKAL</a></li>
+    <li><a>CAPPL</a></li>
+    <li><a>AUROPHARMA</a></li>
+    <li><a>NATCOPHARM</a></li>
+    <li><a>FILATEX</a></li>
+    <li><a>MPHASIS</a></li>
+    <li><a>NMDC</a></li>
+    <li><a>BLUEDART</a></li>
+    <li><a>GREENPLY</a></li>
+    <li><a>CONFIPET</a></li>
+    <li><a>LAOPALA</a></li>
+    <li><a>GUJALKALI</a></li>
+    <li><a>INDIACEM</a></li>
+    <li><a>JKTYRE</a></li>
+    <li><a>JUBLPHARMA</a></li>
+    <li><a>PRIVISCL</a></li>
+    <li><a>GENUSPOWER</a></li>
+    <li><a>RELAXO</a></li>
+    <li><a>SHILPAMED</a></li>
+    <li><a>KRBL</a></li>
+    <li><a>IOC</a></li>
+    <li><a>BALAMINES</a></li>
+    <li><a>EMAMILTD</a></li>
+    <li><a>MANAPPURAM</a></li>
+    <li><a>VSTTILLERS</a></li>
+    <li><a>ZYDUSWELL</a></li>
+    <li><a>CONCOR</a></li>
+    <li><a>TNPL</a></li>
+    <li><a>SHAKTIPUMP</a></li>
+    <li><a>RAJESHEXPO</a></li>
+    <li><a>EVEREADY</a></li>
+    <li><a>HATSUN</a></li>
+    <li><a>SOMANYCERA</a></li>
+    <li><a>CGCL</a></li>
+    <li><a>FDC</a></li>
+    <li><a>MARICO</a></li>
+    <li><a>APOLLOPIPES</a></li>
+    <li><a>POLYMED</a></li>
+    <li><a>BANKBARODA</a></li>
+    <li><a>WELCORP</a></li>
+    <li><a>BANKINDIA</a></li>
+    <li><a>GAIL</a></li>
+    <li><a>VAIBHAVGBL</a></li>
+    <li><a>JKPAPER</a></li>
+    <li><a>SAREGAMA</a></li>
+    <li><a>ICICIBANK</a></li>
+    <li><a>CYIENT</a></li>
+    <li><a>ENGINERSIN</a></li>
+    <li><a>GMDCLTD</a></li>
+    <li><a>INDUSINDBK</a></li>
+    <li><a>ITDC</a></li>
+    <li><a>J&KBANK</a></li>
+    <li><a>CUB</a></li>
+    <li><a>AXISBANK</a></li>
+    <li><a>SOUTHBANK</a></li>
+    <li><a>SONATSOFTW</a></li>
+    <li><a>NATIONALUM</a></li>
+    <li><a>APARINDS</a></li>
+    <li><a>HCLTECH</a></li>
+    <li><a>GEOJITFSL</a></li>
+    <li><a>JINDALSTEL</a></li>
+    <li><a>GLENMARK</a></li>
+    <li><a>WOCKPHARMA</a></li>
+    <li><a>TATACOFFEE</a></li>
+    <li><a>GEPIL</a></li>
+    <li><a>MAHLIFE</a></li>
+    <li><a>ZYDUSLIFE</a></li>
+    <li><a>AJANTPHARM</a></li>
+    <li><a>TVSMOTOR</a></li>
+    <li><a>GATI</a></li>
+    <li><a>SUBEX</a></li>
+    <li><a>TCI</a></li>
+    <li><a>TRIVENI</a></li>
+    <li><a>RAMCOIND</a></li>
+    <li><a>RAMCOSYS</a></li>
+    <li><a>STLTECH</a></li>
+    <li><a>IOB</a></li>
+    <li><a>BSOFT</a></li>
+    <li><a>CEREBRAINT</a></li>
+    <li><a>GODREJCP</a></li>
+    <li><a>BFUTILITIE</a></li>
+    <li><a>CERA</a></li>
+    <li><a>BHARTIARTL</a></li>
+    <li><a>PNB</a></li>
+    <li><a>OFSS</a></li>
+    <li><a>KAMAHOLD</a></li>
+    <li><a>APTECHT</a></li>
+    <li><a>UNIONBANK</a></li>
+    <li><a>UBL</a></li>
+    <li><a>GRANULES</a></li>
+    <li><a>CANBK</a></li>
+    <li><a>DIVISLAB</a></li>
+    <li><a>ASTRAMICRO</a></li>
+    <li><a>RADICO</a></li>
+    <li><a>SHRIRAMCIT</a></li>
+    <li><a>MARUTI</a></li>
+    <li><a>NAVINFLUOR</a></li>
+    <li><a>UCOBANK</a></li>
+    <li><a>JSL</a></li>
+    <li><a>IGL</a></li>
+    <li><a>TVTODAY</a></li>
+    <li><a>PETRONET</a></li>
+    <li><a>BIOCON</a></li>
+    <li><a>PTC</a></li>
+    <li><a>MAHABANK</a></li>
+    <li><a>RKFORGE</a></li>
+    <li><a>STAR</a></li>
+    <li><a>JPASSOCIAT</a></li>
+    <li><a>ULTRACEMCO</a></li>
+    <li><a>MINDAIND</a></li>
+    <li><a>TCS</a></li>
+    <li><a>COFORGE</a></li>
+    <li><a>CENTURYPLY</a></li>
+    <li><a>WELENT</a></li>
+    <li><a>NTPC</a></li>
+    <li><a>DWARKESH</a></li>
+    <li><a>INDOCO</a></li>
+    <li><a>JPPOWER</a></li>
+    <li><a>IIFL</a></li>
+    <li><a>SHOPERSTOP</a></li>
+    <li><a>JSWHL</a></li>
+    <li><a>JKCEMENT</a></li>
+    <li><a>YESBANK</a></li>
+    <li><a>KTKBANK</a></li>
+    <li><a>IDFC</a></li>
+    <li><a>SASKEN</a></li>
+    <li><a>SUZLON</a></li>
+    <li><a>RENUKA</a></li>
+    <li><a>AIAENG</a></li>
+    <li><a>PVR</a></li>
+    <li><a>GSPL</a></li>
+    <li><a>INOXLEISUR</a></li>
+    <li><a>SADBHAV</a></li>
+    <li><a>KEC</a></li>
+    <li><a>M&MFIN</a></li>
+    <li><a>SOLARINDS</a></li>
+    <li><a>SUNTV</a></li>
+    <li><a>GPIL</a></li>
+    <li><a>PAUSHAKLTD</a></li>
+    <li><a>ALLCARGO</a></li>
+    <li><a>GMRINFRA</a></li>
+    <li><a>TECHM</a></li>
+    <li><a>MAHINDCIE</a></li>
+    <li><a>ACE</a></li>
+    <li><a>DCBBANK</a></li>
+    <li><a>NAUKRI</a></li>
+    <li><a>TORNTPOWER</a></li>
+    <li><a>DAAWAT</a></li>
+    <li><a>SOBHA</a></li>
+    <li><a>TANLA</a></li>
+    <li><a>NETWORK18</a></li>
+    <li><a>TV18BRDCST</a></li>
+    <li><a>REDINGTON</a></li>
+    <li><a>FSL</a></li>
+    <li><a>PFC</a></li>
+    <li><a>AHLUCONT</a></li>
+    <li><a>INDIANB</a></li>
+    <li><a>MINDTREE</a></li>
+    <li><a>IDEA</a></li>
+    <li><a>PAGEIND</a></li>
+    <li><a>ASTRAL</a></li>
+    <li><a>IBREALEST</a></li>
+    <li><a>CAMLINFINE</a></li>
+    <li><a>ICRA</a></li>
+    <li><a>DISHTV</a></li>
+    <li><a>FORTIS</a></li>
+    <li><a>DELTACORP</a></li>
+    <li><a>TIMETECHNO</a></li>
+    <li><a>HGS</a></li>
+    <li><a>DLF</a></li>
+    <li><a>SPARC</a></li>
+    <li><a>CENTRALBK</a></li>
+    <li><a>KPRMILL</a></li>
+    <li><a>MOTILALOFS</a></li>
+    <li><a>POWERGRID</a></li>
+    <li><a>KSCL</a></li>
+    <li><a>PAISALO</a></li>
+    <li><a>RELIGARE</a></li>
+    <li><a>ADANIPORTS</a></li>
+    <li><a>EDELWEISS</a></li>
+    <li><a>KOLTEPATIL</a></li>
+    <li><a>JYOTHYLAB</a></li>
+    <li><a>ECLERX</a></li>
+    <li><a>BRIGADE</a></li>
+    <li><a>RPOWER</a></li>
+    <li><a>JKIL</a></li>
+    <li><a>KNRCON</a></li>
+    <li><a>ONMOBILE</a></li>
+    <li><a>IRB</a></li>
+    <li><a>VGUARD</a></li>
+    <li><a>RECLTD</a></li>
+    <li><a>DHANI</a></li>
+    <li><a>KIRIINDUS</a></li>
+    <li><a>BAJAJ-AUTO</a></li>
+    <li><a>BAJAJFINSV</a></li>
+    <li><a>WABCOINDIA</a></li>
+    <li><a>ISGEC</a></li>
+    <li><a>MOLDTKPAC</a></li>
+    <li><a>MHRIL</a></li>
+    <li><a>ADANIPOWER</a></li>
+    <li><a>NHPC</a></li>
+    <li><a>OIL</a></li>
+    <li><a>ASTEC</a></li>
+    <li><a>GODREJPROP</a></li>
+    <li><a>JUBLFOOD</a></li>
+    <li><a>HATHWAY</a></li>
+    <li><a>MANINFRA</a></li>
+    <li><a>PERSISTENT</a></li>
+    <li><a>SJVN</a></li>
+    <li><a>BAJAJCON</a></li>
+    <li><a>GPPL</a></li>
+    <li><a>WABAG</a></li>
+    <li><a>ASHOKA</a></li>
+    <li><a>OBEROIRLTY</a></li>
+    <li><a>PRESTIGE</a></li>
+    <li><a>COALINDIA</a></li>
+    <li><a>MOIL</a></li>
+    <li><a>KIRLOSENG</a></li>
+    <li><a>MUTHOOTFIN</a></li>
+    <li><a>FCONSUMER</a></li>
+    <li><a>L&TFH</a></li>
+    <li><a>RUPA</a></li>
+    <li><a>APLLTD</a></li>
+    <li><a>TRITURBINE</a></li>
+    <li><a>APLAPOLLO</a></li>
+    <li><a>RHIM</a></li>
+    <li><a>MCX</a></li>
+    <li><a>SCHNEIDER</a></li>
+    <li><a>NBCC</a></li>
+    <li><a>CIGNITI</a></li>
+    <li><a>CARERATING</a></li>
+    <li><a>INDUSTOWER</a></li>
+    <li><a>VMART</a></li>
+    <li><a>SBISENSEX</a></li>
+    <li><a>REPCOHOME</a></li>
+    <li><a>JUSTDIAL</a></li>
+    <li><a>ORIENTCEM</a></li>
+    <li><a>ABFRL</a></li>
+    <li><a>IBULHSGFIN</a></li>
+    <li><a>CPSEETF</a></li>
+    <li><a>APOLLOTRI</a></li>
+    <li><a>GULFOILLUB</a></li>
+    <li><a>SHARDACROP</a></li>
+    <li><a>NETFSENSEX</a></li>
+    <li><a>INTELLECT</a></li>
+    <li><a>MINDACORP</a></li>
+    <li><a>GRNLAMIND</a></li>
+    <li><a>SETFBSE100</a></li>
+    <li><a>VRLLOG</a></li>
+    <li><a>PNCINFRA</a></li>
+    <li><a>ADANITRANS</a></li>
+    <li><a>SYNGENE</a></li>
+    <li><a>GUJGAS</a></li>
+    <li><a>IDFCFIRSTB</a></li>
+    <li><a>INDIGO</a></li>
+    <li><a>SHK</a></li>
+    <li><a>LICNETFSEN</a></li>
+    <li><a>SXETF</a></li>
+    <li><a>ALKEM</a></li>
+    <li><a>LALPATHLAB</a></li>
+    <li><a>LUXIND</a></li>
+    <li><a>NH</a></li>
+    <li><a>JSLHISAR</a></li>
+    <li><a>TEAMLEASE</a></li>
+    <li><a>HCG</a></li>
+    <li><a>INFIBEAM</a></li>
+    <li><a>EQUITAS</a></li>
+    <li><a>THYROCARE</a></li>
+    <li><a>UJJIVAN</a></li>
+    <li><a>CROMPTON</a></li>
+    <li><a>PILANIINVS</a></li>
+    <li><a>PARAGMILK</a></li>
+    <li><a>MGL</a></li>
+    <li><a>QUESS</a></li>
+    <li><a>LTI</a></li>
+    <li><a>BSLSENETFG</a></li>
+    <li><a>ADVENZYMES</a></li>
+    <li><a>DBL</a></li>
+    <li><a>FRETAIL</a></li>
+    <li><a>RBLBANK</a></li>
+    <li><a>LTTS</a></li>
+    <li><a>ICICIPRULI</a></li>
+    <li><a>VALIANTORG</a></li>
+    <li><a>ENDURANCE</a></li>
+    <li><a>IDFSENSEXE</a></li>
+    <li><a>PNBHOUSING</a></li>
+    <li><a>VBL</a></li>
+    <li><a>SFL</a></li>
+    <li><a>TCIEXP</a></li>
+    <li><a>LAURUSLABS</a></li>
+    <li><a>PRICOLLTD</a></li>
+    <li><a>DMART</a></li>
+    <li><a>SHANKARA</a></li>
+    <li><a>HUDCO</a></li>
+    <li><a>STARCEMENT</a></li>
+    <li><a>TEJASNET</a></li>
+    <li><a>ERIS</a></li>
+    <li><a>AUBANK</a></li>
+    <li><a>SIS</a></li>
+    <li><a>COCHINSHIP</a></li>
+    <li><a>ABCAPITAL</a></li>
+    <li><a>DIXON</a></li>
+    <li><a>DCAL</a></li>
+    <li><a>MATRIMONY</a></li>
+    <li><a>CAPACITE</a></li>
+    <li><a>ICICIGI</a></li>
+    <li><a>SBILIFE</a></li>
+    <li><a>GODREJAGRO</a></li>
+    <li><a>MASFIN</a></li>
+    <li><a>IEX</a></li>
+    <li><a>GICRE</a></li>
+    <li><a>TIINDIA</a></li>
+    <li><a>NAM-INDIA</a></li>
+    <li><a>MAHLOG</a></li>
+    <li><a>NIACL</a></li>
+    <li><a>HDFCLIFE</a></li>
+    <li><a>ICICIB22</a></li>
+    <li><a>NEWGEN</a></li>
+    <li><a>AMBER</a></li>
+    <li><a>GALAXYSURF</a></li>
+    <li><a>ASTERDM</a></li>
+    <li><a>HGINFRA</a></li>
+    <li><a>BDL</a></li>
+    <li><a>BANDHANBNK</a></li>
+    <li><a>HAL</a></li>
+    <li><a>ISEC</a></li>
+    <li><a>MIDHANI</a></li>
+    <li><a>LEMONTREE</a></li>
+    <li><a>ORIENTELEC</a></li>
+    <li><a>ICICI500</a></li>
+    <li><a>INDOSTAR</a></li>
+    <li><a>ADANIGREEN</a></li>
+    <li><a>SOLARA</a></li>
+    <li><a>RITES</a></li>
+    <li><a>FINEORG</a></li>
+    <li><a>VARROC</a></li>
+    <li><a>TCNSBRANDS</a></li>
+    <li><a>HDFCAMC</a></li>
+    <li><a>CREDITACC</a></li>
+    <li><a>IRCON</a></li>
+    <li><a>SETFSN50</a></li>
+    <li><a>AAVAS</a></li>
+    <li><a>GRSE</a></li>
+    <li><a>ATGL</a></li>
+    <li><a>TECHNOE</a></li>
+    <li><a>DALBHARAT</a></li>
+    <li><a>RPSGVENT</a></li>
+    <li><a>CHALET</a></li>
+    <li><a>ARVINDFASN</a></li>
+    <li><a>MSTC</a></li>
+    <li><a>RVNL</a></li>
+    <li><a>METROPOLIS</a></li>
+    <li><a>KPITTECH</a></li>
+    <li><a>POLYCAB</a></li>
+    <li><a>INDIAMART</a></li>
+    <li><a>NETFSNX150</a></li>
+    <li><a>AFFLE</a></li>
+    <li><a>SPANDANA</a></li>
+    <li><a>SWSOLAR</a></li>
+    <li><a>IIFLWAM</a></li>
+    <li><a>IIFLSEC</a></li>
+    <li><a>IRCTC</a></li>
+    <li><a>GREENPANEL</a></li>
+    <li><a>CSBBANK</a></li>
+    <li><a>UJJIVANSFB</a></li>
+    <li><a>SHIL</a></li>
+    <li><a>PRINCEPIPE</a></li>
+    <li><a>SUMICHEM</a></li>
+    <li><a>SUVENPHAR</a></li>
+    <li><a>SBICARD</a></li>
+    <li><a>POWERINDIA</a></li>
+    <li><a>ROSSARI</a></li>
+    <li><a>MAXHEALTH</a></li>
+    <li><a>ROUTE</a></li>
+    <li><a>CAMS</a></li>
+    <li><a>ANGELONE</a></li>
+    <li><a>MAZDOCK</a></li>
+    <li><a>UTIAMC</a></li>
+    <li><a>HEMIPROP</a></li>
+    <li><a>EQUITASBNK</a></li>
+    <li><a>GLAND</a></li>
+    <li><a>RBA</a></li>
+    <li><a>BECTORFOOD</a></li>
+    <li><a>IRFC</a></li>
+    <li><a>INDIGOPNTS</a></li>
+    <li><a>HOMEFIRST</a></li>
+    <li><a>STOVEKRAFT</a></li>
+    <li><a>RAILTEL</a></li>
+    <li><a>HERANBA</a></li>
+    <li><a>MTARTECH</a></li>
+    <li><a>JUBLINGREA</a></li>
+    <li><a>ANURAS</a></li>
+    <li><a>CRAFTSMAN</a></li>
+    <li><a>LXCHEM</a></li>
+    <li><a>KALYANKJIL</a></li>
+    <li><a>SURYODAY</a></li>
+    <li><a>ICICISENSX</a></li>
+    <li><a>TATAMTRDVR</a></li>
+    <li><a>ANDHRAPET</a></li>
+    <li><a>ANSALAPI</a></li>
+    <li><a>ASIANHOTNR</a></li>
+    <li><a>BANCOINDIA</a></li>
+    <li><a>BIRLACABLE</a></li>
+    <li><a>BPL</a></li>
+    <li><a>OAL</a></li>
+    <li><a>CENTEXT</a></li>
+    <li><a>DICIND</a></li>
+    <li><a>CGPOWER</a></li>
+    <li><a>RELCAPITAL</a></li>
+    <li><a>DCW</a></li>
+    <li><a>ELANTAS</a></li>
+    <li><a>ELECTCAST</a></li>
+    <li><a>ESTER</a></li>
+    <li><a>FOSECOIND</a></li>
+    <li><a>GOLDENTOBC</a></li>
+    <li><a>GANESHBE</a></li>
+    <li><a>GTL</a></li>
+    <li><a>GOODYEAR</a></li>
+    <li><a>GFLLIMITED</a></li>
+    <li><a>HCL-INSYS</a></li>
+    <li><a>NXTDIGITAL</a></li>
+    <li><a>HLVLTD</a></li>
+    <li><a>IGPL</a></li>
+    <li><a>INDORAMA</a></li>
+    <li><a>UMANGDAIR</a></li>
+    <li><a>KAKATCEM</a></li>
+    <li><a>KIRLOSIND</a></li>
+    <li><a>MANALIPETC</a></li>
+    <li><a>MIRCELECTR</a></li>
+    <li><a>CENTENKA</a></li>
+    <li><a>NATPEROX</a></li>
+    <li><a>NIRLON</a></li>
+    <li><a>OILCOUNTUB</a></li>
+    <li><a>ORIENTHOT</a></li>
+    <li><a>OSWALAGRO</a></li>
+    <li><a>PIXTRANS</a></li>
+    <li><a>PRIMESECU</a></li>
+    <li><a>AMJLAND</a></li>
+    <li><a>RSWM</a></li>
+    <li><a>RAMANEWS</a></li>
+    <li><a>RUCHISOYA</a></li>
+    <li><a>RELINFRA</a></li>
+    <li><a>TOKYOPLAST</a></li>
+    <li><a>UNIPHOS</a></li>
+    <li><a>VHL</a></li>
+    <li><a>HOCL</a></li>
+    <li><a>PASUPTAC</a></li>
+    <li><a>MUKANDLTD</a></li>
+    <li><a>UCALFUEL</a></li>
+    <li><a>HARRMALAYA</a></li>
+    <li><a>HINDMOTORS</a></li>
+    <li><a>EXCELINDUS</a></li>
+    <li><a>NOVARTIND</a></li>
+    <li><a>ZUARIGLOB</a></li>
+    <li><a>IITL</a></li>
+    <li><a>SHAILY</a></li>
+    <li><a>COASTCORP</a></li>
+    <li><a>SAGCEM</a></li>
+    <li><a>DECCANCE</a></li>
+    <li><a>SHREDIGCEM</a></li>
+    <li><a>ANDHRAPAP</a></li>
+    <li><a>ORIENTPPR</a></li>
+    <li><a>SESHAPAPER</a></li>
+    <li><a>DCM</a></li>
+    <li><a>FORBESCO</a></li>
+    <li><a>MARATHON</a></li>
+    <li><a>RUBYMILLS</a></li>
+    <li><a>BANSWRAS</a></li>
+    <li><a>SIYSIL</a></li>
+    <li><a>BBL</a></li>
+    <li><a>ELPROINTL</a></li>
+    <li><a>NIPPOBATRY</a></li>
+    <li><a>UNIVCABLES</a></li>
+    <li><a>DELTAMAGNT</a></li>
+    <li><a>SARDAEN</a></li>
+    <li><a>INDIANHUME</a></li>
+    <li><a>ORIENTABRA</a></li>
+    <li><a>SANDUMA</a></li>
+    <li><a>AUTOAXLES</a></li>
+    <li><a>SETCO</a></li>
+    <li><a>TALBROAUTO</a></li>
+    <li><a>SMLISUZU</a></li>
+    <li><a>TIL</a></li>
+    <li><a>DYNAMATECH</a></li>
+    <li><a>MANUGRAPH</a></li>
+    <li><a>REVATHI</a></li>
+    <li><a>TEXINFRA</a></li>
+    <li><a>WENDT</a></li>
+    <li><a>DOLATALGO</a></li>
+    <li><a>SVPGLOB</a></li>
+    <li><a>BHARATGEAR</a></li>
+    <li><a>GRAUWEIL</a></li>
+    <li><a>HERCULES</a></li>
+    <li><a>FMGOETZE</a></li>
+    <li><a>RANEHOLDIN</a></li>
+    <li><a>ARSHIYA</a></li>
+    <li><a>ASL</a></li>
+    <li><a>INEOSSTYRO</a></li>
+    <li><a>MODISNME</a></li>
+    <li><a>CLNINDIA</a></li>
+    <li><a>DHARAMSI</a></li>
+    <li><a>GOCLCORP</a></li>
+    <li><a>KANORICHEM</a></li>
+    <li><a>ORIENTCQ</a></li>
+    <li><a>ULTRAMAR</a></li>
+    <li><a>TRANSPEK</a></li>
+    <li><a>TI</a></li>
+    <li><a>WALCHANNAG</a></li>
+    <li><a>IFBAGRO</a></li>
+    <li><a>GMBREW</a></li>
+    <li><a>RANASUG</a></li>
+    <li><a>SDBL</a></li>
+    <li><a>ASALCBR</a></li>
+    <li><a>FOODSIN</a></li>
+    <li><a>IVP</a></li>
+    <li><a>TTKHEALTH</a></li>
+    <li><a>KANPRPLA</a></li>
+    <li><a>TAINWALCHM</a></li>
+    <li><a>JAGSNPHARM</a></li>
+    <li><a>KHAICHEM</a></li>
+    <li><a>FIBERWEB</a></li>
+    <li><a>EVERESTIND</a></li>
+    <li><a>AYMSYNTEX</a></li>
+    <li><a>AUSOMENT</a></li>
+    <li><a>VISAKAIND</a></li>
+    <li><a>PRESSMN</a></li>
+    <li><a>GUFICBIO</a></li>
+    <li><a>GRPLTD</a></li>
+    <li><a>PTL</a></li>
+    <li><a>GOACARBON</a></li>
+    <li><a>HINDCOMPOS</a></li>
+    <li><a>INTLCONV</a></li>
+    <li><a>JAYSHREETEA</a></li>
+    <li><a>SHALPAINTS</a></li>
+    <li><a>JINDRILL</a></li>
+    <li><a>SHIVTEX</a></li>
+    <li><a>VLSFINANCE</a></li>
+    <li><a>INDBANK</a></li>
+    <li><a>CAPITALT</a></li>
+    <li><a>MONARCH</a></li>
+    <li><a>TIMESGTY</a></li>
+    <li><a>ARIHCAPM</a></li>
+    <li><a>GICHSGFIN</a></li>
+    <li><a>VIPUL</a></li>
+    <li><a>UGROCAP</a></li>
+    <li><a>MUTHTFN</a></li>
+    <li><a>SIGNETIND</a></li>
+    <li><a>SECURKLOUD</a></li>
+    <li><a>BHAGYNAGAR</a></li>
+    <li><a>LLOYDSME</a></li>
+    <li><a>DONEAR</a></li>
+    <li><a>STCINDIA</a></li>
+    <li><a>ZENITHEXPO</a></li>
+    <li><a>KEYFINSER</a></li>
+    <li><a>ORBTEXP</a></li>
+    <li><a>SHBCLQ</a></li>
+    <li><a>GANDHITUBE</a></li>
+    <li><a>ORICON</a></li>
+    <li><a>PENIND*</a></li>
+    <li><a>SSWL</a></li>
+    <li><a>MANINDS</a></li>
+    <li><a>AJMERA</a></li>
+    <li><a>SHAHALLOYS</a></li>
+    <li><a>JSWISPL</a></li>
+    <li><a>STEELCAS</a></li>
+    <li><a>PITTIENG</a></li>
+    <li><a>MAHASTEEL</a></li>
+    <li><a>AROGRANITE</a></li>
+    <li><a>BSL</a></li>
+    <li><a>TTL</a></li>
+    <li><a>GANECOS</a></li>
+    <li><a>VARDMNPOLY</a></li>
+    <li><a>BLACKROSE</a></li>
+    <li><a>SUMEETINDS</a></li>
+    <li><a>SANGAMIND</a></li>
+    <li><a>AARVEEDEN</a></li>
+    <li><a>ASHIMASYN</a></li>
+    <li><a>PIONEEREMB</a></li>
+    <li><a>PREMIERPOL</a></li>
+    <li><a>MANORG</a></li>
+    <li><a>MHLXMIRU</a></li>
+    <li><a>WINSOMTX</a></li>
+    <li><a>MURUDCERA</a></li>
+    <li><a>MADHAV</a></li>
+    <li><a>HINDNATGLS</a></li>
+    <li><a>SHREYANIND</a></li>
+    <li><a>STARPAPER</a></li>
+    <li><a>ARROWGREEN</a></li>
+    <li><a>NRAGRINDQ</a></li>
+    <li><a>ADORWELD</a></li>
+    <li><a>SALZER</a></li>
+    <li><a>LUMAXIND</a></li>
+    <li><a>DIGISPICE</a></li>
+    <li><a>PAEL</a></li>
+    <li><a>HBLPOWER</a></li>
+    <li><a>GIPCL</a></li>
+    <li><a>IGARASHI</a></li>
+    <li><a>BUTTERFLY</a></li>
+    <li><a>RSSOFTWARE</a></li>
+    <li><a>WEBELSOLAR</a></li>
+    <li><a>ONWARDTEC</a></li>
+    <li><a>CENTUM</a></li>
+    <li><a>TRIGYN</a></li>
+    <li><a>GSCLCEMENT</a></li>
+    <li><a>APCL</a></li>
+    <li><a>AVTNPL</a></li>
+    <li><a>NAHARINDUS</a></li>
+    <li><a>VADILALIND</a></li>
+    <li><a>ADFFOODS</a></li>
+    <li><a>WILLAMAGOR</a></li>
+    <li><a>ANIKINDS</a></li>
+    <li><a>DFM</a></li>
+    <li><a>KELLTONTEC</a></li>
+    <li><a>RICOAUTO</a></li>
+    <li><a>OMAXAUTO</a></li>
+    <li><a>MUNJALSHOW</a></li>
+    <li><a>MUNJALAU</a></li>
+    <li><a>JAYBARMARU</a></li>
+    <li><a>SHREYAS</a></li>
+    <li><a>MARALOVER</a></li>
+    <li><a>NAGREEKEXP</a></li>
+    <li><a>ZODIACLOTH</a></li>
+    <li><a>SILINV</a></li>
+    <li><a>SURYALAXMI</a></li>
+    <li><a>DAMOINDUS</a></li>
+    <li><a>KITEX</a></li>
+    <li><a>UNIDT</a></li>
+    <li><a>WINDMACHIN</a></li>
+    <li><a>SHANTIGEAR</a></li>
+    <li><a>HONDAPOWER</a></li>
+    <li><a>HITECHGEAR</a></li>
+    <li><a>YUKEN</a></li>
+    <li><a>GUJAPOLLO</a></li>
+    <li><a>MMFL</a></li>
+    <li><a>JMCPROJECT</a></li>
+    <li><a>JAYNECOIND</a></li>
+    <li><a>CONTROLPR</a></li>
+    <li><a>WEIZMANIND</a></li>
+    <li><a>SAFARIND</a></li>
+    <li><a>EIHAHOTELS</a></li>
+    <li><a>ABAN</a></li>
+    <li><a>KOKUYOCMLN</a></li>
+    <li><a>PEARLPOLY</a></li>
+    <li><a>ADVANIHOTR</a></li>
+    <li><a>SUPERHOUSE</a></li>
+    <li><a>TCPLPACK</a></li>
+    <li><a>KOVAI</a></li>
+    <li><a>DCMSRMIND</a></li>
+    <li><a>MAWANASUG</a></li>
+    <li><a>MAHAPEXLTD</a></li>
+    <li><a>NAHARPOLY</a></li>
+    <li><a>INDBNK</a></li>
+    <li><a>FEL</a></li>
+    <li><a>DREDGECORP</a></li>
+    <li><a>PODDAR</a></li>
+    <li><a>PLASTIBLEN</a></li>
+    <li><a>WATERBASE</a></li>
+    <li><a>EIMCOELECO</a></li>
+    <li><a>ASHIANA</a></li>
+    <li><a>DVL</a></li>
+    <li><a>MAHEPC</a></li>
+    <li><a>SREINFRA</a></li>
+    <li><a>MAZDALTD</a></li>
+    <li><a>MENONBE</a></li>
+    <li><a>SIMPLEXINF</a></li>
+    <li><a>KINGFA</a></li>
+    <li><a>ALBERTDA</a></li>
+    <li><a>KABRAEXTRU</a></li>
+    <li><a>VINYLINDIA</a></li>
+    <li><a>KOPRAN</a></li>
+    <li><a>JAYAGROGN</a></li>
+    <li><a>ORCHIDPHAR</a></li>
+    <li><a>VIMTALABS</a></li>
+    <li><a>BIOFILCHEM</a></li>
+    <li><a>AREYDRG</a></li>
+    <li><a>KREBSBIO</a></li>
+    <li><a>PODARPIGQ</a></li>
+    <li><a>AKSCHEM</a></li>
+    <li><a>SOTL</a></li>
+    <li><a>NACLIND</a></li>
+    <li><a>NGLFINE</a></li>
+    <li><a>PANAMAPET</a></li>
+    <li><a>BALPHARMA</a></li>
+    <li><a>CUBEXTUB</a></li>
+    <li><a>ANDREWYU</a></li>
+    <li><a>HITECHCORP</a></li>
+    <li><a>MOLDTEK</a></li>
+    <li><a>ORIENTLTD</a></li>
+    <li><a>GANESHHOUC</a></li>
+    <li><a>PATINTLOG</a></li>
+    <li><a>ALPHAGEO</a></li>
+    <li><a>KRITIIND</a></li>
+    <li><a>SANGHIIND</a></li>
+    <li><a>TPLPLAST</a></li>
+    <li><a>LIBERTSHOE</a></li>
+    <li><a>ELECTHERM</a></li>
+    <li><a>MIRZAINT</a></li>
+    <li><a>TFCILTD</a></li>
+    <li><a>BIL</a></li>
+    <li><a>KAMATHOTEL</a></li>
+    <li><a>SANDESH</a></li>
+    <li><a>GOLDIAM</a></li>
+    <li><a>SEAMECLTD</a></li>
+    <li><a>BANARBEADS</a></li>
+    <li><a>SARLAPOLY</a></li>
+    <li><a>21STCENMGM</a></li>
+    <li><a>STYLAMIND</a></li>
+    <li><a>VENUSREM</a></li>
+    <li><a>ASHAPURMIN</a></li>
+    <li><a>MANGCHEFER</a></li>
+    <li><a>THEINVEST</a></li>
+    <li><a>SANGHVIMOV</a></li>
+    <li><a>SELAN</a></li>
+    <li><a>UDAICEMENT</a></li>
+    <li><a>OPTIEMUS</a></li>
+    <li><a>THEMISMED</a></li>
+    <li><a>SUVEN</a></li>
+    <li><a>KOTHARIPRO</a></li>
+    <li><a>CHAMANSEQ</a></li>
+    <li><a>ASIANENE</a></li>
+    <li><a>UGARSUGAR</a></li>
+    <li><a>ORIENTBELL</a></li>
+    <li><a>NRBBEARING</a></li>
+    <li><a>NILA</a></li>
+    <li><a>ALPSINDUS</a></li>
+    <li><a>STERTOOLS</a></li>
+    <li><a>BHAGIL</a></li>
+    <li><a>CUPID</a></li>
+    <li><a>CHEMBOND</a></li>
+    <li><a>REMSONSIND</a></li>
+    <li><a>ALANKIT</a></li>
+    <li><a>OMINFRAL</a></li>
+    <li><a>MEDICAMEQ</a></li>
+    <li><a>ALICON</a></li>
+    <li><a>ARMANFIN</a></li>
+    <li><a>NUCLEUS</a></li>
+    <li><a>LINC</a></li>
+    <li><a>WINPRO</a></li>
+    <li><a>PANACEABIO</a></li>
+    <li><a>THEBYKE</a></li>
+    <li><a>ALMONDZ</a></li>
+    <li><a>GRMOVER</a></li>
+    <li><a>MOHITIND</a></li>
+    <li><a>BLUECOAST</a></li>
+    <li><a>JINDWORLD</a></li>
+    <li><a>CORALFINAC</a></li>
+    <li><a>LINCOPH</a></li>
+    <li><a>VIDHIING</a></li>
+    <li><a>BHAGCHEM</a></li>
+    <li><a>ATULAUTO</a></li>
+    <li><a>ZENITHSTL</a></li>
+    <li><a>ASTAR</a></li>
+    <li><a>PIONDIST</a></li>
+    <li><a>AGARIND</a></li>
+    <li><a>AMBIKCO</a></li>
+    <li><a>SINDHUTRAD</a></li>
+    <li><a>KDDL</a></li>
+    <li><a>ANDHRACEMT</a></li>
+    <li><a>SKMEGGPROD</a></li>
+    <li><a>INDRAMEDCO</a></li>
+    <li><a>CYBERTECH</a></li>
+    <li><a>DHANBANK</a></li>
+    <li><a>ARCHIES</a></li>
+    <li><a>HBSTOCK</a></li>
+    <li><a>INDNIPPON</a></li>
+    <li><a>NSIL</a></li>
+    <li><a>ACCELYA</a></li>
+    <li><a>INDSWFTLAB</a></li>
+    <li><a>CINEVISTA</a></li>
+    <li><a>INTENTECH</a></li>
+    <li><a>AMBICAAGAR</a></li>
+    <li><a>IZMO</a></li>
+    <li><a>AKSHOPTFBR</a></li>
+    <li><a>MUKTAARTS</a></li>
+    <li><a>DSSL</a></li>
+    <li><a>PNBGILTS</a></li>
+    <li><a>MRO-TEK</a></li>
+    <li><a>BALAJITELE</a></li>
+    <li><a>CALSOFT</a></li>
+    <li><a>PNC</a></li>
+    <li><a>TAJGVK</a></li>
+    <li><a>CREATIVEYE</a></li>
+    <li><a>UMESLTD</a></li>
+    <li><a>SMARTLINK</a></li>
+    <li><a>UNITDSPR</a></li>
+    <li><a>OLECTRA</a></li>
+    <li><a>MPSLTD</a></li>
+    <li><a>COMPUAGE</a></li>
+    <li><a>GULPOLY</a></li>
+    <li><a>PONNIERODE</a></li>
+    <li><a>NOIDATOLL</a></li>
+    <li><a>BLIL</a></li>
+    <li><a>POKARNA</a></li>
+    <li><a>SUPRAJIT</a></li>
+    <li><a>TVSELECT</a></li>
+    <li><a>DATAMATICS</a></li>
+    <li><a>NDTV</a></li>
+    <li><a>GULFPETRO</a></li>
+    <li><a>SALSTEEL</a></li>
+    <li><a>JBMA</a></li>
+    <li><a>IMPEXFERRO</a></li>
+    <li><a>XCHANGING</a></li>
+    <li><a>JINDALPHOT</a></li>
+    <li><a>3IINFOTECH</a></li>
+    <li><a>GOKEX</a></li>
+    <li><a>ALLSEC</a></li>
+    <li><a>MANGALAM</a></li>
+    <li><a>NDL</a></li>
+    <li><a>NECLIFE</a></li>
+    <li><a>MSPL</a></li>
+    <li><a>SPLIL</a></li>
+    <li><a>MCLEODRUSS</a></li>
+    <li><a>VIVIMEDLAB</a></li>
+    <li><a>RML</a></li>
+    <li><a>HTMEDIA</a></li>
+    <li><a>AURIONPRO</a></li>
+    <li><a>KMSUGAR</a></li>
+    <li><a>BASML</a></li>
+    <li><a>PBAINFRA</a></li>
+    <li><a>BRFL</a></li>
+    <li><a>SORILINFRA</a></li>
+    <li><a>EKC</a></li>
+    <li><a>REPRO</a></li>
+    <li><a>ROHLTD</a></li>
+    <li><a>ENIL</a></li>
+    <li><a>JAGRAN</a></li>
+    <li><a>DYNPRO</a></li>
+    <li><a>SAKUMA</a></li>
+    <li><a>GILLANDERS</a></li>
+    <li><a>INDOTECH</a></li>
+    <li><a>BLKASHYAP</a></li>
+    <li><a>VISASTEEL</a></li>
+    <li><a>NITCO</a></li>
+    <li><a>GALLANTT</a></li>
+    <li><a>MALUPAPER</a></li>
+    <li><a>UTTAMSUGAR</a></li>
+    <li><a>SGL</a></li>
+    <li><a>KKCL</a></li>
+    <li><a>RSYSTEMINT</a></li>
+    <li><a>EMKAY</a></li>
+    <li><a>LOKESHMACH</a></li>
+    <li><a>KAMDHENU</a></li>
+    <li><a>PFOCUS</a></li>
+    <li><a>VOLTAMP</a></li>
+    <li><a>DEEPENR</a></li>
+    <li><a>HOVS</a></li>
+    <li><a>GEECEE</a></li>
+    <li><a>GAYAPROJ</a></li>
+    <li><a>FIEMIND</a></li>
+    <li><a>JHS</a></li>
+    <li><a>GTLINFRA</a></li>
+    <li><a>SHIVAMAUTO</a></li>
+    <li><a>SUTLEJTEX</a></li>
+    <li><a>RUCHIRA</a></li>
+    <li><a>ZEEMEDIA</a></li>
+    <li><a>LUMAXTECH</a></li>
+    <li><a>TIIL</a></li>
+    <li><a>CINELINE</a></li>
+    <li><a>PGIL</a></li>
+    <li><a>TFL</a></li>
+    <li><a>SMSPHARMA</a></li>
+    <li><a>AMDIND</a></li>
+    <li><a>SRHHYPOLTD</a></li>
+    <li><a>TGBHOTELS</a></li>
+    <li><a>HILTON</a></li>
+    <li><a>INSECTICID</a></li>
+    <li><a>ASAHISONG</a></li>
+    <li><a>NELCAST</a></li>
+    <li><a>V2RETAIL</a></li>
+    <li><a>TARMAT</a></li>
+    <li><a>ADSL</a></li>
+    <li><a>ALPA</a></li>
+    <li><a>OMAXE</a></li>
+    <li><a>REFEX</a></li>
+    <li><a>ASIANTILES</a></li>
+    <li><a>TAKE</a></li>
+    <li><a>PURVA</a></li>
+    <li><a>NAGREEKCAP</a></li>
+    <li><a>MAGNUM</a></li>
+    <li><a>MAANALU</a></li>
+    <li><a>RGL</a></li>
+    <li><a>TRIL</a></li>
+    <li><a>BGRENERGY</a></li>
+    <li><a>MANAKSIA</a></li>
+    <li><a>PPAP</a></li>
+    <li><a>ARIES</a></li>
+    <li><a>KUANTUM</a></li>
+    <li><a>CORDSCABLE</a></li>
+    <li><a>SEPC</a></li>
+    <li><a>BANG</a></li>
+    <li><a>NAHARCAP</a></li>
+    <li><a>TWL</a></li>
+    <li><a>BIRLAMONEY</a></li>
+    <li><a>JAIBALAJI</a></li>
+    <li><a>GOKUL</a></li>
+    <li><a>RPGLIFE</a></li>
+    <li><a>KTKSENSEX</a></li>
+    <li><a>NIRAJ</a></li>
+    <li><a>RBL</a></li>
+    <li><a>RANEENGINE</a></li>
+    <li><a>BAFNAPHARM</a></li>
+    <li><a>ARCHIDPLY</a></li>
+    <li><a>SOMICONV</a></li>
+    <li><a>20MICRONS</a></li>
+    <li><a>IMFA</a></li>
+    <li><a>RAJOIL</a></li>
+    <li><a>BENGALASM</a></li>
+    <li><a>GLOBUSSPR</a></li>
+    <li><a>EXPLEOSOL</a></li>
+    <li><a>DEN</a></li>
+    <li><a>DLINKINDIA</a></li>
+    <li><a>DBCORP</a></li>
+    <li><a>MBLINFRA</a></li>
+    <li><a>VASCONEQ</a></li>
+    <li><a>THANGAMAYL</a></li>
+    <li><a>EMMBI</a></li>
+    <li><a>TEXMOPIPES</a></li>
+    <li><a>ROSSELLIND</a></li>
+    <li><a>ISFT</a></li>
+    <li><a>KCPSUGIND</a></li>
+    <li><a>KECL</a></li>
+    <li><a>JPINFRATEC</a></li>
+    <li><a>EMAMIPAP</a></li>
+    <li><a>HMVL</a></li>
+    <li><a>AHLEAST</a></li>
+    <li><a>PRAKASHSTL</a></li>
+    <li><a>WELINV</a></li>
+    <li><a>SASTASUNDR</a></li>
+    <li><a>CAREERP</a></li>
+    <li><a>EROSMEDIA</a></li>
+    <li><a>RAMKY</a></li>
+    <li><a>GALLISPAT</a></li>
+    <li><a>CANTABIL</a></li>
+    <li><a>BEDMUTHA</a></li>
+    <li><a>CEBBCO</a></li>
+    <li><a>RPPINFRA</a></li>
+    <li><a>ZEELEARN</a></li>
+    <li><a>A2ZINFRA</a></li>
+    <li><a>PSB</a></li>
+    <li><a>FMNL</a></li>
+    <li><a>KICL</a></li>
+    <li><a>BFINVEST</a></li>
+    <li><a>SUMMITSEC</a></li>
+    <li><a>STEL</a></li>
+    <li><a>OMKARCHEM</a></li>
+    <li><a>JUBLINDS</a></li>
+    <li><a>TEXRAIL</a></li>
+    <li><a>INDTERRAIN</a></li>
+    <li><a>FCL</a></li>
+    <li><a>DHUNINV</a></li>
+    <li><a>ZENTEC</a></li>
+    <li><a>PFS</a></li>
+    <li><a>TCIDEVELOP</a></li>
+    <li><a>DELPHIFX</a></li>
+    <li><a>RUSHIL</a></li>
+    <li><a>INVENTURE</a></li>
+    <li><a>YAARI</a></li>
+    <li><a>BROOKS</a></li>
+    <li><a>TDPOWERSYS</a></li>
+    <li><a>VASWANI</a></li>
+    <li><a>PGEL</a></li>
+    <li><a>ONELIFECAP</a></li>
+    <li><a>GPTINFRA</a></li>
+    <li><a>TERASOFT</a></li>
+    <li><a>MTEDUCARE</a></li>
+    <li><a>HEXATRADEX</a></li>
+    <li><a>TBZ</a></li>
+    <li><a>VSSL</a></li>
+    <li><a>SPECIALITY</a></li>
+    <li><a>RTNINDIA</a></li>
+    <li><a>JTLINFRA</a></li>
+    <li><a>NECCLTD</a></li>
+    <li><a>ZUARI</a></li>
+    <li><a>PCJEWELLER</a></li>
+    <li><a>NIBL</a></li>
+    <li><a>SREEL</a></li>
+    <li><a>SHARDA</a></li>
+    <li><a>FLFL</a></li>
+    <li><a>JPOLYINVST</a></li>
+    <li><a>MOM100</a></li>
+    <li><a>ICICINIFTY</a></li>
+    <li><a>ICICINF100</a></li>
+    <li><a>NATHBIOGEN</a></li>
+    <li><a>AGRITECH</a></li>
+    <li><a>NETFNIF100</a></li>
+    <li><a>KOTAKNIFTY</a></li>
+    <li><a>RNBDENIMS</a></li>
+    <li><a>WONDERLA</a></li>
+    <li><a>SPS</a></li>
+    <li><a>MONEYBOXX</a></li>
+    <li><a>BRPL</a></li>
+    <li><a>SKIPPER</a></li>
+    <li><a>VISHAL</a></li>
+    <li><a>SNOWMAN</a></li>
+    <li><a>SHEMAROO</a></li>
+    <li><a>DHABRIYA</a></li>
+    <li><a>PDSL</a></li>
+    <li><a>MONTECARLO</a></li>
+    <li><a>DHUNTEAIND</a></li>
+    <li><a>KARNAVATI</a></li>
+    <li><a>GENUSPAPER</a></li>
+    <li><a>WARDINMOBI</a></li>
+    <li><a>PTCIL</a></li>
+    <li><a>AGIIL</a></li>
+    <li><a>MANAKSTELTD</a></li>
+    <li><a>IMAGICAA</a></li>
+    <li><a>INOXWIND</a></li>
+    <li><a>MEP</a></li>
+    <li><a>UFO</a></li>
+    <li><a>SHIVALIK</a></li>
+    <li><a>AIIL</a></li>
+    <li><a>SATIA</a></li>
+    <li><a>GARMNTMNTR</a></li>
+    <li><a>RUDRA</a></li>
+    <li><a>LOYAL</a></li>
+    <li><a>GGPL</a></li>
+    <li><a>SCFL</a></li>
+    <li><a>MSL</a></li>
+    <li><a>KAYA</a></li>
+    <li><a>ORTINLAABS</a></li>
+    <li><a>AURUM</a></li>
+    <li><a>BINDALAGRO</a></li>
+    <li><a>ARVSMART</a></li>
+    <li><a>POWERMECH</a></li>
+    <li><a>RAMASTEEL</a></li>
+    <li><a>THINKINK</a></li>
+    <li><a>UTISENSETF</a></li>
+    <li><a>UTINIFTETF</a></li>
+    <li><a>VETO</a></li>
+    <li><a>NAVKARCORP</a></li>
+    <li><a>SHREEPUSHK</a></li>
+    <li><a>SADBHIN</a></li>
+    <li><a>PRITIKAUTO</a></li>
+    <li><a>BELLACASA</a></li>
+    <li><a>MALLCOM</a></li>
+    <li><a>GENCON</a></li>
+    <li><a>TEJNAKSH</a></li>
+    <li><a>COFFEEDAY</a></li>
+    <li><a>BEARDSELL</a></li>
+    <li><a>LICNETFN50</a></li>
+    <li><a>HDFCNIFETF</a></li>
+    <li><a>PRECAM</a></li>
+    <li><a>BESTAGRO</a></li>
+    <li><a>QUICKHEAL</a></li>
+    <li><a>SIMBHALS</a></li>
+    <li><a>LICNFNHGP</a></li>
+    <li><a>PDMJEPAPER</a></li>
+    <li><a>UMIYA</a></li>
+    <li><a>BHARATWIRE</a></li>
+    <li><a>RPEL</a></li>
+    <li><a>LANCER</a></li>
+    <li><a>BAJAJHCARE</a></li>
+    <li><a>NAGARFERT</a></li>
+    <li><a>YASHCHEM</a></li>
+    <li><a>MAXVIL</a></li>
+    <li><a>ICICINV20</a></li>
+    <li><a>ZEAL</a></li>
+    <li><a>DIGJAMLTD</a></li>
+    <li><a>ICICIMCAP</a></li>
+    <li><a>COMSYN</a></li>
+    <li><a>PTIL</a></li>
+    <li><a>SPAL</a></li>
+    <li><a>BIGBLOC</a></li>
+    <li><a>BLS</a></li>
+    <li><a>MITSU</a></li>
+    <li><a>NARAYANI</a></li>
+    <li><a>GNA</a></li>
+    <li><a>RADHIKAJWE</a></li>
+    <li><a>HPL</a></li>
+    <li><a>AVL</a></li>
+    <li><a>TMRVL</a></li>
+    <li><a>VSL</a></li>
+    <li><a>DHANVARSHA</a></li>
+    <li><a>RADIOCITY</a></li>
+    <li><a>SMLT</a></li>
+    <li><a>MAXIMUS</a></li>
+    <li><a>CLEDUCATE</a></li>
+    <li><a>STARLENT</a></li>
+    <li><a>SCHAND</a></li>
+    <li><a>MEERA</a></li>
+    <li><a>PSPPROJECT</a></li>
+    <li><a>GTPL</a></li>
+    <li><a>ICICILOVOL</a></li>
+    <li><a>GGENG</a></li>
+    <li><a>7NR</a></li>
+    <li><a>BHAGYAPROP</a></li>
+    <li><a>SALASAR</a></li>
+    <li><a>GANGESSEC</a></li>
+    <li><a>AVADHSUGAR</a></li>
+    <li><a>MAGADHSUGAR</a></li>
+    <li><a>GSTL</a></li>
+    <li><a>UTINEXT50</a></li>
+    <li><a>SMSLIFE</a></li>
+    <li><a>KIOCL</a></li>
+    <li><a>APEX</a></li>
+    <li><a>ANG</a></li>
+    <li><a>LASA</a></li>
+    <li><a>DIAMONDYD</a></li>
+    <li><a>SHAREINDIA</a></li>
+    <li><a>POOJA</a></li>
+    <li><a>MEHAI</a></li>
+    <li><a>IRIS</a></li>
+    <li><a>SGRL</a></li>
+    <li><a>STL</a></li>
+    <li><a>IFGLEXPOR</a></li>
+    <li><a>KHADIM</a></li>
+    <li><a>5PAISA</a></li>
+    <li><a>NIVBDDP</a></li>
+    <li><a>NIVBDGP</a></li>
+    <li><a>NIVBDP</a></li>
+    <li><a>NIVBGP</a></li>
+    <li><a>DYNAMIC</a></li>
+    <li><a>SHALBY</a></li>
+    <li><a>FSC</a></li>
+    <li><a>ASTRON</a></li>
+    <li><a>PRAXIS</a></li>
+    <li><a>TDSL</a></li>
+    <li><a>SHIVAMILLS</a></li>
+    <li><a>KTINDF4RG</a></li>
+    <li><a>KTINDF4RD</a></li>
+    <li><a>KTINDF4DG</a></li>
+    <li><a>KTINDF4DD</a></li>
+    <li><a>AXISCBD1D</a></li>
+    <li><a>AXISCBDGG</a></li>
+    <li><a>AXISCBDPD</a></li>
+    <li><a>AXISCBGPG</a></li>
+    <li><a>KBCGLOBAL</a></li>
+    <li><a>SANDHAR</a></li>
+    <li><a>CHEMFABALKA</a></li>
+    <li><a>DHRUV</a></li>
+    <li><a>MEGASTAR</a></li>
+    <li><a>DOLLAR</a></li>
+    <li><a>DEEP</a></li>
+    <li><a>ICICINXT50</a></li>
+    <li><a>ASRL</a></li>
+    <li><a>SGIL</a></li>
+    <li><a>MANORAMA</a></li>
+    <li><a>SHUBHAM</a></li>
+    <li><a>SMGOLD</a></li>
+    <li><a>BCPL</a></li>
+    <li><a>MAN50ETF</a></li>
+    <li><a>ABSLNN50ET</a></li>
+    <li><a>SRD</a></li>
+    <li><a>TREJHARA</a></li>
+    <li><a>AXISCCDID</a></li>
+    <li><a>AXISCCDGG</a></li>
+    <li><a>AXISCCDPD</a></li>
+    <li><a>AXISCCGPG</a></li>
+    <li><a>KPIGLOBAL</a></li>
+    <li><a>SPENCER</a></li>
+    <li><a>XELPMOC</a></li>
+    <li><a>ANMOL</a></li>
+    <li><a>KRANTI</a></li>
+    <li><a>ANUP</a></li>
+    <li><a>UTISXN50</a></li>
+    <li><a>AGOL</a></li>
+    <li><a>NEOGEN</a></li>
+    <li><a>GKP</a></li>
+    <li><a>AEPL</a></li>
+    <li><a>PPL</a></li>
+    <li><a>ARL</a></li>
+    <li><a>EARUM</a></li>
+    <li><a>DCMNVL</a></li>
+    <li><a>ICICIBANKN</a></li>
+    <li><a>ICICIBANKP</a></li>
+    <li><a>ALPHALOGIC</a></li>
+    <li><a>NIESSPJ</a></li>
+    <li><a>NIESSPI</a></li>
+    <li><a>NIESSPB</a></li>
+    <li><a>NIESSPO</a></li>
+    <li><a>NIESSPC</a></li>
+    <li><a>NIESSPP</a></li>
+    <li><a>NIESSPA</a></li>
+    <li><a>NIESSPG</a></li>
+    <li><a>NIEHSPA</a></li>
+    <li><a>NIEHSPB</a></li>
+    <li><a>NIEHSPC</a></li>
+    <li><a>NIEHSPF</a></li>
+    <li><a>NIEHSPI</a></li>
+    <li><a>NIEHSPK</a></li>
+    <li><a>NIEHSPM</a></li>
+    <li><a>NIEHSPN</a></li>
+    <li><a>NIESSPD</a></li>
+    <li><a>NIESSPE</a></li>
+    <li><a>NIESSPF</a></li>
+    <li><a>NIEHSPD</a></li>
+    <li><a>NIESSPH</a></li>
+    <li><a>NIEHSPE</a></li>
+    <li><a>NIESSPK</a></li>
+    <li><a>NIEHSPG</a></li>
+    <li><a>NIEHSPH</a></li>
+    <li><a>NIEHSPJ</a></li>
+    <li><a>NIEHSPL</a></li>
+    <li><a>NIESSPL</a></li>
+    <li><a>NIESSPM</a></li>
+    <li><a>NIESSPN</a></li>
+    <li><a>VISHWARAJ</a></li>
+    <li><a>ABSLBANETF</a></li>
+    <li><a>ARTEMISMED</a></li>
+    <li><a>ICICIM150</a></li>
+    <li><a>MANXT50ETF</a></li>
+    <li><a>BIRLATYRES</a></li>
+    <li><a>UNIVPHOTO</a></li>
+    <li><a>08MPD</a></li>
+    <li><a>08ADR</a></li>
+    <li><a>08MPR</a></li>
+    <li><a>08AMD</a></li>
+    <li><a>08AMR</a></li>
+    <li><a>08BPB</a></li>
+    <li><a>08GPG</a></li>
+    <li><a>08ABB</a></li>
+    <li><a>08QPD</a></li>
+    <li><a>08AGG</a></li>
+    <li><a>08QPR</a></li>
+    <li><a>08AQD</a></li>
+    <li><a>08DPD</a></li>
+    <li><a>08AQR</a></li>
+    <li><a>08DPR</a></li>
+    <li><a>08ADD</a></li>
+    <li><a>11DPR</a></li>
+    <li><a>11GPG</a></li>
+    <li><a>11MPD</a></li>
+    <li><a>11MPR</a></li>
+    <li><a>11QPD</a></li>
+    <li><a>11QPR</a></li>
+    <li><a>11ADD</a></li>
+    <li><a>11ADR</a></li>
+    <li><a>11AGG</a></li>
+    <li><a>11AMD</a></li>
+    <li><a>11AMR</a></li>
+    <li><a>11AQD</a></li>
+    <li><a>11AQR</a></li>
+    <li><a>11DPD</a></li>
+    <li><a>AARTISURF</a></li>
+    <li><a>NDRAUTO</a></li>
+    <li><a>ICICIALPLV</a></li>
+    <li><a>ICICITECH</a></li>
+    <li><a>MAXINDIA</a></li>
+    <li><a>HBANKETF</a></li>
+    <li><a>UTIBANKETF</a></li>
+    <li><a>HAPPSTMNDS</a></li>
+    <li><a>CHEMCON</a></li>
+    <li><a>LIKHITHA</a></li>
+    <li><a>MAESGETF</a></li>
+    <li><a>TARC</a></li>
+    <li><a>RVHL</a></li>
+    <li><a>FAIRCHEMOR</a></li>
+    <li><a>AWHCL</a></li>
+    <li><a>INFRABEES</a></li>
+    <li><a>SMCGLOBAL</a></li>
+    <li><a>NURECA</a></li>
+    <li><a>EASEMYTRIP</a></li>
+    <li><a>NAZARA</a></li>
+    <li><a>SUVIDHAA</a></li>
+    <li><a>BARBEQUE</a></li>
+    <li><a>LODHA</a></li>
+    <li><a>DEEPIND</a></li>
+    <li><a>MAFANG</a></li>
+    <li><a>ICICIPHARM</a></li>
+    <li><a>IWEL</a></li>
+    <li><a>VINEETLAB</a></li>
+    <li><a>SHYAMMETL</a></li>
+    <li><a>SONACOMS</a></li>
+    <li><a>DODLA</a></li>
+    <li><a>KIMS</a></li>
+    <li><a>IPL</a></li>
+    <li><a>GRINFRA</a></li>
+    <li><a>CLEAN</a></li>
+    <li><a>ZOMATO</a></li>
+    <li><a>TATVA</a></li>
+    <li><a>GLS</a></li>
+    <li><a>MAFSETF</a></li>
+    <li><a>ROLEXRINGS</a></li>
+    <li><a>ICICIFMCG</a></li>
+    <li><a>EXXARO</a></li>
+    <li><a>KRSNAA</a></li>
+    <li><a>WINDLAS</a></li>
+    <li><a>DEVYANI</a></li>
+    <li><a>MOL</a></li>
+    <li><a>MFL</a></li>
+    <li><a>CARTRADE</a></li>
+    <li><a>NUVOCO</a></li>
+    <li><a>APTUS</a></li>
+    <li><a>CHEMPLASTS</a></li>
+    <li><a>AXISTECETF</a></li>
+    <li><a>AXISHETF</a></li>
+    <li><a>AMIORG</a></li>
+    <li><a>VIJAYA</a></li>
+    <li><a>AXISCETF</a></li>
+    <li><a>SANSERA</a></li>
+    <li><a>MASPTOP50</a></li>
+    <li><a>PARAS</a></li>
+    <li><a>ABSLAMC</a></li>
+    <li><a>ICICICONSU</a></li>
+    <li><a>NYKAA</a></li>
+    <li><a>FINOPB</a></li>
+    <li><a>SJS</a></li>
+    <li><a>DSPNEWETF</a></li>
+    <li><a>SIGACHI</a></li>
+    <li><a>POLICYBZR</a></li>
+    <li><a>PAYTM</a></li>
+    <li><a>SAPPHIRE</a></li>
+    <li><a>LATENTVIEW</a></li>
+    <li><a>TARSONS</a></li>
+    <li><a>GOCOLORS</a></li>
+    <li><a>HITECH</a></li>
+    <li><a>STARHEALTH</a></li>
+    <li><a>TEGA</a></li>
+    <li><a>MAHKTECH</a></li>
+    <li><a>ANANDRATHI</a></li>
+    <li><a>RATEGAIN</a></li>
+    <li><a>SHRIRAMPPS</a></li>
+    <li><a>JETFREIGHT</a></li>
+    <li><a>MAPMYINDIA</a></li>
+    <li><a>METROBRAND</a></li>
+    <li><a>MEDPLUS</a></li>
+    <li><a>DATAPATTNS</a></li>
+    <li><a>HPAL</a></li>
+    <li><a>SUPRIYA</a></li>
+    <li><a>MONQ50</a></li>
+    <li><a>DSPQ50ETF</a></li>
+    <li><a>DSPN50ETF</a></li>
+    <li><a>CMSINFO</a></li>
+    <li><a>BCONCEPTS</a></li>
+    <li><a>ICICIAUTO</a></li>
+    <li><a>AGSTRA</a></li>
+    <li><a>MAMFGETF</a></li>
+    <li><a>AWL</a></li>
+    <li><a>DEVIT</a></li>
+    <li><a>MANYAVAR</a></li>
+    <li><a>MOMOMENTUM</a></li>
+    <li><a>SOFTTECH</a></li>
+    <li><a>TECH</a></li>
+    <li><a>HEALTHY</a></li>
+    <li><a>BSLNIFTY</a></li>
+    <li><a>MAM150ETF</a></li>
+    <li><a>JISLDVREQS</a></li>
+    <li><a>SCAPDVR</a></li>
+    <li><a>KARURVYSYA</a></li>
+    <li><a>TIDEWATER</a></li>
+    <li><a>AMRUTANJAN</a></li>
+    <li><a>HISARMET</a></li>
+    <li><a>BHARATRAS</a></li>
+    <li><a>FACT</a></li>
+    <li><a>GINNIFILA</a></li>
+    <li><a>SPIC</a></li>
+    <li><a>SAKSOFT</a></li>
+    <li><a>SALONACOT</a></li>
+    <li><a>EQUIPPP</a></li>
+    <li><a>ANDHRSUGAR</a></li>
+    <li><a>IMPAL</a></li>
+    <li><a>KCP</a></li>
+    <li><a>RADAAN</a></li>
+    <li><a>SUNDARMFIN</a></li>
+    <li><a>SUNDRMBRAK</a></li>
+    <li><a>WHEELS</a></li>
+    <li><a>LAMBODHARA</a></li>
+    <li><a>MAITHANALL</a></li>
+    <li><a>ORISSAMINE</a></li>
+    <li><a>NIFTYBEES</a></li>
+    <li><a>JUNIORBEES</a></li>
+    <li><a>BANKBEES</a></li>
+    <li><a>KOTAKPSUBK</a></li>
+    <li><a>PSUBNKBEES</a></li>
+    <li><a>SHARIABEES</a></li>
+    <li><a>QNIFTY</a></li>
+    <li><a>MOM50</a></li>
+    <li><a>MADRASFERT</a></li>
+    <li><a>KOTAKBKETF</a></li>
+    <li><a>SETFNIFBK</a></li>
+    <li><a>SETFNIF50</a></li>
+    <li><a>ABB India Limited</a></li>
+    <li><a>AEGIS LOGISTICS LTD.</a></li>
+    <li><a>AMARA RAJA BATTERIES LTD.</a></li>
+    <li><a>HOUSING DEVELOPMENT FINANCE CORP.LTD.</a></li>
+    <li><a>BOMBAY DYEING & MFG.CO.LTD.</a></li>
+    <li><a>ATUL LTD.</a></li>
+    <li><a>BAJAJ ELECTRICALS LTD.-$</a></li>
+    <li><a>Bajaj Hindusthan Sugar Limited</a></li>
+    <li><a>FORCE MOTORS LTD.-$</a></li>
+    <li><a>Bajaj Finance Limited</a></li>
+    <li><a>BALRAMPUR CHINI MILLS LTD.</a></li>
+    <li><a>CENTURY TEXTILES & INDUSTRIES LTD.</a></li>
+    <li><a>BANNARI AMMAN SUGARS LTD.</a></li>
+    <li><a>BASF INDIA LTD.</a></li>
+    <li><a>BATA INDIA LTD.</a></li>
+    <li><a>BEML LTD.</a></li>
+    <li><a>BHARAT ELECTRONICS LTD.</a></li>
+    <li><a>BHANSALI ENGINEERING POLYMERS LTD.-$</a></li>
+    <li><a>BLUE STAR LTD.</a></li>
+    <li><a>CESC LTD.</a></li>
+    <li><a>CHAMBAL FERTILISERS & CHEMICALS LTD.</a></li>
+    <li><a>EXIDE INDUSTRIES LTD.</a></li>
+    <li><a>CIPLA LTD.</a></li>
+    <li><a>CRISIL LTD.</a></li>
+    <li><a>DABUR INDIA LTD.</a></li>
+    <li><a>Dalmia Bharat Sugar and Industries Ltd</a></li>
+    <li><a>ARVIND LTD.</a></li>
+    <li><a>BHARAT HEAVY ELECTRICALS LTD.</a></li>
+    <li><a>HINDUSTAN PETROLEUM CORPORATION LTD.</a></li>
+    <li><a>IFCI LTD.</a></li>
+    <li><a>MAHANAGAR TELEPHONE NIGAM LTD.</a></li>
+    <li><a>MANGALORE REFINERY & PETROCHEMICALS LTD.</a></li>
+    <li><a>CHENNAI PETROLEUM CORPORATION LTD.</a></li>
+    <li><a>STATE BANK OF INDIA</a></li>
+    <li><a>STEEL AUTHORITY OF INDIA LTD.</a></li>
+    <li><a>Titan Company Limited</a></li>
+    <li><a>IDBI BANK LTD.</a></li>
+    <li><a>DHAMPUR SUGAR MILLS LTD.</a></li>
+    <li><a>DR.REDDY'S LABORATORIES LTD.</a></li>
+    <li><a>E.I.D.-PARRY (INDIA) LTD.</a></li>
+    <li><a>Procter & Gamble Health Ltd</a></li>
+    <li><a>ESAB INDIA LTD.</a></li>
+    <li><a>EPL Ltd</a></li>
+    <li><a>FINOLEX CABLES LTD.</a></li>
+    <li><a>UFLEX LTD.</a></li>
+    <li><a>GODFREY PHILLIPS INDIA LTD.</a></li>
+    <li><a>GODREJ INDUSTRIES LTD.</a></li>
+    <li><a>KANSAI NEROLAC PAINTS LTD.</a></li>
+    <li><a>GHCL LTD.</a></li>
+    <li><a>HDFC Bank Ltd</a></li>
+    <li><a>HERO MOTOCORP LTD.</a></li>
+    <li><a>HFCL Ltd</a></li>
+    <li><a>Himadri Speciality Chemical Ltd</a></li>
+    <li><a>HINDUSTAN CONSTRUCTION CO.LTD.</a></li>
+    <li><a>HINDUSTAN OIL EXPLORATION CO.LTD.</a></li>
+    <li><a>HSIL LTD.</a></li>
+    <li><a>HINDUSTAN ZINC LTD.</a></li>
+    <li><a>INDIA GLYCOLS LTD.</a></li>
+    <li><a>INFOSYS LTD.</a></li>
+    <li><a>INGERSOLL-RAND (INDIA) LTD.</a></li>
+    <li><a>ION EXCHANGE (INDIA) LTD.-$</a></li>
+    <li><a>AGRO TECH FOODS LTD.</a></li>
+    <li><a>JAIN IRRIGATION SYSTEMS LTD.</a></li>
+    <li><a>JINDAL POLY FILMS LTD.</a></li>
+    <li><a>JSW STEEL LTD.</a></li>
+    <li><a>KAJARIA CERAMICS LTD.</a></li>
+    <li><a>KALYANI STEELS LTD.</a></li>
+    <li><a>WHIRLPOOL OF INDIA LTD.</a></li>
+    <li><a>KIRLOSKAR BROTHERS LTD.-$</a></li>
+    <li><a>KIRLOSKAR FERROUS INDUSTRIES LTD.</a></li>
+    <li><a>KOTAK MAHINDRA BANK LTD.</a></li>
+    <li><a>KSB Ltd</a></li>
+    <li><a>L.G.BALAKRISHNAN & BROS.LTD.</a></li>
+    <li><a>TRENT LTD.</a></li>
+    <li><a>LAKSHMI MACHINE WORKS LTD.</a></li>
+    <li><a>LIC HOUSING FINANCE LTD.</a></li>
+    <li><a>LUPIN LTD.</a></li>
+    <li><a>The Ramco Cements Limited</a></li>
+    <li><a>MAHARASHTRA SEAMLESS LTD.</a></li>
+    <li><a>MAHARASHTRA SCOOTERS LTD.</a></li>
+    <li><a>Max Financial Services Ltd</a></li>
+    <li><a>SPICEJET LTD.</a></li>
+    <li><a>MOREPEN LABORATORIES LTD.</a></li>
+    <li><a>MRF LTD.</a></li>
+    <li><a>HEIDELBERGCEMENT INDIA LTD.</a></li>
+    <li><a>NCC Limited</a></li>
+    <li><a>Vedanta Limited</a></li>
+    <li><a>GRASIM INDUSTRIES LTD.</a></li>
+    <li><a>PIRAMAL ENTERPRISES LTD.</a></li>
+    <li><a>NIIT LTD.</a></li>
+    <li><a>Oil and Natural Gas Corporation Ltd</a></li>
+    <li><a>RELIANCE INDUSTRIES LTD.</a></li>
+    <li><a>RAYMOND LTD.</a></li>
+    <li><a>PIDILITE INDUSTRIES LTD.</a></li>
+    <li><a>BIRLA CORPORATION LTD.</a></li>
+    <li><a>SURYA ROSHNI LTD.</a></li>
+    <li><a>Prism Johnson Ltd</a></li>
+    <li><a>Rain Industries Ltd</a></li>
+    <li><a>RALLIS INDIA LTD.</a></li>
+    <li><a>JINDAL SAW LTD.</a></li>
+    <li><a>JK LAKSHMI CEMENT LTD.</a></li>
+    <li><a>SHREE CEMENT LTD.</a></li>
+    <li><a>TATA POWER CO.LTD.</a></li>
+    <li><a>SUNDRAM FASTENERS LTD.</a></li>
+    <li><a>SUNFLAG IRON & STEEL CO.LTD.</a></li>
+    <li><a>SUPREME PETROCHEM LTD.</a></li>
+    <li><a>SWARAJ ENGINES LTD.</a></li>
+    <li><a>TATA ELXSI LTD.</a></li>
+    <li><a>ACC LTD.</a></li>
+    <li><a>THERMAX LTD.</a></li>
+    <li><a>THIRUMALAI CHEMICALS LTD.</a></li>
+    <li><a>THOMAS COOK (INDIA) LTD.</a></li>
+    <li><a>TORRENT PHARMACEUTICALS LTD.</a></li>
+    <li><a>AMBUJA CEMENTS LTD.</a></li>
+    <li><a>HINDALCO INDUSTRIES LTD.</a></li>
+    <li><a>WEST COAST PAPER MILLS LTD.</a></li>
+    <li><a>PROCTER & GAMBLE HYGIENE & HEALTH CARE LTD.</a></li>
+    <li><a>Black Box Ltd</a></li>
+    <li><a>FEDERAL BANK LTD.</a></li>
+    <li><a>TATA STEEL LTD.</a></li>
+    <li><a>SKF India Ltd</a></li>
+    <li><a>ASHOK LEYLAND LTD.</a></li>
+    <li><a>CUMMINS INDIA LTD.</a></li>
+    <li><a>TATA COMMUNICATIONS LTD.</a></li>
+    <li><a>ABBOTT INDIA LTD.</a></li>
+    <li><a>BAJAJ HOLDINGS & INVESTMENT LTD.</a></li>
+    <li><a>BHARAT FORGE LTD.</a></li>
+    <li><a>ESCORTS LTD.</a></li>
+    <li><a>LARSEN & TOUBRO LTD.</a></li>
+    <li><a>MAHINDRA & MAHINDRA LTD.</a></li>
+    <li><a>BOSCH LTD.</a></li>
+    <li><a>BHARAT PETROLEUM CORPORATION LTD.</a></li>
+    <li><a>SIEMENS LTD.</a></li>
+    <li><a>TATA MOTORS LTD.</a></li>
+    <li><a>VOLTAS LTD.</a></li>
+    <li><a>GREAT EASTERN SHIPPING CO.LTD.</a></li>
+    <li><a>DEEPAK FERTILISERS & PETROCHEMICALS CORPORATION LTD.</a></li>
+    <li><a>Garware Hi-Tech Films Ltd</a></li>
+    <li><a>GLAXOSMITHKLINE PHARMACEUTICALS LTD.</a></li>
+    <li><a>GUJARAT NARMADA VALLEY FERTILIZERS & CHEMICALS LTD.</a></li>
+    <li><a>Sanofi India Ltd</a></li>
+    <li><a>PFIZER LTD.</a></li>
+    <li><a>GUJARAT STATE FERTILIZERS & CHEMICALS LTD.</a></li>
+    <li><a>HINDUSTAN UNILEVER LTD.</a></li>
+    <li><a>Akzo Nobel India Limited</a></li>
+    <li><a>NOCIL LTD.</a></li>
+    <li><a>TATA CHEMICALS LTD.</a></li>
+    <li><a>TAMILNADU PETROPRODUCTS LTD.</a></li>
+    <li><a>NESTLE INDIA LTD.</a></li>
+    <li><a>Tata Consumer Products Ltd</a></li>
+    <li><a>ASIAN PAINTS LTD.</a></li>
+    <li><a>BRITANNIA INDUSTRIES LTD.</a></li>
+    <li><a>COLGATE-PALMOLIVE (INDIA) LTD.</a></li>
+    <li><a>EIH LTD.</a></li>
+    <li><a>INDIAN HOTELS CO.LTD.</a></li>
+    <li><a>CASTROL INDIA LTD.</a></li>
+    <li><a>ITC LTD.</a></li>
+    <li><a>APOLLO TYRES LTD.</a></li>
+    <li><a>CEAT LTD.</a></li>
+    <li><a>FINOLEX INDUSTRIES LTD.</a></li>
+    <li><a>CENTRUM CAPITAL LTD.</a></li>
+    <li><a>TATA INVESTMENT CORPORATION LTD.</a></li>
+    <li><a>BOMBAY BURMAH TRADING CORP.LTD.</a></li>
+    <li><a>GREAVES COTTON LTD.</a></li>
+    <li><a>MANGALAM CEMENT LTD.</a></li>
+    <li><a>NCL INDUSTRIES LTD.-$</a></li>
+    <li><a>Borosil Renewables Ltd</a></li>
+    <li><a>BALKRISHNA INDUSTRIES LTD.-$</a></li>
+    <li><a>KESORAM INDUSTRIES LTD.</a></li>
+    <li><a>VARDHMAN TEXTILES LTD.</a></li>
+    <li><a>The Phoenix Mills Ltd</a></li>
+    <li><a>SWAN ENERGY LTD.</a></li>
+    <li><a>SRF LTD.</a></li>
+    <li><a>ZENSAR TECHNOLOGIES LTD.</a></li>
+    <li><a>TINPLATE COMPANY OF INDIA LTD.</a></li>
+    <li><a>Cholamandalam Financial Holdings Ltd</a></li>
+    <li><a>EICHER MOTORS LTD.</a></li>
+    <li><a>GMM PFAUDLER LTD.</a></li>
+    <li><a>KIRLOSKAR PNEUMATIC CO.LTD.</a></li>
+    <li><a>NESCO LTD.</a></li>
+    <li><a>RESPONSIVE INDUSTRIES LTD.</a></li>
+    <li><a>WESTLIFE DEVELOPMENT LTD.</a></li>
+    <li><a>ZEE ENTERTAINMENT ENTERPRISES LTD.</a></li>
+    <li><a>ELECON ENGINEERING CO.LTD.</a></li>
+    <li><a>GABRIEL INDIA LTD.-$</a></li>
+    <li><a>IFB INDUSTRIES LTD.</a></li>
+    <li><a>Schaeffler India Ltd</a></li>
+    <li><a>KENNAMETAL INDIA LTD.-$</a></li>
+    <li><a>PRAKASH INDUSTRIES LTD.</a></li>
+    <li><a>GRINDWELL NORTON LTD.-$</a></li>
+    <li><a>BLISS GVS PHARMA LTD.</a></li>
+    <li><a>ALEMBIC LTD.</a></li>
+    <li><a>BAYER CROPSCIENCE LTD.</a></li>
+    <li><a>COROMANDEL INTERNATIONAL LTD.</a></li>
+    <li><a>DEEPAK NITRITE LTD.-$</a></li>
+    <li><a>PCBL Ltd</a></li>
+    <li><a>PUNJAB CHEMICALS AND CROP PROTECTION LTD.-$</a></li>
+    <li><a>SUDARSHAN CHEMICAL INDUSTRIES LTD.</a></li>
+    <li><a>UNICHEM LABORATORIES LTD.</a></li>
+    <li><a>ALKYL AMINES CHEMICALS LTD.-$</a></li>
+    <li><a>ASTRAZENECA PHARMA INDIA LTD.</a></li>
+    <li><a>J.B.CHEMICALS & PHARMACEUTICALS LTD.</a></li>
+    <li><a>WIPRO LTD.</a></li>
+    <li><a>DHANUKA AGRITECH LTD.</a></li>
+    <li><a>GILLETTE INDIA LTD.</a></li>
+    <li><a>V.I.P.INDUSTRIES LTD.-$</a></li>
+    <li><a>HAWKINS COOKERS LTD.-$</a></li>
+    <li><a>COSMO FILMS LTD.</a></li>
+    <li><a>APOLLO HOSPITALS ENTERPRISE LTD.</a></li>
+    <li><a>Navneet Education Limited</a></li>
+    <li><a>TVS SRICHAKRA LTD.-$</a></li>
+    <li><a>BERGER PAINTS INDIA LTD.</a></li>
+    <li><a>GRAPHITE INDIA LTD.</a></li>
+    <li><a>ITD CEMENTATION INDIA LTD.</a></li>
+    <li><a>Garware Technical Fibres Ltd</a></li>
+    <li><a>HEG LTD.</a></li>
+    <li><a>HIL LTD.</a></li>
+    <li><a>Huhtamaki India Ltd</a></li>
+    <li><a>SUPREME INDUSTRIES LTD.</a></li>
+    <li><a>VST INDUSTRIES LTD.</a></li>
+    <li><a>CAN FIN HOMES LTD.</a></li>
+    <li><a>SHRIRAM TRANSPORT FINANCE CO.LTD.</a></li>
+    <li><a>Cholamandalam Investment and Finance Company Ltd</a></li>
+    <li><a>Vakrangee Limited-$</a></li>
+    <li><a>UPL Limited</a></li>
+    <li><a>SUNTECK REALTY LTD.</a></li>
+    <li><a>JAI CORP LTD.</a></li>
+    <li><a>SEQUENT SCIENTIFIC LTD.</a></li>
+    <li><a>AVANTI FEEDS LTD.-$</a></li>
+    <li><a>ADANI ENTERPRISES LTD.</a></li>
+    <li><a>Tata Steel Long Products Ltd</a></li>
+    <li><a>NAVA BHARAT VENTURES LTD.</a></li>
+    <li><a>CARBORUNDUM UNIVERSAL LTD.</a></li>
+    <li><a>MMTC LTD.</a></li>
+    <li><a>TATA METALIKS LTD.</a></li>
+    <li><a>HINDUSTAN COPPER LTD.</a></li>
+    <li><a>NLC India Ltd</a></li>
+    <li><a>HIMATSINGKA SEIDE LTD.</a></li>
+    <li><a>WELSPUN INDIA LTD.</a></li>
+    <li><a>ASAHI INDIA GLASS LTD.</a></li>
+    <li><a>Anant Raj Limited-$</a></li>
+    <li><a>VINDHYA TELELINKS LTD.</a></li>
+    <li><a>USHA MARTIN LTD.</a></li>
+    <li><a>SUBROS LTD.</a></li>
+    <li><a>HONEYWELL AUTOMATION INDIA LTD.</a></li>
+    <li><a>MOTHERSON SUMI SYSTEMS LTD.</a></li>
+    <li><a>HAVELLS INDIA LTD.</a></li>
+    <li><a>Symphony Limited</a></li>
+    <li><a>TTK PRESTIGE LTD.</a></li>
+    <li><a>KEI INDUSTRIES LTD.</a></li>
+    <li><a>TASTY BITE EATABLES LTD.</a></li>
+    <li><a>HINDUSTAN FOODS LTD.</a></li>
+    <li><a>Heritage Foods Limited</a></li>
+    <li><a>CCL PRODUCTS (INDIA) LTD.</a></li>
+    <li><a>JAMNA AUTO INDUSTRIES LTD.</a></li>
+    <li><a>SUNDARAM-CLAYTON LTD.</a></li>
+    <li><a>Jtekt India Ltd</a></li>
+    <li><a>RATNAMANI METALS & TUBES LTD.-$</a></li>
+    <li><a>VESUVIUS INDIA LTD.</a></li>
+    <li><a>INDO COUNT INDUSTRIES LTD.</a></li>
+    <li><a>ALOK INDUSTRIES LTD.</a></li>
+    <li><a>ELGI EQUIPMENTS LTD.</a></li>
+    <li><a>TIMKEN INDIA LTD.</a></li>
+    <li><a>PRAJ INDUSTRIES LTD.</a></li>
+    <li><a>HLE Glascoat Ltd</a></li>
+    <li><a>MAYUR UNIQUOTERS LTD.-$</a></li>
+    <li><a>GE T&D India Ltd</a></li>
+    <li><a>KALPATARU POWER TRANSMISSION LTD.</a></li>
+    <li><a>VENKY'S (INDIA) LTD.</a></li>
+    <li><a>BALMER LAWRIE & CO.LTD.</a></li>
+    <li><a>DCM Shriram Limited</a></li>
+    <li><a>NILKAMAL LTD.</a></li>
+    <li><a>3M INDIA LTD.</a></li>
+    <li><a>Johnson Controls-Hitachi Air Conditioning India Ltd</a></li>
+    <li><a>JM FINANCIAL LTD.-$</a></li>
+    <li><a>RELIANCE INDUSTRIAL INFRASTRUCTURE LTD.</a></li>
+    <li><a>Linde India Limited</a></li>
+    <li><a>SHIPPING CORPORATION OF INDIA LTD.</a></li>
+    <li><a>ITI LTD.</a></li>
+    <li><a>NATIONAL FERTILIZERS LTD.</a></li>
+    <li><a>PI Industries Ltd</a></li>
+    <li><a>APCOTEX INDUSTRIES LTD.</a></li>
+    <li><a>MASTEK LTD.</a></li>
+    <li><a>Poonawalla Fincorp Ltd</a></li>
+    <li><a>POLYPLEX CORPORATION LTD.</a></li>
+    <li><a>ACRYSIL LTD.</a></li>
+    <li><a>IOL CHEMICALS & PHARMACEUTICALS LTD.</a></li>
+    <li><a>VINATI ORGANICS LTD.-$</a></li>
+    <li><a>AARTI INDUSTRIES LTD.</a></li>
+    <li><a>GUJARAT AMBUJA EXPORTS LTD.</a></li>
+    <li><a>RASHTRIYA CHEMICALS & FERTILIZERS LTD.</a></li>
+    <li><a>AARTI DRUGS LTD.</a></li>
+    <li><a>BODAL CHEMICALS LTD.</a></li>
+    <li><a>MARKSANS PHARMA LTD.</a></li>
+    <li><a>IPCA LABORATORIES LTD.</a></li>
+    <li><a>NEULAND LABORATORIES LTD.</a></li>
+    <li><a>HESTER BIOSCIENCES LTD.</a></li>
+    <li><a>SUN PHARMACEUTICAL INDUSTRIES LTD.</a></li>
+    <li><a>HIKAL LTD.</a></li>
+    <li><a>CAPLIN POINT LABORATORIES LTD.</a></li>
+    <li><a>AUROBINDO PHARMA LTD.</a></li>
+    <li><a>NATCO PHARMA LTD.</a></li>
+    <li><a>FILATEX INDIA LTD.-$</a></li>
+    <li><a>MPHASIS LTD.</a></li>
+    <li><a>NMDC LTD.</a></li>
+    <li><a>BLUE DART EXPRESS LTD.</a></li>
+    <li><a>GREENPLY INDUSTRIES LTD.</a></li>
+    <li><a>CONFIDENCE PETROLEUM INDIA LTD.</a></li>
+    <li><a>LA OPALA RG LTD.</a></li>
+    <li><a>GUJARAT ALKALIES & CHEMICALS LTD.</a></li>
+    <li><a>INDIA CEMENTS LTD.</a></li>
+    <li><a>JK TYRE & INDUSTRIES LTD.</a></li>
+    <li><a>Jubilant Pharmova Ltd</a></li>
+    <li><a>Privi Speciality Chemicals Ltd</a></li>
+    <li><a>GENUS POWER INFRASTRUCTURES LTD.-$</a></li>
+    <li><a>RELAXO FOOTWEARS LTD.-$</a></li>
+    <li><a>SHILPA MEDICARE LTD.</a></li>
+    <li><a>KRBL LTD.</a></li>
+    <li><a>INDIAN OIL CORPORATION LTD.</a></li>
+    <li><a>BALAJI AMINES LTD.-$</a></li>
+    <li><a>EMAMI LTD.-$</a></li>
+    <li><a>MANAPPURAM FINANCE LTD.</a></li>
+    <li><a>V.S.T.TILLERS TRACTORS LTD.-$</a></li>
+    <li><a>ZYDUS WELLNESS LTD.-$</a></li>
+    <li><a>CONTAINER CORPORATION OF INDIA LTD.</a></li>
+    <li><a>TAMIL NADU NEWSPRINT & PAPERS LTD.</a></li>
+    <li><a>SHAKTI PUMPS (INDIA) LTD.-$</a></li>
+    <li><a>RAJESH EXPORTS LTD.</a></li>
+    <li><a>EVEREADY INDUSTRIES INDIA LTD.</a></li>
+    <li><a>HATSUN AGRO PRODUCT LTD.</a></li>
+    <li><a>SOMANY CERAMICS LTD.</a></li>
+    <li><a>Capri Global Capital Limited</a></li>
+    <li><a>FDC LTD.</a></li>
+    <li><a>MARICO LTD.</a></li>
+    <li><a>Apollo Pipes Ltd</a></li>
+    <li><a>POLY MEDICURE LTD.</a></li>
+    <li><a>BANK OF BARODA</a></li>
+    <li><a>Welspun Corp Limited</a></li>
+    <li><a>BANK OF INDIA</a></li>
+    <li><a>GAIL (INDIA) LTD.</a></li>
+    <li><a>Vaibhav Global Ltd</a></li>
+    <li><a>JK PAPER LTD.</a></li>
+    <li><a>SAREGAMA INDIA LTD.</a></li>
+    <li><a>ICICI BANK LTD.</a></li>
+    <li><a>Cyient Limited</a></li>
+    <li><a>ENGINEERS INDIA LTD.</a></li>
+    <li><a>GUJARAT MINERAL DEVELOPMENT CORPORATION LTD.</a></li>
+    <li><a>INDUSIND BANK LTD.</a></li>
+    <li><a>INDIA TOURISM DEVELOPMENT CORPORATION LTD.</a></li>
+    <li><a>JAMMU & KASHMIR BANK LTD.</a></li>
+    <li><a>CITY UNION BANK LTD.</a></li>
+    <li><a>AXIS BANK LTD.</a></li>
+    <li><a>SOUTH INDIAN BANK LTD.</a></li>
+    <li><a>SONATA SOFTWARE LTD.</a></li>
+    <li><a>NATIONAL ALUMINIUM CO.LTD.</a></li>
+    <li><a>APAR INDUSTRIES LTD.</a></li>
+    <li><a>HCL TECHNOLOGIES LTD.</a></li>
+    <li><a>Geojit Financial Services Ltd</a></li>
+    <li><a>JINDAL STEEL & POWER LTD.</a></li>
+    <li><a>GLENMARK PHARMACEUTICALS LTD.</a></li>
+    <li><a>WOCKHARDT LTD.</a></li>
+    <li><a>TATA COFFEE LTD.</a></li>
+    <li><a>GE Power India Ltd</a></li>
+    <li><a>MAHINDRA LIFESPACE DEVELOPERS LTD.</a></li>
+    <li><a>Zydus Lifesciences Ltd</a></li>
+    <li><a>AJANTA PHARMA LTD.</a></li>
+    <li><a>TVS MOTOR COMPANY LTD.</a></li>
+    <li><a>GATI LTD.</a></li>
+    <li><a>SUBEX LTD.</a></li>
+    <li><a>TRANSPORT CORPORATION OF INDIA LTD.</a></li>
+    <li><a>TRIVENI ENGINEERING & INDUSTRIES LTD.</a></li>
+    <li><a>RAMCO INDUSTRIES LTD.</a></li>
+    <li><a>RAMCO SYSTEMS LTD.</a></li>
+    <li><a>STERLITE TECHNOLOGIES LTD.</a></li>
+    <li><a>INDIAN OVERSEAS BANK</a></li>
+    <li><a>Birlasoft Ltd</a></li>
+    <li><a>CEREBRA INTEGRATED TECHNOLOGIES LTD.</a></li>
+    <li><a>GODREJ CONSUMER PRODUCTS LTD.</a></li>
+    <li><a>BF UTILITIES LTD.-$</a></li>
+    <li><a>CERA SANITARYWARE LTD.</a></li>
+    <li><a>BHARTI AIRTEL LTD.</a></li>
+    <li><a>PUNJAB NATIONAL BANK</a></li>
+    <li><a>ORACLE FINANCIAL SERVICES SOFTWARE LTD.</a></li>
+    <li><a>Kama Holdings Limited-$</a></li>
+    <li><a>APTECH LTD.</a></li>
+    <li><a>UNION BANK OF INDIA</a></li>
+    <li><a>UNITED BREWERIES LTD.-$</a></li>
+    <li><a>GRANULES INDIA LTD.-$</a></li>
+    <li><a>CANARA BANK</a></li>
+    <li><a>DIVI'S LABORATORIES LTD.</a></li>
+    <li><a>ASTRA MICROWAVE PRODUCTS LTD.</a></li>
+    <li><a>RADICO KHAITAN LTD.</a></li>
+    <li><a>SHRIRAM CITY UNION FINANCE LTD.</a></li>
+    <li><a>MARUTI SUZUKI INDIA LTD.</a></li>
+    <li><a>Navin Fluorine International Limited-$</a></li>
+    <li><a>UCO BANK</a></li>
+    <li><a>JINDAL STAINLESS LTD.</a></li>
+    <li><a>INDRAPRASTHA GAS LTD.</a></li>
+    <li><a>TV TODAY NETWORK LTD.</a></li>
+    <li><a>PETRONET LNG LTD.</a></li>
+    <li><a>BIOCON LTD.</a></li>
+    <li><a>PTC INDIA LTD.</a></li>
+    <li><a>BANK OF MAHARASHTRA</a></li>
+    <li><a>RAMKRISHNA FORGINGS LTD.</a></li>
+    <li><a>Strides Pharma Science Ltd</a></li>
+    <li><a>JAIPRAKASH ASSOCIATES LTD.</a></li>
+    <li><a>ULTRATECH CEMENT LTD.</a></li>
+    <li><a>MINDA INDUSTRIES LTD.-$</a></li>
+    <li><a>TATA CONSULTANCY SERVICES LTD.</a></li>
+    <li><a>Coforge Ltd</a></li>
+    <li><a>CENTURY PLYBOARDS (I) LTD.-$</a></li>
+    <li><a>Welspun Enterprises Ltd</a></li>
+    <li><a>NTPC LTD.</a></li>
+    <li><a>DWARIKESH SUGAR INDUSTRIES LTD.</a></li>
+    <li><a>INDOCO REMEDIES LTD.</a></li>
+    <li><a>Jaiprakash Power Ventures Limited</a></li>
+    <li><a>IIFL Finance Ltd</a></li>
+    <li><a>SHOPPERS STOP LTD.</a></li>
+    <li><a>JSW Holdings Limited</a></li>
+    <li><a>J.K.CEMENT LTD.</a></li>
+    <li><a>YES BANK LTD.</a></li>
+    <li><a>KARNATAKA BANK LTD.</a></li>
+    <li><a>IDFC LIMITED</a></li>
+    <li><a>Sasken Technologies Ltd</a></li>
+    <li><a>SUZLON ENERGY LTD.</a></li>
+    <li><a>SHREE RENUKA SUGARS LTD.</a></li>
+    <li><a>AIA ENGINEERING LTD.</a></li>
+    <li><a>PVR LTD.</a></li>
+    <li><a>GUJARAT STATE PETRONET LTD.</a></li>
+    <li><a>INOX LEISURE LTD.</a></li>
+    <li><a>SADBHAV ENGINEERING LTD.</a></li>
+    <li><a>KEC INTERNATIONAL LTD.</a></li>
+    <li><a>MAHINDRA & MAHINDRA FINANCIAL SERVICES LTD.</a></li>
+    <li><a>SOLAR INDUSTRIES INDIA LTD.</a></li>
+    <li><a>SUN TV NETWORK LTD.</a></li>
+    <li><a>GODAWARI POWER & ISPAT LTD.</a></li>
+    <li><a>PAUSHAK LTD.</a></li>
+    <li><a>ALLCARGO LOGISTICS LTD.</a></li>
+    <li><a>GMR INFRASTRUCTURE LTD.</a></li>
+    <li><a>TECH MAHINDRA LTD.</a></li>
+    <li><a>Mahindra CIE Automotive Limited</a></li>
+    <li><a>ACTION CONSTRUCTION EQUIPMENT LTD.</a></li>
+    <li><a>DCB Bank Limited</a></li>
+    <li><a>INFO EDGE (INDIA) LTD.</a></li>
+    <li><a>TORRENT POWER LTD.</a></li>
+    <li><a>LT FOODS LTD.</a></li>
+    <li><a>Sobha Limited</a></li>
+    <li><a>Tanla Platforms Ltd</a></li>
+    <li><a>NETWORK18 MEDIA & INVESTMENTS LTD.</a></li>
+    <li><a>TV18 BROADCAST LTD.</a></li>
+    <li><a>REDINGTON (INDIA) LTD.</a></li>
+    <li><a>FIRSTSOURCE SOLUTIONS LTD.</a></li>
+    <li><a>POWER FINANCE CORPORATION LTD.</a></li>
+    <li><a>AHLUWALIA CONTRACTS (INDIA) LTD.</a></li>
+    <li><a>INDIAN BANK</a></li>
+    <li><a>MINDTREE LTD.</a></li>
+    <li><a>Vodafone Idea Ltd</a></li>
+    <li><a>PAGE INDUSTRIES LTD.</a></li>
+    <li><a>Astral Ltd</a></li>
+    <li><a>INDIABULLS REAL ESTATE LTD.</a></li>
+    <li><a>CAMLIN FINE SCIENCES LTD.</a></li>
+    <li><a>ICRA LTD.</a></li>
+    <li><a>DISH TV INDIA LTD.</a></li>
+    <li><a>FORTIS HEALTHCARE LTD.</a></li>
+    <li><a>DELTA CORP LTD.</a></li>
+    <li><a>TIME TECHNOPLAST LTD.</a></li>
+    <li><a>HINDUJA GLOBAL SOLUTIONS LTD.</a></li>
+    <li><a>DLF LTD.</a></li>
+    <li><a>SUN PHARMA ADVANCED RESEARCH COMPANY LTD.</a></li>
+    <li><a>CENTRAL BANK OF INDIA</a></li>
+    <li><a>K.P.R. Mill Limited</a></li>
+    <li><a>MOTILAL OSWAL FINANCIAL SERVICES LTD.</a></li>
+    <li><a>POWER GRID CORPORATION OF INDIA LTD.</a></li>
+    <li><a>KAVERI SEED COMPANY LTD.</a></li>
+    <li><a>Paisalo Digital Ltd</a></li>
+    <li><a>RELIGARE ENTERPRISES LTD.</a></li>
+    <li><a>ADANI PORTS AND SPECIAL ECONOMIC ZONE LTD.</a></li>
+    <li><a>Edelweiss Financial Services Ltd.</a></li>
+    <li><a>KOLTE-PATIL DEVELOPERS LTD.</a></li>
+    <li><a>Jyothy Labs Ltd</a></li>
+    <li><a>ECLERX SERVICES LTD.</a></li>
+    <li><a>BRIGADE ENTERPRISES LTD.</a></li>
+    <li><a>RELIANCE POWER LTD.</a></li>
+    <li><a>J.KUMAR INFRAPROJECTS LTD.</a></li>
+    <li><a>KNR CONSTRUCTIONS LTD.</a></li>
+    <li><a>OnMobile Global Ltd.</a></li>
+    <li><a>IRB INFRASTRUCTURE DEVELOPERS LTD.</a></li>
+    <li><a>V-GUARD INDUSTRIES LTD.</a></li>
+    <li><a>REC Ltd</a></li>
+    <li><a>Dhani Services Ltd</a></li>
+    <li><a>KIRI INDUSTRIES LTD.</a></li>
+    <li><a>BAJAJ AUTO LTD.</a></li>
+    <li><a>BAJAJ FINSERV LTD.</a></li>
+    <li><a>WABCO INDIA LTD.</a></li>
+    <li><a>ISGEC Heavy Engineering Ltd</a></li>
+    <li><a>Mold-Tek Packaging Limited</a></li>
+    <li><a>MAHINDRA HOLIDAYS & RESORTS INDIA LTD.</a></li>
+    <li><a>ADANI POWER LTD.</a></li>
+    <li><a>NHPC LTD.</a></li>
+    <li><a>OIL INDIA LTD.</a></li>
+    <li><a>ASTEC LIFESCIENCES LIMITED</a></li>
+    <li><a>Godrej Properties Ltd</a></li>
+    <li><a>Jubilant FoodWorks Ltd</a></li>
+    <li><a>Hathway Cable & Datacom Ltd</a></li>
+    <li><a>MAN INFRACONSTRUCTION LTD.</a></li>
+    <li><a>PERSISTENT SYSTEMS LTD.</a></li>
+    <li><a>SJVN Ltd</a></li>
+    <li><a>Bajaj Consumer Care Ltd</a></li>
+    <li><a>GUJARAT PIPAVAV PORT LTD.</a></li>
+    <li><a>VA TECH WABAG LTD.</a></li>
+    <li><a>ASHOKA BUILDCON LTD.</a></li>
+    <li><a>OBEROI REALTY LTD.</a></li>
+    <li><a>PRESTIGE ESTATES PROJECTS LTD.</a></li>
+    <li><a>COAL INDIA LTD.</a></li>
+    <li><a>MOIL LTD.</a></li>
+    <li><a>KIRLOSKAR OIL ENGINES LTD.</a></li>
+    <li><a>MUTHOOT FINANCE LTD.</a></li>
+    <li><a>Future Consumer Ltd</a></li>
+    <li><a>L&T FINANCE HOLDINGS LTD.</a></li>
+    <li><a>RUPA & COMPANY LTD.</a></li>
+    <li><a>ALEMBIC PHARMACEUTICALS LTD.</a></li>
+    <li><a>TRIVENI TURBINE LTD.</a></li>
+    <li><a>APL APOLLO TUBES LTD.</a></li>
+    <li><a>Rhi Magnesita India Ltd</a></li>
+    <li><a>MULTI COMMODITY EXCHANGE OF INDIA LTD.</a></li>
+    <li><a>SCHNEIDER ELECTRIC INFRASTRUCTURE LTD.</a></li>
+    <li><a>NBCC (India) Ltd</a></li>
+    <li><a>CIGNITI TECHNOLOGIES LTD.</a></li>
+    <li><a>CARE Ratings Ltd</a></li>
+    <li><a>Indus Towers Ltd</a></li>
+    <li><a>V-MART RETAIL LTD.</a></li>
+    <li><a>SBI Mutual Fund - SBI Sensex ETF</a></li>
+    <li><a>REPCO HOME FINANCE LTD.</a></li>
+    <li><a>JUST DIAL LTD.</a></li>
+    <li><a>Orient Cement Ltd</a></li>
+    <li><a>Aditya Birla Fashion and Retail Ltd</a></li>
+    <li><a>Indiabulls Housing Finance Ltd</a></li>
+    <li><a>CPSE ETF</a></li>
+    <li><a>Apollo Tricoat Tubes Ltd</a></li>
+    <li><a>Gulf Oil Lubricants India Ltd</a></li>
+    <li><a>Sharda Cropchem Ltd</a></li>
+    <li><a>NIPPON INDIA ETF SENSEX</a></li>
+    <li><a>Intellect Design Arena Ltd</a></li>
+    <li><a>Minda Corporation Ltd</a></li>
+    <li><a>Greenlam Industries Ltd</a></li>
+    <li><a>SBI Mutual Fund - SBI - ETF BSE 100</a></li>
+    <li><a>VRL Logistics Ltd</a></li>
+    <li><a>PNC Infratech Ltd</a></li>
+    <li><a>Adani Transmission Ltd</a></li>
+    <li><a>Syngene International Ltd</a></li>
+    <li><a>Gujarat Gas Ltd</a></li>
+    <li><a>IDFC First Bank Ltd</a></li>
+    <li><a>InterGlobe Aviation Ltd</a></li>
+    <li><a>S H Kelkar and Company Ltd</a></li>
+    <li><a>LIC MF EXCHANGE TRADED FUND- SENSEX</a></li>
+    <li><a>HDFC Sensex ETF - Open Ended Traded Fund</a></li>
+    <li><a>Alkem Laboratories Ltd</a></li>
+    <li><a>Dr. Lal PathLabs Ltd</a></li>
+    <li><a>Lux Industries Ltd</a></li>
+    <li><a>Narayana Hrudayalaya Ltd</a></li>
+    <li><a>Jindal Stainless (Hisar) Ltd</a></li>
+    <li><a>TeamLease Services Ltd</a></li>
+    <li><a>HealthCare Global Enterprises Ltd</a></li>
+    <li><a>Infibeam Avenues Ltd</a></li>
+    <li><a>Equitas Holdings Ltd</a></li>
+    <li><a>Thyrocare Technologies Ltd</a></li>
+    <li><a>Ujjivan Financial Services Ltd</a></li>
+    <li><a>Crompton Greaves Consumer Electricals Ltd</a></li>
+    <li><a>Pilani Investment and Industries Corporation Ltd</a></li>
+    <li><a>Parag Milk Foods Ltd</a></li>
+    <li><a>Mahanagar Gas Ltd</a></li>
+    <li><a>Quess Corp Ltd</a></li>
+    <li><a>Larsen & Toubro Infotech Ltd</a></li>
+    <li><a>BIRLA SUN LIFE SENSEX ETF</a></li>
+    <li><a>Advanced Enzyme Technologies Ltd</a></li>
+    <li><a>Dilip Buildcon Ltd</a></li>
+    <li><a>Future Retail Ltd</a></li>
+    <li><a>RBL Bank Ltd</a></li>
+    <li><a>L&T Technology Services Ltd</a></li>
+    <li><a>ICICI Prudential Life Insurance Company Ltd</a></li>
+    <li><a>Valiant Organics Ltd</a></li>
+    <li><a>Endurance Technologies Ltd</a></li>
+    <li><a>IDFC SENSEX ETF</a></li>
+    <li><a>PNB Housing Finance Ltd</a></li>
+    <li><a>Varun Beverages Ltd</a></li>
+    <li><a>Sheela Foam Ltd</a></li>
+    <li><a>TCI Express Ltd</a></li>
+    <li><a>Laurus Labs Ltd</a></li>
+    <li><a>Pricol Ltd</a></li>
+    <li><a>Avenue Supermarts Ltd</a></li>
+    <li><a>Shankara Building Products Ltd</a></li>
+    <li><a>Housing & Urban Development Corporation Ltd</a></li>
+    <li><a>Star Cement Ltd</a></li>
+    <li><a>Tejas Networks Ltd</a></li>
+    <li><a>Eris Lifesciences Ltd</a></li>
+    <li><a>AU Small Finance Bank Ltd</a></li>
+    <li><a>SIS Ltd</a></li>
+    <li><a>Cochin Shipyard Ltd</a></li>
+    <li><a>Aditya Birla Capital Ltd</a></li>
+    <li><a>Dixon Technologies (India) Ltd</a></li>
+    <li><a>Dishman Carbogen Amcis Ltd</a></li>
+    <li><a>Matrimony.com Ltd</a></li>
+    <li><a>Capacite Infraprojects Ltd</a></li>
+    <li><a>ICICI Lombard General Insurance Company Ltd</a></li>
+    <li><a>SBI Life Insurance Company Ltd</a></li>
+    <li><a>Godrej Agrovet Ltd</a></li>
+    <li><a>MAS Financial Services Ltd</a></li>
+    <li><a>Indian Energy Exchange Ltd</a></li>
+    <li><a>General Insurance Corporation of India</a></li>
+    <li><a>Tube Investments of India Ltd</a></li>
+    <li><a>Nippon Life India Asset Management Ltd</a></li>
+    <li><a>Mahindra Logistics Ltd</a></li>
+    <li><a>The New India Assurance Company Ltd</a></li>
+    <li><a>HDFC Life Insurance Company Ltd</a></li>
+    <li><a>BHARAT 22 ETF - ICICI Prudential AMC</a></li>
+    <li><a>Newgen Software Technologies Ltd</a></li>
+    <li><a>Amber Enterprises India Ltd</a></li>
+    <li><a>Galaxy Surfactants Ltd</a></li>
+    <li><a>Aster DM Healthcare Ltd</a></li>
+    <li><a>H.G. Infra Engineering Ltd</a></li>
+    <li><a>Bharat Dynamics Ltd</a></li>
+    <li><a>Bandhan Bank Ltd</a></li>
+    <li><a>Hindustan Aeronautics Ltd</a></li>
+    <li><a>ICICI Securities Ltd</a></li>
+    <li><a>Mishra Dhatu Nigam Ltd</a></li>
+    <li><a>Lemon Tree Hotels Ltd</a></li>
+    <li><a>Orient Electric Ltd</a></li>
+    <li><a>ICICI Prudential S&P BSE 500 ETF</a></li>
+    <li><a>Indostar Capital Finance Ltd</a></li>
+    <li><a>Adani Green Energy Ltd</a></li>
+    <li><a>Solara Active Pharma Sciences Ltd</a></li>
+    <li><a>RITES Ltd</a></li>
+    <li><a>Fine Organic Industries Ltd</a></li>
+    <li><a>Varroc Engineering Ltd</a></li>
+    <li><a>TCNS Clothing Co. Ltd</a></li>
+    <li><a>HDFC Asset Management Company Ltd</a></li>
+    <li><a>CreditAccess Grameen Ltd</a></li>
+    <li><a>IRCON International Ltd</a></li>
+    <li><a>SBI - ETF - SENSEX NEXT 50</a></li>
+    <li><a>AAVAS Financiers Ltd</a></li>
+    <li><a>Garden Reach Shipbuilders & Engineers Ltd</a></li>
+    <li><a>Adani Total Gas Ltd</a></li>
+    <li><a>Techno Electric & Engineering Company Ltd</a></li>
+    <li><a>Dalmia Bharat Ltd</a></li>
+    <li><a>RPSG Ventures Ltd</a></li>
+    <li><a>Chalet Hotels Ltd</a></li>
+    <li><a>Arvind Fashions Ltd</a></li>
+    <li><a>MSTC Ltd</a></li>
+    <li><a>Rail Vikas Nigam Ltd</a></li>
+    <li><a>Metropolis Healthcare Ltd</a></li>
+    <li><a>KPIT Technologies Ltd</a></li>
+    <li><a>Polycab India Ltd</a></li>
+    <li><a>IndiaMART InterMESH Ltd</a></li>
+    <li><a>NIPPON INDIA ETF SENSEX NEXT 50</a></li>
+    <li><a>Affle (India) Ltd</a></li>
+    <li><a>Spandana Sphoorty Financial Ltd</a></li>
+    <li><a>Sterling and Wilson Renewable Energy Ltd</a></li>
+    <li><a>IIFL Wealth Management Ltd</a></li>
+    <li><a>IIFL Securities Ltd</a></li>
+    <li><a>Indian Railway Catering and Tourism Corporation Ltd</a></li>
+    <li><a>Greenpanel Industries Ltd</a></li>
+    <li><a>CSB Bank Ltd</a></li>
+    <li><a>Ujjivan Small Finance Bank Ltd</a></li>
+    <li><a>Somany Home Innovation Ltd</a></li>
+    <li><a>Prince Pipes and Fittings Ltd</a></li>
+    <li><a>Sumitomo Chemical India Ltd</a></li>
+    <li><a>Suven Pharmaceuticals Ltd</a></li>
+    <li><a>SBI Cards and Payment Services Ltd</a></li>
+    <li><a>Hitachi Energy India Ltd</a></li>
+    <li><a>Rossari Biotech Ltd</a></li>
+    <li><a>Max Healthcare Institute Ltd</a></li>
+    <li><a>Route Mobile Ltd</a></li>
+    <li><a>Computer Age Management Services Ltd</a></li>
+    <li><a>Angel One Ltd</a></li>
+    <li><a>Mazagon Dock Shipbuilders Ltd</a></li>
+    <li><a>UTI Asset Management Company Ltd</a></li>
+    <li><a>Hemisphere Properties India Ltd</a></li>
+    <li><a>Equitas Small Finance Bank Ltd</a></li>
+    <li><a>Gland Pharma Ltd</a></li>
+    <li><a>Restaurant Brands Asia Ltd</a></li>
+    <li><a>Mrs. Bectors Food Specialities Ltd</a></li>
+    <li><a>Indian Railway Finance Corporation Ltd</a></li>
+    <li><a>Indigo Paints Ltd</a></li>
+    <li><a>Home First Finance Company India Ltd</a></li>
+    <li><a>Stove Kraft Ltd</a></li>
+    <li><a>RailTel Corporation of India Ltd</a></li>
+    <li><a>Heranba Industries Ltd</a></li>
+    <li><a>MTAR Technologies Ltd</a></li>
+    <li><a>Jubilant Ingrevia Ltd</a></li>
+    <li><a>Anupam Rasayan India Ltd</a></li>
+    <li><a>Craftsman Automation Ltd</a></li>
+    <li><a>Laxmi Organic Industries Ltd</a></li>
+    <li><a>Kalyan Jewellers India Ltd</a></li>
+    <li><a>Suryoday Small Finance Bank Ltd</a></li>
+    <li><a>ICICI Prudential Sensex ETF</a></li>
+    <li><a>Tata Motors Ltd - DVR</a></li>
+    <li><a>ANDHRA PETROCHEMICALS LTD.</a></li>
+    <li><a>ANSAL PROPERTIES & INFRASTRUCTURE LTD.</a></li>
+    <li><a>Asian Hotels (North) Limited</a></li>
+    <li><a>BANCO PRODUCTS (INDIA) LTD.-$</a></li>
+    <li><a>Birla Cable Ltd</a></li>
+    <li><a>BPL LTD.</a></li>
+    <li><a>Oriental Aromatics Ltd-$</a></li>
+    <li><a>CENTURY EXTRUSIONS LTD.</a></li>
+    <li><a>DIC INDIA LTD.</a></li>
+    <li><a>CG Power and Industrial Solutions Ltd</a></li>
+    <li><a>RELIANCE CAPITAL LTD.</a></li>
+    <li><a>DCW LTD.</a></li>
+    <li><a>ELANTAS BECK INDIA LTD.-$</a></li>
+    <li><a>ELECTROSTEEL CASTINGS LTD.</a></li>
+    <li><a>ESTER INDUSTRIES LTD.</a></li>
+    <li><a>FOSECO INDIA LTD.</a></li>
+    <li><a>GOLDEN TOBACCO LTD.</a></li>
+    <li><a>GANESH BENZOPLAST LTD.</a></li>
+    <li><a>GTL LTD.</a></li>
+    <li><a>GOODYEAR INDIA LTD.</a></li>
+    <li><a>GFL Ltd</a></li>
+    <li><a>HCL INFOSYSTEMS LTD.</a></li>
+    <li><a>Nxtdigital Ltd</a></li>
+    <li><a>HLV Ltd</a></li>
+    <li><a>I G PETROCHEMICALS LTD.</a></li>
+    <li><a>INDO RAMA SYNTHETICS (INDIA) LTD.</a></li>
+    <li><a>UMANG DAIRIES LTD.</a></li>
+    <li><a>KAKATIYA CEMENT SUGAR & INDUSTRIES LTD.</a></li>
+    <li><a>Kirloskar Industries Ltd</a></li>
+    <li><a>MANALI PETROCHEMICAL LTD.</a></li>
+    <li><a>MIRC ELECTRONICS LTD.</a></li>
+    <li><a>CENTURY ENKA LTD.</a></li>
+    <li><a>NATIONAL PEROXIDE LTD.</a></li>
+    <li><a>NIRLON LTD.</a></li>
+    <li><a>OIL COUNTRY TUBULAR LTD.</a></li>
+    <li><a>ORIENTAL HOTELS LTD.</a></li>
+    <li><a>OSWAL AGRO MILLS LTD.</a></li>
+    <li><a>PIX TRANSMISSIONS LTD.</a></li>
+    <li><a>PRIME SECURITIES LTD.</a></li>
+    <li><a>AMJ Land Holdings Ltd</a></li>
+    <li><a>RSWM LTD.</a></li>
+    <li><a>SHREE RAMA NEWSPRINT LTD.</a></li>
+    <li><a>RUCHI SOYA INDUSTRIES LTD.</a></li>
+    <li><a>RELIANCE INFRASTRUCTURE LTD.</a></li>
+    <li><a>TOKYO PLAST INTERNATIONAL LTD.</a></li>
+    <li><a>UNIPHOS ENTERPRISES LTD.</a></li>
+    <li><a>VARDHMAN HOLDINGS LTD.</a></li>
+    <li><a>HINDUSTAN ORGANIC CHEMICALS LTD.</a></li>
+    <li><a>PASUPATI ACRYLON LTD.</a></li>
+    <li><a>MUKAND LTD.</a></li>
+    <li><a>UCAL FUEL SYSTEMS LTD.</a></li>
+    <li><a>HARRISONS MALAYALAM LTD.</a></li>
+    <li><a>HINDUSTAN MOTORS LTD.</a></li>
+    <li><a>EXCEL INDUSTRIES LTD.</a></li>
+    <li><a>NOVARTIS INDIA LTD.</a></li>
+    <li><a>ZUARI GLOBAL LTD.</a></li>
+    <li><a>INDUSTRIAL INVESTMENT TRUST LTD.</a></li>
+    <li><a>SHAILY ENGINEERING PLASTICS LTD.</a></li>
+    <li><a>COASTAL CORPORATION LTD.</a></li>
+    <li><a>SAGAR CEMENTS LTD.-$</a></li>
+    <li><a>DECCAN CEMENTS LTD.-$</a></li>
+    <li><a>SHREE DIGVIJAY CEMENT CO.LTD.-$</a></li>
+    <li><a>Andhra Paper Ltd</a></li>
+    <li><a>ORIENT PAPER & INDUSTRIES LTD.</a></li>
+    <li><a>SESHASAYEE PAPER & BOARDS LTD.</a></li>
+    <li><a>DCM LTD.</a></li>
+    <li><a>FORBES & COMPANY LTD.-$</a></li>
+    <li><a>MARATHON NEXTGEN REALTY LTD.</a></li>
+    <li><a>RUBY MILLS LTD.</a></li>
+    <li><a>BANSWARA SYNTEX LTD.-$</a></li>
+    <li><a>SIYARAM SILK MILLS LTD.-$</a></li>
+    <li><a>BHARAT BIJLEE LTD.-$</a></li>
+    <li><a>ELPRO INTERNATIONAL LTD.</a></li>
+    <li><a>INDO-NATIONAL LTD.</a></li>
+    <li><a>UNIVERSAL CABLES LTD.</a></li>
+    <li><a>Delta Manufacturing Ltd</a></li>
+    <li><a>SARDA ENERGY & MINERALS LTD.-$</a></li>
+    <li><a>INDIAN HUME PIPE CO.LTD.</a></li>
+    <li><a>ORIENT ABRASIVES LTD.-$</a></li>
+    <li><a>SANDUR MANGANESE & IRON ORES LTD.</a></li>
+    <li><a>AUTOMOTIVE AXLES LTD.</a></li>
+    <li><a>SETCO AUTOMOTIVE LTD.</a></li>
+    <li><a>TALBROS AUTOMOTIVE COMPONENTS LTD.</a></li>
+    <li><a>SML ISUZU LIMITED</a></li>
+    <li><a>TIL LTD.</a></li>
+    <li><a>DYNAMATIC TECHNOLOGIES LTD.-$</a></li>
+    <li><a>MANUGRAPH INDIA LTD.-$</a></li>
+    <li><a>REVATHI EQUIPMENT LTD.-$</a></li>
+    <li><a>TEXMACO INFRASTRUCTURE & HOLDINGS LTD.</a></li>
+    <li><a>WENDT (INDIA) LTD.</a></li>
+    <li><a>Dolat Algotech Ltd</a></li>
+    <li><a>SVP Global Textiles Ltd</a></li>
+    <li><a>BHARAT GEARS LTD.</a></li>
+    <li><a>GRAUER & WEIL (INDIA) LTD.-$</a></li>
+    <li><a>HERCULES HOISTS LTD.</a></li>
+    <li><a>FEDERAL-MOGUL GOETZE (INDIA) LTD.</a></li>
+    <li><a>RANE HOLDINGS LTD.</a></li>
+    <li><a>Arshiya Limited</a></li>
+    <li><a>Arihant Superstructures Limited</a></li>
+    <li><a>INEOS Styrolution India Ltd</a></li>
+    <li><a>MODISON METALS LTD.-$</a></li>
+    <li><a>CLARIANT CHEMICALS (INDIA) LTD.</a></li>
+    <li><a>DHARAMSI MORARJI CHEMICAL CO.LTD.</a></li>
+    <li><a>GOCL Corporation Ltd-$</a></li>
+    <li><a>KANORIA CHEMICALS & INDUSTRIES LTD.</a></li>
+    <li><a>ORIENTAL CARBON & CHEMICALS LTD.-$</a></li>
+    <li><a>ULTRAMARINE & PIGMENTS LTD.-$</a></li>
+    <li><a>TRANSPEK INDUSTRY LTD.-$</a></li>
+    <li><a>TILAKNAGAR INDUSTRIES LTD.-$</a></li>
+    <li><a>WALCHANDNAGAR INDUSTRIES LTD.</a></li>
+    <li><a>IFB AGRO INDUSTRIES LTD.</a></li>
+    <li><a>G.M.BREWERIES LTD.</a></li>
+    <li><a>RANA SUGARS LTD.</a></li>
+    <li><a>SOM DISTILLERIES & BREWERIES LTD.</a></li>
+    <li><a>ASSOCIATED ALCOHOLS & BREWERIES LTD.</a></li>
+    <li><a>FOODS & INNS LTD.</a></li>
+    <li><a>IVP LTD.</a></li>
+    <li><a>TTK HEALTHCARE LTD.-$</a></li>
+    <li><a>KANPUR PLASTIPACK LTD.</a></li>
+    <li><a>TAINWALA CHEMICALS & PLASTICS (INDIA) LTD.</a></li>
+    <li><a>JAGSONPAL PHARMACEUTICALS LTD.</a></li>
+    <li><a>KHAITAN CHEMICALS & FERTILIZERS LTD.</a></li>
+    <li><a>FIBERWEB (INDIA) LTD.</a></li>
+    <li><a>EVEREST INDUSTRIES LTD.</a></li>
+    <li><a>AYM Syntex Ltd</a></li>
+    <li><a>AuSom Enterprise Limited</a></li>
+    <li><a>VISAKA INDUSTRIES LTD.</a></li>
+    <li><a>Pressman Advertising Limited</a></li>
+    <li><a>GUFIC BIOSCIENCES LTD.</a></li>
+    <li><a>GRP LTD.</a></li>
+    <li><a>PTL ENTERPRISES LTD.-$</a></li>
+    <li><a>GOA CARBON LTD.-$</a></li>
+    <li><a>HINDUSTAN COMPOSITES LTD.</a></li>
+    <li><a>INTERNATIONAL CONVEYORS LTD.</a></li>
+    <li><a>JAY SHREE TEA & INDUSTRIES LTD.</a></li>
+    <li><a>SHALIMAR PAINTS LTD.-$</a></li>
+    <li><a>JINDAL DRILLING & INDUSTRIES LTD.</a></li>
+    <li><a>SHIVA TEXYARN LTD.</a></li>
+    <li><a>VLS FINANCE LTD.</a></li>
+    <li><a>INDBANK MERCHANT BANKING SERVICES LTD.</a></li>
+    <li><a>CAPITAL TRUST LTD.</a></li>
+    <li><a>Monarch Networth Capital Ltd</a></li>
+    <li><a>TIMES GUARANTY LTD.</a></li>
+    <li><a>ARIHANT CAPITAL MARKETS LTD.</a></li>
+    <li><a>GIC HOUSING FINANCE LTD.</a></li>
+    <li><a>VIPUL LTD.</a></li>
+    <li><a>Ugro Capital Ltd</a></li>
+    <li><a>MUTHOOT CAPITAL SERVICES LTD.</a></li>
+    <li><a>Signet Industries Limited</a></li>
+    <li><a>Securekloud Technologies Ltd</a></li>
+    <li><a>BHAGYANAGAR INDIA LTD.</a></li>
+    <li><a>LLOYDS METALS AND ENERGY LTD.</a></li>
+    <li><a>DONEAR INDUSTRIES LTD.-$</a></li>
+    <li><a>STATE TRADING CORPORATION OF INDIA LTD.</a></li>
+    <li><a>ZENITH EXPORTS LTD.</a></li>
+    <li><a>Keynote Financial Services Ltd</a></li>
+    <li><a>ORBIT EXPORTS LTD.</a></li>
+    <li><a>SHIVALIK BIMETAL CONTROLS LTD.</a></li>
+    <li><a>GANDHI SPECIAL TUBES LTD.-$</a></li>
+    <li><a>ORICON ENTERPRISES LTD.-$</a></li>
+    <li><a>PENNAR INDUSTRIES LTD.-$</a></li>
+    <li><a>STEEL STRIPS WHEELS LTD.-$</a></li>
+    <li><a>MAN INDUSTRIES (INDIA) LTD.-$</a></li>
+    <li><a>AJMERA REALTY & INFRA INDIA LTD.</a></li>
+    <li><a>SHAH ALLOYS LTD.</a></li>
+    <li><a>JSW Ispat Special Products Ltd</a></li>
+    <li><a>STEELCAST LTD.</a></li>
+    <li><a>Pitti Engineering Ltd-$</a></li>
+    <li><a>MAHAMAYA STEEL INDUSTRIES LTD.</a></li>
+    <li><a>ARO GRANITE INDUSTRIES LTD.-$</a></li>
+    <li><a>BSL LTD.</a></li>
+    <li><a>T T LTD.-$</a></li>
+    <li><a>GANESHA ECOSPHERE LTD.</a></li>
+    <li><a>VARDHMAN POLYTEX LTD.</a></li>
+    <li><a>BLACK ROSE INDUSTRIES LTD.</a></li>
+    <li><a>SUMEET INDUSTRIES LTD.-$</a></li>
+    <li><a>SANGAM (INDIA) LTD.</a></li>
+    <li><a>AARVEE DENIMS & EXPORTS LTD.</a></li>
+    <li><a>ASHIMA LTD.</a></li>
+    <li><a>PIONEER EMBROIDERIES LTD.-$</a></li>
+    <li><a>PREMIER POLYFILM LTD.</a></li>
+    <li><a>Mangalam Organics Limited</a></li>
+    <li><a>MAHALAXMI RUBTECH LTD.</a></li>
+    <li><a>WINSOME TEXTILE INDUSTRIES LTD.-$</a></li>
+    <li><a>MURUDESHWAR CERAMICS LTD.</a></li>
+    <li><a>MADHAV MARBLES & GRANITES LTD.</a></li>
+    <li><a>HINDUSTHAN NATIONAL GLASS & INDUSTRIES LTD.-$</a></li>
+    <li><a>SHREYANS INDUSTRIES LTD.-$</a></li>
+    <li><a>STAR PAPER MILLS LTD.</a></li>
+    <li><a>Arrow Greentech Ltd</a></li>
+    <li><a>N.R.AGARWAL INDUSTRIES LTD.</a></li>
+    <li><a>ADOR WELDING LTD.</a></li>
+    <li><a>SALZER ELECTRONICS LTD.-$</a></li>
+    <li><a>LUMAX INDUSTRIES LTD.</a></li>
+    <li><a>Digispice Technologies Ltd-$</a></li>
+    <li><a>PAE LTD.</a></li>
+    <li><a>HBL POWER SYSTEMS LTD.-$</a></li>
+    <li><a>GUJARAT INDUSTRIES POWER CO.LTD.</a></li>
+    <li><a>IGARASHI MOTORS INDIA LTD.</a></li>
+    <li><a>Butterfly Gandhimathi Appliances Ltd</a></li>
+    <li><a>R.S.SOFTWARE INDIA LTD.</a></li>
+    <li><a>WEBSOL ENERGY SYSTEM LTD.</a></li>
+    <li><a>ONWARD TECHNOLOGIES LTD.</a></li>
+    <li><a>CENTUM ELECTRONICS LTD.</a></li>
+    <li><a>TRIGYN TECHNOLOGIES LTD.</a></li>
+    <li><a>GUJARAT SIDHEE CEMENT LTD.</a></li>
+    <li><a>ANJANI PORTLAND CEMENT LTD.-$</a></li>
+    <li><a>AVT NATURAL PRODUCTS LTD.</a></li>
+    <li><a>NAHAR INDUSTRIAL ENTERPRISES LTD.-$</a></li>
+    <li><a>VADILAL INDUSTRIES LTD.-$</a></li>
+    <li><a>ADF FOODS LTD.-$</a></li>
+    <li><a>WILLIAMSON MAGOR & COMPANY LTD.</a></li>
+    <li><a>ANIK INDUSTRIES LTD.</a></li>
+    <li><a>DFM FOODS LTD.</a></li>
+    <li><a>Kellton Tech Solutions Ltd.</a></li>
+    <li><a>RICO AUTO INDUSTRIES LTD.</a></li>
+    <li><a>OMAX AUTOS LTD.</a></li>
+    <li><a>MUNJAL SHOWA LTD.</a></li>
+    <li><a>MUNJAL AUTO INDUSTRIES LTD.</a></li>
+    <li><a>JAY BHARAT MARUTI LTD.</a></li>
+    <li><a>SHREYAS SHIPPING & LOGISTICS LTD.</a></li>
+    <li><a>MARAL OVERSEAS LTD.</a></li>
+    <li><a>NAGREEKA EXPORTS LTD.-$</a></li>
+    <li><a>ZODIAC CLOTHING CO.LTD.</a></li>
+    <li><a>SIL INVESTMENTS LTD.</a></li>
+    <li><a>SURYALAKSHMI COTTON MILLS LTD.</a></li>
+    <li><a>DAMODAR INDUSTRIES LTD.-$</a></li>
+    <li><a>KITEX GARMENTS LTD.</a></li>
+    <li><a>UNITED DRILLING TOOLS LTD.</a></li>
+    <li><a>WINDSOR MACHINES LTD.</a></li>
+    <li><a>SHANTHI GEARS LTD.</a></li>
+    <li><a>Honda India Power Products Ltd</a></li>
+    <li><a>The Hi-Tech Gears Ltd</a></li>
+    <li><a>YUKEN INDIA LTD.-$</a></li>
+    <li><a>GUJARAT APOLLO INDUSTRIES LTD.</a></li>
+    <li><a>M.M.FORGINGS LTD.-$</a></li>
+    <li><a>JMC PROJECTS (INDIA) LTD.-$</a></li>
+    <li><a>JAYASWAL NECO INDUSTRIES LTD.</a></li>
+    <li><a>CONTROL PRINT LTD.-$</a></li>
+    <li><a>WEIZMANN LTD.</a></li>
+    <li><a>SAFARI INDUSTRIES (INDIA) LTD.</a></li>
+    <li><a>EIH ASSOCIATED HOTELS LTD.-$</a></li>
+    <li><a>ABAN OFFSHORE LTD.</a></li>
+    <li><a>KOKUYO CAMLIN LTD.-$</a></li>
+    <li><a>PEARL POLYMERS LTD.</a></li>
+    <li><a>ADVANI HOTELS & RESORTS (INDIA) LTD.</a></li>
+    <li><a>SUPERHOUSE LTD.</a></li>
+    <li><a>TCPL PACKAGING LTD.-$</a></li>
+    <li><a>KOVAI MEDICAL CENTER & HOSPITAL LTD.</a></li>
+    <li><a>DCM SHRIRAM INDUSTRIES LTD.-$</a></li>
+    <li><a>MAWANA SUGARS LTD.</a></li>
+    <li><a>MAHA RASHTRA APEX CORPORATION LTD.</a></li>
+    <li><a>NAHAR POLYFILMS LTD.</a></li>
+    <li><a>IND BANK HOUSING LTD.</a></li>
+    <li><a>Future Enterprises Ltd</a></li>
+    <li><a>DREDGING CORPORATION OF INDIA LTD.</a></li>
+    <li><a>Poddar Housing and Development Ltd</a></li>
+    <li><a>PLASTIBLENDS INDIA LTD.-$</a></li>
+    <li><a>WATERBASE LTD.</a></li>
+    <li><a>EIMCO ELECON (INDIA) LTD.</a></li>
+    <li><a>ASHIANA HOUSING LTD.-$</a></li>
+    <li><a>Dhunseri Ventures Ltd-$</a></li>
+    <li><a>Mahindra EPC Irrigation Ltd</a></li>
+    <li><a>SREI INFRASTRUCTURE FINANCE LTD.</a></li>
+    <li><a>MAZDA LTD.-$</a></li>
+    <li><a>MENON BEARINGS LTD.-$</a></li>
+    <li><a>SIMPLEX INFRASTRUCTURES LTD.</a></li>
+    <li><a>Kingfa Science & Technology (India) Ltd-$</a></li>
+    <li><a>ALBERT DAVID LTD.-$</a></li>
+    <li><a>KABRA EXTRUSIONTECHNIK LTD.</a></li>
+    <li><a>VINYL CHEMICALS (INDIA) LTD.</a></li>
+    <li><a>KOPRAN LTD.</a></li>
+    <li><a>JAYANT AGRO-ORGANICS LTD.</a></li>
+    <li><a>Orchid Pharma Ltd</a></li>
+    <li><a>VIMTA LABS LTD.-$</a></li>
+    <li><a>BIOFIL CHEMICALS & PHARMACEUTICALS LTD.</a></li>
+    <li><a>AAREY DRUGS & PHARMACEUTICALS LTD.</a></li>
+    <li><a>KREBS BIOCHEMICALS & INDUSTRIES LTD.-$</a></li>
+    <li><a>PODDAR PIGMENTS LTD.-$</a></li>
+    <li><a>AKSHARCHEM (INDIA) LTD.-$</a></li>
+    <li><a>SAVITA OIL TECHNOLOGIES LTD.</a></li>
+    <li><a>NACL Industries Ltd</a></li>
+    <li><a>NGL FINE-CHEM LTD.</a></li>
+    <li><a>PANAMA PETROCHEM LTD.</a></li>
+    <li><a>BAL PHARMA LTD.</a></li>
+    <li><a>CUBEX TUBINGS LTD.</a></li>
+    <li><a>ANDREW YULE & COMPANY LTD.</a></li>
+    <li><a>Hitech Corporation Ltd-$</a></li>
+    <li><a>MOLD-TEK TECHNOLOGIES LTD.</a></li>
+    <li><a>ORIENT PRESS LTD.</a></li>
+    <li><a>GANESH HOUSING CORPORATION LTD.-$</a></li>
+    <li><a>PATEL INTEGRATED LOGISTICS LTD.-$</a></li>
+    <li><a>ALPHAGEO (INDIA) LTD.-$</a></li>
+    <li><a>KRITI INDUSTRIES (INDIA) LTD.-$</a></li>
+    <li><a>SANGHI INDUSTRIES LTD.</a></li>
+    <li><a>TPL PLASTECH LTD.</a></li>
+    <li><a>LIBERTY SHOES LTD.</a></li>
+    <li><a>ELECTROTHERM (INDIA) LTD.</a></li>
+    <li><a>MIRZA INTERNATIONAL LTD.</a></li>
+    <li><a>TOURISM FINANCE CORPORATION OF INDIA LTD.</a></li>
+    <li><a>BHARTIYA INTERNATIONAL LTD.</a></li>
+    <li><a>KAMAT HOTELS (INDIA) LTD.</a></li>
+    <li><a>SANDESH LTD.</a></li>
+    <li><a>GOLDIAM INTERNATIONAL LTD.</a></li>
+    <li><a>SEAMEC LTD.</a></li>
+    <li><a>BANARAS BEADS LTD.</a></li>
+    <li><a>SARLA PERFORMANCE FIBERS LTD.-$</a></li>
+    <li><a>TWENTYFIRST CENTURY MANAGEMENT SERVICES LTD.</a></li>
+    <li><a>Stylam Industries Limited</a></li>
+    <li><a>VENUS REMEDIES LTD.</a></li>
+    <li><a>ASHAPURA MINECHEM LTD.</a></li>
+    <li><a>MANGALORE CHEMICALS & FERTILIZERS LTD.</a></li>
+    <li><a>The Investment Trust Of India Ltd</a></li>
+    <li><a>SANGHVI MOVERS LTD.</a></li>
+    <li><a>SELAN EXPLORATION TECHNOLOGY LTD.-$</a></li>
+    <li><a>UDAIPUR CEMENT WORKS LTD.</a></li>
+    <li><a>Optiemus Infracom Ltd</a></li>
+    <li><a>THEMIS MEDICARE LTD.</a></li>
+    <li><a>SUVEN LIFE SCIENCES LTD.</a></li>
+    <li><a>KOTHARI PRODUCTS LTD.</a></li>
+    <li><a>CHAMAN LAL SETIA EXPORTS LTD.-$</a></li>
+    <li><a>Asian Energy Services Ltd</a></li>
+    <li><a>UGAR SUGAR WORKS LTD.-$</a></li>
+    <li><a>ORIENT BELL LIMITED-$</a></li>
+    <li><a>NRB BEARINGS LTD.</a></li>
+    <li><a>NILA INFRASTRUCTURES LTD.</a></li>
+    <li><a>ALPS INDUSTRIES LTD.</a></li>
+    <li><a>STERLING TOOLS LTD.-$</a></li>
+    <li><a>Bhageria Industries Ltd</a></li>
+    <li><a>CUPID LTD.-$</a></li>
+    <li><a>CHEMBOND CHEMICALS LTD.-$</a></li>
+    <li><a>REMSONS INDUSTRIES LTD.</a></li>
+    <li><a>Alankit Ltd</a></li>
+    <li><a>OM Infra Ltd</a></li>
+    <li><a>MEDICAMEN BIOTECH LTD.-$</a></li>
+    <li><a>Alicon Castalloy Limited</a></li>
+    <li><a>ARMAN FINANCIAL SERVICES LTD.</a></li>
+    <li><a>NUCLEUS SOFTWARE EXPORTS LTD.</a></li>
+    <li><a>Linc Ltd-$</a></li>
+    <li><a>WinPro Industries Ltd</a></li>
+    <li><a>PANACEA BIOTEC LTD.</a></li>
+    <li><a>THE BYKE HOSPITALITY LTD.</a></li>
+    <li><a>ALMONDZ GLOBAL SECURITIES LTD.</a></li>
+    <li><a>GRM OVERSEAS LTD.</a></li>
+    <li><a>MOHIT INDUSTRIES LTD.-$</a></li>
+    <li><a>BLUE COAST HOTELS LTD.</a></li>
+    <li><a>JINDAL WORLDWIDE LTD.</a></li>
+    <li><a>CORAL INDIA FINANCE & HOUSING LTD.</a></li>
+    <li><a>LINCOLN PHARMACEUTICALS LTD.</a></li>
+    <li><a>Vidhi Specialty Food Ingredients Ltd-$</a></li>
+    <li><a>BHAGIRADHA CHEMICALS & INDUSTRIES LTD.</a></li>
+    <li><a>ATUL AUTO LTD.-$</a></li>
+    <li><a>Zenith Steel Pipes & Industries Ltd-$</a></li>
+    <li><a>ASIAN STAR CO.LTD.-$</a></li>
+    <li><a>PIONEER DISTILLERIES LTD.</a></li>
+    <li><a>AGARWAL INDUSTRIAL CORPORATION LTD.</a></li>
+    <li><a>AMBIKA COTTON MILLS LTD.</a></li>
+    <li><a>Sindhu Trade Links Limited</a></li>
+    <li><a>KDDL LTD.-$</a></li>
+    <li><a>ANDHRA CEMENTS LTD.</a></li>
+    <li><a>SKM EGG PRODUCTS EXPORT (INDIA) LTD.</a></li>
+    <li><a>INDRAPRASTHA MEDICAL CORP.LTD.</a></li>
+    <li><a>CYBERTECH SYSTEMS AND SOFTWARE LTD.</a></li>
+    <li><a>Dhanlaxmi Bank Limited</a></li>
+    <li><a>ARCHIES LTD.</a></li>
+    <li><a>HB STOCKHOLDINGS LTD.</a></li>
+    <li><a>INDIA NIPPON ELECTRICALS LTD.</a></li>
+    <li><a>NALWA SONS INVESTMENTS LTD.</a></li>
+    <li><a>Accelya Solutions India Ltd</a></li>
+    <li><a>IND-SWIFT LABORATORIES LTD.</a></li>
+    <li><a>CINEVISTA LTD.</a></li>
+    <li><a>INTENSE TECHNOLOGIES LTD.-$</a></li>
+    <li><a>AMBICA AGARBATHIES & AROMA INDUSTRIES LTD.</a></li>
+    <li><a>IZMO Limited-$</a></li>
+    <li><a>AKSH OPTIFIBRE LTD.</a></li>
+    <li><a>MUKTA ARTS LTD.</a></li>
+    <li><a>DYNACONS SYSTEMS & SOLUTIONS LTD.</a></li>
+    <li><a>PNB GILTS LTD.</a></li>
+    <li><a>MRO-TEK Realty Ltd</a></li>
+    <li><a>BALAJI TELEFILMS LTD.</a></li>
+    <li><a>CALIFORNIA SOFTWARE CO.LTD.</a></li>
+    <li><a>PRITISH NANDY COMMUNICATIONS LTD.</a></li>
+    <li><a>TAJGVK HOTELS & RESORTS LTD.</a></li>
+    <li><a>CREATIVE EYE LTD.</a></li>
+    <li><a>Usha Martin Education & Solutions Limited</a></li>
+    <li><a>Smartlink Holdings Ltd</a></li>
+    <li><a>UNITED SPIRITS LTD.</a></li>
+    <li><a>Olectra Greentech Ltd</a></li>
+    <li><a>MPS LTD.</a></li>
+    <li><a>COMPUAGE INFOCOM LTD.</a></li>
+    <li><a>GULSHAN POLYOLS LTD.</a></li>
+    <li><a>PONNI SUGARS (ERODE) LTD.</a></li>
+    <li><a>NOIDA TOLL BRIDGE COMPANY LTD.</a></li>
+    <li><a>BALMER LAWRIE INVESTMENTS LTD.</a></li>
+    <li><a>POKARNA LTD.</a></li>
+    <li><a>SUPRAJIT ENGINEERING LTD.-$</a></li>
+    <li><a>TVS ELECTRONICS LTD.</a></li>
+    <li><a>DATAMATICS GLOBAL SERVICES LTD.</a></li>
+    <li><a>NEW DELHI TELEVISION LTD.</a></li>
+    <li><a>GP Petroleums Limited</a></li>
+    <li><a>S.A.L.STEEL LTD.</a></li>
+    <li><a>JBM AUTO LTD.</a></li>
+    <li><a>IMPEX FERRO TECH LTD.</a></li>
+    <li><a>XCHANGING SOLUTIONS LTD.</a></li>
+    <li><a>JINDAL PHOTO LTD.</a></li>
+    <li><a>3I INFOTECH LTD.</a></li>
+    <li><a>GOKALDAS EXPORTS LTD.</a></li>
+    <li><a>ALLSEC TECHNOLOGIES LTD.</a></li>
+    <li><a>MANGALAM DRUGS & ORGANICS LTD.</a></li>
+    <li><a>Nandan Denim Limited</a></li>
+    <li><a>NECTAR LIFESCIENCES LTD.</a></li>
+    <li><a>MSP STEEL & POWER LTD.</a></li>
+    <li><a>SPL INDUSTRIES LTD.</a></li>
+    <li><a>MCLEOD RUSSEL INDIA LTD.</a></li>
+    <li><a>VIVIMED LABS LTD.</a></li>
+    <li><a>RANE (MADRAS) LTD.</a></li>
+    <li><a>HT MEDIA LTD.</a></li>
+    <li><a>AURIONPRO SOLUTIONS LTD.</a></li>
+    <li><a>K.M.SUGAR MILLS LTD.</a></li>
+    <li><a>BANNARI AMMAN SPINNING MILLS LTD.</a></li>
+    <li><a>PBA INFRASTRUCTURE LTD.</a></li>
+    <li><a>BOMBAY RAYON FASHIONS LTD.</a></li>
+    <li><a>SORIL Infra Resources Ltd</a></li>
+    <li><a>EVEREST KANTO CYLINDER LTD.</a></li>
+    <li><a>REPRO INDIA LTD.</a></li>
+    <li><a>ROYAL ORCHID HOTELS LTD.</a></li>
+    <li><a>ENTERTAINMENT NETWORK (INDIA) LTD.</a></li>
+    <li><a>JAGRAN PRAKASHAN LTD.</a></li>
+    <li><a>DYNEMIC PRODUCTS LTD.</a></li>
+    <li><a>SAKUMA EXPORTS LTD.</a></li>
+    <li><a>GILLANDERS ARBUTHNOT & CO.LTD.</a></li>
+    <li><a>INDO TECH TRANSFORMERS LTD.</a></li>
+    <li><a>B.L.KASHYAP AND SONS LTD.</a></li>
+    <li><a>VISA STEEL LTD.</a></li>
+    <li><a>NITCO LTD.</a></li>
+    <li><a>GALLANTT METAL LTD.</a></li>
+    <li><a>MALU PAPER MILLS LTD.</a></li>
+    <li><a>UTTAM SUGAR MILLS LTD.</a></li>
+    <li><a>STL GLOBAL LTD.</a></li>
+    <li><a>KEWAL KIRAN CLOTHING LTD.</a></li>
+    <li><a>R Systems International Limited</a></li>
+    <li><a>EMKAY GLOBAL FINANCIAL SERVICES LTD.</a></li>
+    <li><a>LOKESH MACHINES LTD.</a></li>
+    <li><a>Kamdhenu Ltd</a></li>
+    <li><a>PRIME FOCUS LTD.</a></li>
+    <li><a>VOLTAMP TRANSFORMERS LTD.</a></li>
+    <li><a>Deep Energy Resources Ltd</a></li>
+    <li><a>HOV SERVICES LTD.</a></li>
+    <li><a>GeeCee Ventures Limited</a></li>
+    <li><a>GAYATRI PROJECTS LTD.</a></li>
+    <li><a>FIEM INDUSTRIES LTD.</a></li>
+    <li><a>JHS SVENDGAARD LABORATORIES LTD.</a></li>
+    <li><a>GTL INFRASTRUCTURE LTD.</a></li>
+    <li><a>SHIVAM AUTOTECH LTD.</a></li>
+    <li><a>SUTLEJ TEXTILES & INDUSTRIES LTD.</a></li>
+    <li><a>RUCHIRA PAPERS LTD.</a></li>
+    <li><a>Zee Media Corporation Limited</a></li>
+    <li><a>LUMAX AUTO TECHNOLOGIES LTD.</a></li>
+    <li><a>TECHNOCRAFT INDUSTRIES (INDIA) LTD.</a></li>
+    <li><a>Cineline India Limited</a></li>
+    <li><a>Pearl Global Industries Limited</a></li>
+    <li><a>TRANSWARRANTY FINANCE LTD.</a></li>
+    <li><a>SMS PHARMACEUTICALS LTD.</a></li>
+    <li><a>AMD INDUSTRIES LTD.</a></li>
+    <li><a>SREE RAYALASEEMA HI-STRENGTH HYPO LTD.</a></li>
+    <li><a>TGB BANQUETS AND HOTELS LTD.</a></li>
+    <li><a>HILTON METAL FORGING LTD.</a></li>
+    <li><a>INSECTICIDES (INDIA) LTD.</a></li>
+    <li><a>ASAHI SONGWON COLORS LTD.</a></li>
+    <li><a>NELCAST LTD.</a></li>
+    <li><a>V2 RETAIL LTD.</a></li>
+    <li><a>TARMAT LTD.</a></li>
+    <li><a>ALLIED DIGITAL SERVICES LTD.</a></li>
+    <li><a>ALPA LABORATORIES LTD.</a></li>
+    <li><a>OMAXE LTD.</a></li>
+    <li><a>Refex Industries Limited</a></li>
+    <li><a>ASIAN GRANITO INDIA LTD.</a></li>
+    <li><a>TAKE SOLUTIONS LTD.</a></li>
+    <li><a>Puravankara Ltd</a></li>
+    <li><a>NAGREEKA CAPITAL & INFRASTRUCTURE LTD.</a></li>
+    <li><a>MAGNUM VENTURES LTD.</a></li>
+    <li><a>MAAN ALUMINIUM LTD.</a></li>
+    <li><a>Renaissance Global Ltd</a></li>
+    <li><a>TRANSFORMERS AND RECTIFIERS (INDIA) LTD.</a></li>
+    <li><a>BGR ENERGY SYSTEMS LTD.</a></li>
+    <li><a>MANAKSIA LTD.</a></li>
+    <li><a>PPAP Automotive Limited</a></li>
+    <li><a>ARIES AGRO LTD.</a></li>
+    <li><a>KUANTUM PAPERS LTD.</a></li>
+    <li><a>CORDS CABLE INDUSTRIES LTD.</a></li>
+    <li><a>SEPC Ltd</a></li>
+    <li><a>BANG OVERSEAS LTD.</a></li>
+    <li><a>NAHAR CAPITAL & FINANCIAL SERVICES LTD.</a></li>
+    <li><a>TITAGARH WAGONS LTD.</a></li>
+    <li><a>ADITYA BIRLA MONEY LTD.-$</a></li>
+    <li><a>JAI BALAJI INDUSTRIES LTD.</a></li>
+    <li><a>GOKUL REFOILS & SOLVENT LTD.</a></li>
+    <li><a>RPG LIFE SCIENCES LTD.</a></li>
+    <li><a>KOTAK SENSEX ETF</a></li>
+    <li><a>NIRAJ CEMENT STRUCTURALS LTD.</a></li>
+    <li><a>RANE BRAKE LINING LTD.</a></li>
+    <li><a>RANE ENGINE VALVE LTD.</a></li>
+    <li><a>BAFNA PHARMACEUTICALS LTD.</a></li>
+    <li><a>ARCHIDPLY INDUSTRIES LTD.</a></li>
+    <li><a>SOMI CONVEYOR BELTINGS LTD.</a></li>
+    <li><a>20 MICRONS LTD.</a></li>
+    <li><a>INDIAN METALS & FERRO ALLOYS LTD.</a></li>
+    <li><a>RAJ OIL MILLS LTD.</a></li>
+    <li><a>BENGAL & ASSAM COMPANY LTD.</a></li>
+    <li><a>GLOBUS SPIRITS LTD.</a></li>
+    <li><a>Expleo Solutions Ltd</a></li>
+    <li><a>Den Networks Ltd</a></li>
+    <li><a>D-Link (India) Ltd</a></li>
+    <li><a>D B Corp Ltd</a></li>
+    <li><a>MBL Infrastructures Ltd</a></li>
+    <li><a>Vascon Engineers Ltd</a></li>
+    <li><a>Thangamayil Jewellery Ltd</a></li>
+    <li><a>Emmbi Industries Ltd</a></li>
+    <li><a>TEXMO PIPES & PRODUCTS LTD.</a></li>
+    <li><a>ROSSELL INDIA LTD.</a></li>
+    <li><a>INTRASOFT TECHNOLOGIES LTD.</a></li>
+    <li><a>KCP SUGAR & INDUSTRIES CORPORATION LTD.</a></li>
+    <li><a>Kirloskar Electric Company Ltd</a></li>
+    <li><a>Jaypee Infratech Ltd</a></li>
+    <li><a>EMAMI PAPER MILLS LTD.</a></li>
+    <li><a>HINDUSTAN MEDIA VENTURES LTD.</a></li>
+    <li><a>ASIAN HOTELS (EAST) LTD.</a></li>
+    <li><a>PRAKASH STEELAGE LTD.</a></li>
+    <li><a>WELSPUN INVESTMENTS AND COMMERCIALS LTD.</a></li>
+    <li><a>Sastasundar Ventures Ltd</a></li>
+    <li><a>CAREER POINT LTD.</a></li>
+    <li><a>EROS INTERNATIONAL MEDIA LTD.</a></li>
+    <li><a>RAMKY INFRASTRUCTURE LTD.</a></li>
+    <li><a>GALLANTT ISPAT LTD.</a></li>
+    <li><a>CANTABIL RETAIL INDIA LTD.</a></li>
+    <li><a>BEDMUTHA INDUSTRIES LTD.</a></li>
+    <li><a>COMMERCIAL ENGINEERS & BODY BUILDERS CO. LTD.</a></li>
+    <li><a>RPP INFRA PROJECTS LTD.</a></li>
+    <li><a>ZEE LEARN LTD.</a></li>
+    <li><a>A2Z Infra Engineering Limited</a></li>
+    <li><a>PUNJAB & SIND BANK</a></li>
+    <li><a>FUTURE MARKET NETWORKS LTD.</a></li>
+    <li><a>KALYANI INVESTMENT COMPANY LTD.</a></li>
+    <li><a>BF INVESTMENT LTD.</a></li>
+    <li><a>SUMMIT SECURITIES LTD.</a></li>
+    <li><a>STEL Holdings Ltd</a></li>
+    <li><a>OMKAR SPECIALITY CHEMICALS LTD.</a></li>
+    <li><a>JUBILANT INDUSTRIES LTD.</a></li>
+    <li><a>TEXMACO RAIL & ENGINEERING LTD.</a></li>
+    <li><a>INDIAN TERRAIN FASHIONS LTD.</a></li>
+    <li><a>FINEOTEX CHEMICAL LTD.</a></li>
+    <li><a>DHUNSERI INVESTMENTS LTD.</a></li>
+    <li><a>ZEN TECHNOLOGIES LTD.</a></li>
+    <li><a>PTC INDIA FINANCIAL SERVICES LTD.</a></li>
+    <li><a>TCI DEVELOPERS LTD.</a></li>
+    <li><a>Delphi World Money Ltd</a></li>
+    <li><a>RUSHIL DECOR LTD.</a></li>
+    <li><a>INVENTURE GROWTH & SECURITIES LTD.</a></li>
+    <li><a>Yaari Digital Integrated Services Ltd</a></li>
+    <li><a>BROOKS LABORATORIES LTD.</a></li>
+    <li><a>T D POWER SYSTEMS LTD.</a></li>
+    <li><a>VASWANI INDUSTRIES LTD.</a></li>
+    <li><a>PG ELECTROPLAST LTD.</a></li>
+    <li><a>ONELIFE CAPITAL ADVISORS LTD.</a></li>
+    <li><a>GPT INFRAPROJECTS LTD.</a></li>
+    <li><a>TERA SOFTWARE LTD.</a></li>
+    <li><a>MT EDUCARE LTD.</a></li>
+    <li><a>HEXA TRADEX LTD.</a></li>
+    <li><a>TRIBHOVANDAS BHIMJI ZAVERI LTD.</a></li>
+    <li><a>VARDHMAN SPECIAL STEELS LTD.</a></li>
+    <li><a>SPECIALITY RESTAURANTS LTD.</a></li>
+    <li><a>Rattanindia Enterprises Ltd</a></li>
+    <li><a>JTL INFRA LTD.</a></li>
+    <li><a>NORTH EASTERN CARRYING CORPORATION LTD.</a></li>
+    <li><a>ZUARI AGRO CHEMICALS LTD.</a></li>
+    <li><a>PC JEWELLER LTD.</a></li>
+    <li><a>NRB INDUSTRIAL BEARINGS LTD.</a></li>
+    <li><a>SREELEATHERS LTD.</a></li>
+    <li><a>Sharda Motor Industries Ltd</a></li>
+    <li><a>Future Lifestyle Fashions Ltd</a></li>
+    <li><a>Jindal Poly Investment and Finance Company Ltd</a></li>
+    <li><a>Motilal Oswal Mutual Fund - Motilal Oswal MOSt Shares Midcap 100 ETF- Growth option</a></li>
+    <li><a>ICICI Prudential Nifty ETF</a></li>
+    <li><a>ICICI Prudential Nifty 100 ETF</a></li>
+    <li><a>Nath Bio-Genes (India) Ltd</a></li>
+    <li><a>Agri- Tech (India) Ltd</a></li>
+    <li><a>NIPPON INDIA ETF NIFTY 100</a></li>
+    <li><a>Kotak Mahindra Mutual Fund - Kotak Nifty ETF</a></li>
+    <li><a>R&B Denims Ltd</a></li>
+    <li><a>Wonderla Holidays Ltd</a></li>
+    <li><a>SPS Finquest Ltd</a></li>
+    <li><a>Moneyboxx Finance Ltd</a></li>
+    <li><a>Bansal Roofing Products Ltd</a></li>
+    <li><a>Skipper Ltd</a></li>
+    <li><a>Vishal Fabrics Ltd</a></li>
+    <li><a>Snowman Logistics Ltd</a></li>
+    <li><a>Shemaroo Entertainment Ltd</a></li>
+    <li><a>Dhabriya Polywood Ltd</a></li>
+    <li><a>PDS Ltd</a></li>
+    <li><a>Monte Carlo Fashions Ltd</a></li>
+    <li><a>Dhunseri Tea & Industries Ltd</a></li>
+    <li><a>Karnavati Finance Ltd</a></li>
+    <li><a>Genus Paper & Boards Ltd</a></li>
+    <li><a>Wardwizard Innovations & Mobility Ltd</a></li>
+    <li><a>PTC Industries Ltd</a></li>
+    <li><a>AGI Infra Ltd</a></li>
+    <li><a>Manaksia Steels Ltd</a></li>
+    <li><a>Imagicaaworld Entertainment Ltd</a></li>
+    <li><a>Inox Wind Ltd</a></li>
+    <li><a>MEP Infrastructure Developers Ltd</a></li>
+    <li><a>UFO Moviez India Ltd</a></li>
+    <li><a>Shivalik Rasayan Ltd</a></li>
+    <li><a>Authum Investment & Infrastructure Ltd</a></li>
+    <li><a>Satia Industries Ltd</a></li>
+    <li><a>Garment Mantra Lifestyle Ltd</a></li>
+    <li><a>Rudra Global Infra Products Ltd</a></li>
+    <li><a>Loyal Equipments Ltd</a></li>
+    <li><a>Gala Global Products Ltd</a></li>
+    <li><a>Shyam Century Ferrous Ltd</a></li>
+    <li><a>Mangalam Seeds Ltd</a></li>
+    <li><a>Kaya Ltd</a></li>
+    <li><a>Ortin Laboratories Ltd</a></li>
+    <li><a>Aurum PropTech Ltd</a></li>
+    <li><a>Oswal Greentech Ltd</a></li>
+    <li><a>Arvind SmartSpaces Ltd</a></li>
+    <li><a>Power Mech Projects Ltd</a></li>
+    <li><a>Rama Steel Tubes Ltd</a></li>
+    <li><a>Thinkink Picturez Ltd</a></li>
+    <li><a>UTI- SENSEX ETF</a></li>
+    <li><a>UTI NIFTY ETF</a></li>
+    <li><a>Veto Switchgears and Cables Ltd</a></li>
+    <li><a>Navkar Corporation Ltd</a></li>
+    <li><a>Shree Pushkar Chemicals & Fertilisers Ltd</a></li>
+    <li><a>Sadbhav Infrastructure Project Ltd</a></li>
+    <li><a>Pritika Auto Industries Ltd</a></li>
+    <li><a>Bella Casa Fashion & Retail Ltd</a></li>
+    <li><a>Mallcom (India) Ltd</a></li>
+    <li><a>Generic Engineering Construction and Projects Ltd</a></li>
+    <li><a>Tejnaksh Healthcare Ltd</a></li>
+    <li><a>Coffee Day Enterprises Ltd</a></li>
+    <li><a>Beardsell Ltd</a></li>
+    <li><a>LIC MF EXCHANGE TRADED FUND- NIFTY 50</a></li>
+    <li><a>HDFC Nifty ETF</a></li>
+    <li><a>Precision Camshafts Ltd</a></li>
+    <li><a>Best Agrolife Ltd</a></li>
+    <li><a>Quick Heal Technologies Ltd</a></li>
+    <li><a>Simbhaoli Sugars Ltd</a></li>
+    <li><a>LIC MF Exchange Traded Fund- NIFTY 100</a></li>
+    <li><a>Pudumjee Paper Products Ltd</a></li>
+    <li><a>Umiya Tubes Ltd</a></li>
+    <li><a>Bharat Wire Ropes Ltd</a></li>
+    <li><a>Raghav Productivity Enhancers Ltd</a></li>
+    <li><a>Lancer Container Lines Ltd</a></li>
+    <li><a>Bajaj Healthcare Ltd</a></li>
+    <li><a>Nagarjuna Fertilizers and Chemicals Ltd</a></li>
+    <li><a>Yash Chemex Ltd</a></li>
+    <li><a>Max Ventures and Industries Ltd</a></li>
+    <li><a>ICICI Prudential NV20 ETF</a></li>
+    <li><a>Zeal Aqua Ltd</a></li>
+    <li><a>Digjam Ltd</a></li>
+    <li><a>ICICI Prudential Midcap Select ETF</a></li>
+    <li><a>Commercial Syn Bags Ltd</a></li>
+    <li><a>Prabhat Technologies (India) Ltd</a></li>
+    <li><a>S.P. Apparels Ltd</a></li>
+    <li><a>Bigbloc Construction Ltd</a></li>
+    <li><a>BLS International Services Ltd</a></li>
+    <li><a>Mitsu Chem Plast Ltd</a></li>
+    <li><a>Narayani Steels Ltd</a></li>
+    <li><a>G N A Axles Ltd</a></li>
+    <li><a>Radhika Jeweltech Ltd</a></li>
+    <li><a>HPL Electric & Power Ltd</a></li>
+    <li><a>Aditya Vision Ltd</a></li>
+    <li><a>The Mandhana Retail Ventures Ltd</a></li>
+    <li><a>Veeram Securities Ltd</a></li>
+    <li><a>Dhanvarsha Finvest Ltd</a></li>
+    <li><a>Music Broadcast Ltd</a></li>
+    <li><a>Sarthak Metals Ltd</a></li>
+    <li><a>Maximus International Ltd</a></li>
+    <li><a>CL Educate Ltd</a></li>
+    <li><a>Starlineps Enterprises Ltd</a></li>
+    <li><a>S Chand and Company Ltd</a></li>
+    <li><a>Meera Industries Ltd</a></li>
+    <li><a>PSP Projects Ltd</a></li>
+    <li><a>GTPL Hathway Ltd</a></li>
+    <li><a>ICICI Prudential Nifty Low Vol 30 ETF</a></li>
+    <li><a>G G Engineering Ltd</a></li>
+    <li><a>7NR Retail Ltd</a></li>
+    <li><a>Bhagyanagar Properties Ltd</a></li>
+    <li><a>Salasar Techno Engineering Ltd</a></li>
+    <li><a>Ganges Securities Ltd</a></li>
+    <li><a>Avadh Sugar & Energy Ltd</a></li>
+    <li><a>Magadh Sugar & Energy Ltd</a></li>
+    <li><a>Globalspace Technologies Ltd</a></li>
+    <li><a>UTI Nifty Next 50 ETF</a></li>
+    <li><a>SMS Lifesciences India Ltd</a></li>
+    <li><a>KIOCL Ltd</a></li>
+    <li><a>Apex Frozen Foods Ltd</a></li>
+    <li><a>ANG Lifesciences India Ltd</a></li>
+    <li><a>Lasa Supergenerics Ltd</a></li>
+    <li><a>Prataap Snacks Ltd</a></li>
+    <li><a>Share India Securities Ltd</a></li>
+    <li><a>Poojawestern Metaliks Ltd</a></li>
+    <li><a>Mehai Technology Ltd</a></li>
+    <li><a>IRIS Business Services Ltd</a></li>
+    <li><a>Shree Ganesh Remedies Ltd</a></li>
+    <li><a>Shreeji Translogistics Ltd</a></li>
+    <li><a>IFGL Refractories Ltd</a></li>
+    <li><a>Khadim India Ltd</a></li>
+    <li><a>5paisa Capital Ltd</a></li>
+    <li><a>NIPPON INDIA MUTUAL FUND CAPITAL BUILDER FD SR B DR DVP 06JN21</a></li>
+    <li><a>NIPPON INDIA MUTUAL FUND CAPITAL BUILDER FD SR B DR GWTH 06JN21</a></li>
+    <li><a>NIPPON INDIA MUTUAL FUND CAPITAL BUILDER FD SR B RG DVP 06JN21</a></li>
+    <li><a>NIPPON INDIA MUTUAL FUND CAPITAL BUILDER FD SR B RG GWTH 06JN21</a></li>
+    <li><a>Dynamic Cables Ltd</a></li>
+    <li><a>Shalby Ltd</a></li>
+    <li><a>Future Supply Chain Solutions Ltd</a></li>
+    <li><a>Astron Paper & Board Mill Ltd</a></li>
+    <li><a>Praxis Home Retail Ltd</a></li>
+    <li><a>Tasty Dairy Specialities Ltd</a></li>
+    <li><a>Shiva Mills Ltd</a></li>
+    <li><a>Kotak India Growth Fund Series 4 - Regular Plan Growth Option</a></li>
+    <li><a>Kotak India Growth Fund Series 4 - Regular Plan Dividend Option</a></li>
+    <li><a>KOTAK INDIA GROWTH FUND SERIES 4 DIRECT PLAN DIVIDEND OPTION</a></li>
+    <li><a>Kotak India Growth Fund Series 4 - Direct Plan Growth Option</a></li>
+    <li><a>Axis Capital Builder Fund - Series 1 (1540 Days) - Direct Plan - Dividend Payout</a></li>
+    <li><a>Axis Capital Builder Fund - Series 1 (1540 Days) - Direct Plan - Growth</a></li>
+    <li><a>Axis Capital Builder Fund - Series 1 (1540 Days) - Regular Plan - Dividend Payout</a></li>
+    <li><a>Axis Capital Builder Fund - Series 1 (1540 Days) - Regular Plan - Growth</a></li>
+    <li><a>KBC Global Ltd</a></li>
+    <li><a>Sandhar Technologies Ltd</a></li>
+    <li><a>Chemfab Alkalis Ltd</a></li>
+    <li><a>Dhruv Consultancy Services Ltd</a></li>
+    <li><a>Megastar Foods Ltd</a></li>
+    <li><a>Dollar Industries Ltd</a></li>
+    <li><a>Deep Polymers Ltd</a></li>
+    <li><a>ICICI Prudential Nifty Next 50 ETF</a></li>
+    <li><a>Add-Shop ERetail Ltd</a></li>
+    <li><a>Synergy Green Industries Ltd</a></li>
+    <li><a>Manorama Industries Ltd</a></li>
+    <li><a>Shubham Polyspin Ltd</a></li>
+    <li><a>S. M. Gold Ltd</a></li>
+    <li><a>BCPL Railway Infrastructure Ltd</a></li>
+    <li><a>MIRAE ASSET NIFTY 50 ETF (MAN50ETF)</a></li>
+    <li><a>Aditya Birla Sun Life Nifty Next 50 ETF</a></li>
+    <li><a>Shankar Lal Rampal Dye-Chem Ltd</a></li>
+    <li><a>Trejhara Solutions Ltd</a></li>
+    <li><a>AxisÂ CapitalÂ BuilderÂ FundÂ -Â SeriesÂ 4Â (1582Â days)Â -</a></li>
+    <li><a>AxisÂ CapitalÂ BuilderÂ FundÂ -Â SeriesÂ 4Â (1582Â days)Â -DirectÂ PlanÂ -Â GrowthÂ Option</a></li>
+    <li><a>AxisÂ CapitalÂ BuilderÂ FundÂ -Â SeriesÂ 4Â (1582Â days)Â -RegularÂ PlanÂ -Â DividendÂ PayoutÂ Option</a>
+    </li>
+    <li><a>AxisÂ CapitalÂ BuilderÂ FundÂ -Â SeriesÂ 4Â (1582Â days)Â - RegularÂ PlanÂ -Â GrowthÂ Option</a></li>
+    <li><a>K.P.I. Global Infrastructure Ltd</a></li>
+    <li><a>Spencers Retail Ltd</a></li>
+    <li><a>Xelpmoc Design and Tech Ltd</a></li>
+    <li><a>Anmol India Ltd</a></li>
+    <li><a>Kranti Industries Ltd</a></li>
+    <li><a>The Anup Engineering Ltd</a></li>
+    <li><a>UTI S&P BSE Sensex Next 50 ETF</a></li>
+    <li><a>Ashapuri Gold Ornament Ltd</a></li>
+    <li><a>Neogen Chemicals Ltd</a></li>
+    <li><a>G. K. P. Printing & Packaging Ltd</a></li>
+    <li><a>Artemis Electricals and Projects Ltd</a></li>
+    <li><a>Prakash Pipes Ltd</a></li>
+    <li><a>Anand Rayons Ltd</a></li>
+    <li><a>Earum Pharmaceuticals Ltd</a></li>
+    <li><a>DCM Nouvelle Ltd</a></li>
+    <li><a>ICICI Prudential Bank ETF</a></li>
+    <li><a>ICICI Prudential Private Banks ETF</a></li>
+    <li><a>Alphalogic Techsys Ltd</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT QUARTERLY DIVIDEND PLAN REINVESTMENT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT BONUS PLAN BONUS</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - QUARTERLY DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT DIVIDEND PLAN DIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - QUARTERLY DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - BONUS PLANBONUS</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT MONTHLY DIVIDEND PLAN REINVESTMENT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1- DIRECT DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIRECT MONTHLY DIVIDEND PLAN DIVIDEND PAYOUT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIRECT MONTHLY DIVIDEND PLAN REINVESTMENT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - QUARTERLY DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIRECT QUARTERLY DIVIDEND PLAN DIVIDEND
+        PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIRECT QUARTERLY DIVIDEND PLAN REINVESTMENT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIRECT DIVIDEND PLAN DIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - MONTHLY DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT GROWTH PLAN GROWTH</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT MONTHLY DIVIDEND PLAN DIVIDEND PAYOUT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - GROWTH PLAN GROWTH</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIRECT QUARTERLY DIVIDEND PLAN DIVIDEND
+        PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - QUARTERLY DIVIDEND PLAN DIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIRECT GROWTH PLAN GROWTH</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIVIDEND PLAN DIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND -Â SEGREGATED PORTFOLIO 1 - MONTHLY DIVIDEND PLAN DIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - GROWTH PLAN GROWTH</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - MONTHLY DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 1 - MONTHLY DIVIDEND PLAN REINVESTMENT</a></li>
+    <li><a>Vishwaraj Sugar Industries Ltd</a></li>
+    <li><a>ADITYA BIRLA SUN LIFE BANKING ETF</a></li>
+    <li><a>Artemis Medicare Services Ltd</a></li>
+    <li><a>ICICI Prudential Midcap 150 ETF</a></li>
+    <li><a>Mirae Asset Nifty Next 50 ETF (MANXT50ETF)</a></li>
+    <li><a>Birla Tyres Ltd</a></li>
+    <li><a>Universus Photo Imagings Ltd</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - MONTHLY DIVIDEND PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT DIVIDEND PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - MONTHLY DIVIDEND PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT MONTHLY DIVIDEND PLAN(Issue Price:
+        0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT MONTHLY DIVIDEND PLAN(Issue Price:
+        0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - BONUS PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - GROWTH PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT BONUS PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - QUARTERLY DIVIDEND PLAN(Issue Price: 0.01)</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT GROWTH PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - QUARTERLY DIVIDEND PLAN(Issue Price: 0.01)</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT QUARTERLY DIVIDEND PLAN(Issue Price:
+        0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIVIDEND PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT QUARTERLY DIVIDEND PLAN(Issue Price:
+        0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIVIDEND PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY SAVINGS FUND - SEGREGATED PORTFOLIO 2 - DIRECT DIVIDEND PLAN(Issue Price: 0.01)</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIVIDEND PLANDIVIDEND REINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2GROWTH PLAN GROWTH OPTIONGROWTH</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2MONTHLY DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2MONTHLY DIVIDEND PLANREINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2QUARTERLY DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2QUARTERLY DIVIDEND PLANREINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT PLAN DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT PLAN DIVIDEND PLANDIVIDEND REINVESTMENT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT GROWTH PLAN GROWTH OPTIONGROWTH</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT MONTHLY DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT MONTHLY DIVIDEND PLANREINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT QUARTERLY DIVIDEND PLANDIVIDEND PAYOUT</a>
+    </li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIRECT QUARTERLY DIVIDEND PLANREINVESTMENT</a></li>
+    <li><a>NIPPON INDIA EQUITY HYBRID FUND - SEGREGATED PORTFOLIO 2DIVIDEND PLANDIVIDEND PAYOUT</a></li>
+    <li><a>Aarti Surfactants Ltd</a></li>
+    <li><a>NDR Auto Components Ltd</a></li>
+    <li><a>Â ICICI Prudential Alpha Low Vol 30 ETFÂ </a></li>
+    <li><a>ICICI Prudential IT ETF</a></li>
+    <li><a>Max India Ltd</a></li>
+    <li><a>HDFC Banking ETF</a></li>
+    <li><a>UTI Bank Exchange Traded Fund (UTI Bank ETF)</a></li>
+    <li><a>Happiest Minds Technologies Ltd</a></li>
+    <li><a>Chemcon Speciality Chemicals Ltd</a></li>
+    <li><a>Likhitha Infrastructure Ltd</a></li>
+    <li><a>Mirae Asset ESG Sector Leaders ETF</a></li>
+    <li><a>Tarc Ltd</a></li>
+    <li><a>Ravinder Heights Ltd</a></li>
+    <li><a>Fairchem Organics Ltd</a></li>
+    <li><a>Antony Waste Handling Cell Ltd</a></li>
+    <li><a>NIPPON INDIA ETF INFRA BeES</a></li>
+    <li><a>SMC Global Securities Ltd</a></li>
+    <li><a>Nureca Ltd</a></li>
+    <li><a>Easy Trip Planners Ltd</a></li>
+    <li><a>Nazara Technologies Ltd</a></li>
+    <li><a>Suvidhaa Infoserve Ltd</a></li>
+    <li><a>Barbeque-Nation Hospitality Ltd</a></li>
+    <li><a>Macrotech Developers Ltd</a></li>
+    <li><a>Deep Industries Ltd</a></li>
+    <li><a>Mirae Asset NYSE FANG+ ETF</a></li>
+    <li><a>ICICI Prudential Healthcare ETF</a></li>
+    <li><a>Inox Wind Energy Ltd</a></li>
+    <li><a>Vineet Laboratories Ltd</a></li>
+    <li><a>Shyam Metalics and Energy Ltd</a></li>
+    <li><a>Sona BLW Precision Forgings Ltd</a></li>
+    <li><a>Dodla Dairy Ltd</a></li>
+    <li><a>Krishna Institute of Medical Sciences Ltd</a></li>
+    <li><a>India Pesticides Ltd</a></li>
+    <li><a>G R Infraprojects Ltd</a></li>
+    <li><a>Clean Science and Technology Ltd</a></li>
+    <li><a>Zomato Ltd</a></li>
+    <li><a>Tatva Chintan Pharma Chem Ltd</a></li>
+    <li><a>Glenmark Life Sciences Ltd</a></li>
+    <li><a>Mirae Asset Nifty Financial Services ETF</a></li>
+    <li><a>Rolex Rings Ltd</a></li>
+    <li><a>ICICI Prudential FMCG ETF</a></li>
+    <li><a>Exxaro Tiles Ltd</a></li>
+    <li><a>Krsnaa Diagnostics Ltd</a></li>
+    <li><a>Windlas Biotech Ltd</a></li>
+    <li><a>Devyani International Ltd</a></li>
+    <li><a>Meghmani Organics Ltd</a></li>
+    <li><a>Meghmani Finechem Ltd</a></li>
+    <li><a>CarTrade Tech Ltd</a></li>
+    <li><a>Nuvoco Vistas Corporation Ltd</a></li>
+    <li><a>Aptus Value Housing Finance India Ltd</a></li>
+    <li><a>Chemplast Sanmar Ltd</a></li>
+    <li><a>AXIS TECHNOLOGY ETF</a></li>
+    <li><a>AXIS HEALTHCARE ETF</a></li>
+    <li><a>Ami Organics Ltd</a></li>
+    <li><a>Vijaya Diagnostic Centre Ltd</a></li>
+    <li><a>AXIS CONSUMPTION ETF</a></li>
+    <li><a>Sansera Engineering Ltd</a></li>
+    <li><a>Mirae Asset S&P 500 Top 50 ETF</a></li>
+    <li><a>Paras Defence and Space Technologies Ltd</a></li>
+    <li><a>Aditya Birla Sun Life AMC Ltd</a></li>
+    <li><a>ICICI Prudential Consumption ETF</a></li>
+    <li><a>FSN E-Commerce Ventures Ltd</a></li>
+    <li><a>Fino Payments Bank Ltd</a></li>
+    <li><a>S.J.S. Enterprises Ltd</a></li>
+    <li><a>DSP Nifty 50 Equal Weight ETF</a></li>
+    <li><a>Sigachi Industries Ltd</a></li>
+    <li><a>PB Fintech Ltd</a></li>
+    <li><a>One 97 Communications Ltd</a></li>
+    <li><a>Sapphire Foods India Ltd</a></li>
+    <li><a>Latent View Analytics Ltd</a></li>
+    <li><a>Tarsons Products Ltd</a></li>
+    <li><a>Go Fashion (India) Ltd</a></li>
+    <li><a>Hi-Tech Pipes Ltd</a></li>
+    <li><a>Star Health and Allied Insurance Company Ltd</a></li>
+    <li><a>Tega Industries Ltd</a></li>
+    <li><a>Mirae Asset Hang Seng TECH ETF</a></li>
+    <li><a>Anand Rathi Wealth Ltd</a></li>
+    <li><a>RateGain Travel Technologies Ltd</a></li>
+    <li><a>Shriram Properties Ltd</a></li>
+    <li><a>Jet Freight Logistics Ltd</a></li>
+    <li><a>C.E. Info Systems Ltd</a></li>
+    <li><a>Metro Brands Ltd</a></li>
+    <li><a>Medplus Health Services Ltd</a></li>
+    <li><a>Data Patterns (India) Ltd</a></li>
+    <li><a>HP Adhesives Ltd</a></li>
+    <li><a>Supriya Lifescience Ltd</a></li>
+    <li><a>Motilal Oswal Nasdaq Q 50 ETF</a></li>
+    <li><a>DSP Nifty Midcap 150 Quality 50 ETF</a></li>
+    <li><a>DSP Nifty 50 ETF</a></li>
+    <li><a>CMS Info Systems Ltd</a></li>
+    <li><a>Brand Concepts Ltd</a></li>
+    <li><a>ICICI Prudential Nifty Auto ETF</a></li>
+    <li><a>AGS Transact Technologies Ltd</a></li>
+    <li><a>Mirae Asset Nifty India Manufacturing ETF</a></li>
+    <li><a>Adani Wilmar Ltd</a></li>
+    <li><a>Dev Information Technology Ltd</a></li>
+    <li><a>Vedant Fashions Ltd</a></li>
+    <li><a>Motilal Oswal Nifty 200 Momentum 30 ETF</a></li>
+    <li><a>Softtech Engineers Ltd</a></li>
+    <li><a>Aditya Birla Sunlife Nifty IT ETF</a></li>
+    <li><a>Aditya Birla Sun Life Nifty Healthcare ETF</a></li>
+    <li><a>Aditya Birla Sun Life Nifty ETF</a></li>
+    <li><a>Mirae Asset Nifty Midcap 150 ETF</a></li>
+    <li><a>JAIN IRRIGATION SYSTEMS LTD.</a></li>
+    <li><a>Stampede Capital Ltd - DVR</a></li>
+    <li><a>KARUR VYSYA BANK LTD.</a></li>
+    <li><a>TIDE WATER OIL (INDIA) LTD.</a></li>
+    <li><a>AMRUTANJAN HEALTH CARE LTD.-$</a></li>
+    <li><a>HISAR METAL INDUSTRIES LTD.-$</a></li>
+    <li><a>BHARAT RASAYAN LTD.</a></li>
+    <li><a>FERTILIZERS & CHEMICALS TRAVANCORE LTD.</a></li>
+    <li><a>GINNI FILAMENTS LTD.</a></li>
+    <li><a>SOUTHERN PETROCHEMICALS LTD.</a></li>
+    <li><a>SAKSOFT LTD.</a></li>
+    <li><a>SALONA COTSPIN LTD.</a></li>
+    <li><a>Equippp Social Impact Technologies Ltd</a></li>
+    <li><a>ANDHRA SUGARS LTD.</a></li>
+    <li><a>INDIA MOTOR PARTS & ACCESSORIES LTD.</a></li>
+    <li><a>K.C.P.LTD.</a></li>
+    <li><a>RADAAN MEDIAWORKS (I) LTD.</a></li>
+    <li><a>SUNDARAM FINANCE LTD.</a></li>
+    <li><a>SUNDARAM BRAKE LININGS LTD.</a></li>
+    <li><a>WHEELS INDIA LTD.</a></li>
+    <li><a>LAMBODHARA TEXTILES LTD.-$</a></li>
+    <li><a>MAITHAN ALLOYS LTD.</a></li>
+    <li><a>ORISSA MINERALS DEVELOPMENT COMPANY LTD.</a></li>
+    <li><a>NIPPON INDIA ETF NIFTY BEES</a></li>
+    <li><a>NIPPON INDIA ETF JUNIOR BEES</a></li>
+    <li><a>NIPPON INDIA ETF BANK BEES</a></li>
+    <li><a>KOTAK MAHINDRA MUTUAL FUND - KOTAK PSU BANK ETF</a></li>
+    <li><a>NIPPON INDIA ETF PSU BANK BEES</a></li>
+    <li><a>NIPPON INDIA ETF SHARIAH BEES</a></li>
+    <li><a>Quantum Nifty 50 ETF</a></li>
+    <li><a>Motilal Oswal MOSt Shares M50 ETF</a></li>
+    <li><a>Madras Fertilizers Ltd</a></li>
+    <li><a>Kotak Banking ETF - Dividend Payout Option</a></li>
+    <li><a>SBI-ETF NIFTY BANK</a></li>
+    <li><a>SBI-ETF NIFTY 50</a></li>
+
+  </ul>
+</div>
+
+
+<!-- //importing library of jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<script>
+  document.getElementById("myUL").style.display = "none";
+
+  //this function tells us which stock has been selected
+  function stock_name(event) {
+
+    var target = event.target || event.srcElement;
+    const name = [event.target.innerHTML] //IT gives a list of text
+    console.log(name[0])
+
+
+
+
+    $.ajax({
+      // points to the url where your data will be posted
+      url: '/stock_name',
+      // post for security reason
+      type: "POST",
+      // data that you will like to return 
+      data: { 'name[]': name },
+      // what to do when the call is success 
+
+      success: function (response) {
+
+
+        alert(response)
+
+
+
+        if (response.indexOf(' ') >= 0) {
+          console.log("if")
+          const result1 = response.replace(/\s+/g, '-'); //Converts spaces with dash
+          window.location.href = "/stock_info?a=" + result1 + "&b=" + name + " " //THis code redirect to new HTML page by using js
+        }
+        else {
+          console.log("response")
+          const result1 = name[0].replace(/\s+/g, '-'); //Converts spaces with dash
+          window.location.href = "/stock_info?a=" + result1 + "&b=" + response + " " //THis code redirect to new HTML page by using js
+        }
+      },
+
+
+      error: function (xhr, textStatus, thrownError) {
+        alert("error")
+      }
+    });
+
+
+  }
+  
+  function myFunction() {
+
+
+    input = document.getElementById("myInput");
+    // console.log(input.value==none);
+    //this condition is written only for if input dosen;t contains anything
+    if (input.value.length == 0) {
+
+      document.getElementById("myUL").style.display = "none";
+
+    }
+
+    else {
+
+      document.getElementById("myUL").style.display = "block";
+      var input, filter, ul, li, a, i, txtValue;
+
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName("li");
+
+
+      for (i = 0; i < li.length; i++) {
+
+
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+
+
+
+
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+
+
+          li[i].style.display = "block";
+
+        } else {
+
+          li[i].style.display = "none";
+        }
+      }
+    }
+  }
+
+
+
+</script>
+
+
+{% endblock body %}
