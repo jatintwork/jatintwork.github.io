@@ -1,11 +1,13 @@
 $(document).ready(function () {
     $("#submit").click(function () {
 
+        alert("test")
+
 
         var url = window.location.href ;
-        var urls = url.substr(55);
+        // var urls = url.substr(55);
          
-       alert(urls);
+       alert(url);
        console.log(urls)
 
 
