@@ -54,6 +54,12 @@
  margin-right: 7px;
  margin-bottom: 12px;
  
+ 
+ }
+
+ .edit-icon:hover{
+
+    cursor: pointer;
  }
  
  .jobs-list {
@@ -79,12 +85,13 @@
  
  border-radius: 20px;
  font-size: 20px;
+ /* background: rgb(66, 50, 187); */
   
  }
  
  .button-effects:hover{
  
-     background-color: #6198ea;
+     background-color: #2c0455;
   
  
  }
