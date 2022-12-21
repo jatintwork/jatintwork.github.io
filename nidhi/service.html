@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Finanza - Financial Services Website Template</title>
+    <title>Nidhi - Financial Services Website </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -27,7 +27,7 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!--  Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -43,9 +43,20 @@
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
        
 
+        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small><i class="fa fa-map-marker-alt text-primary me-2"></i>Mumbai, Maharashtra</small>
+                <small class="ms-4"><i class="fa fa-clock text-primary me-2"></i>9.00 am - 9.00 pm</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small><i class="fa fa-envelope text-primary me-2"></i>info@example.com</small>
+                <small class="ms-4"><i class="fa fa-phone-alt text-primary me-2"></i>+012 345 6789</small>
+            </div>
+        </div>
+
         <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h1 class="display-5 text-primary m-0">Finanza</h1>
+                <h1 class="display-5 text-primary m-0">Nidhi</h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -53,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="index.html" class="nav-item nav-link">Home</a>
-                     <a href="apply.html" class="nav-item nav-link">Apply Now</a>
+                     <a href="apply.php" class="nav-item nav-link">Apply Now</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="service.html" class="nav-item nav-link active">Services</a>
                     
@@ -91,103 +102,101 @@
     </div>
     <!-- Page Header End -->
 
-
-    <!-- Service Start -->
-    <div class="container-xxl service py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Services</p>
-                <h1 class="display-5 mb-5">Awesome Financial Services For Business</h1>
-            </div>
-            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-lg-4">
-                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Financial Planning</h5>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Cash Investment</h5>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Financial Consultancy</h5>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Business Loans</h5>
-                        </button>
-                    </div>
+  <!-- Service Start -->
+  <div class="container-xxl service py-5">
+    <div class="container">
+        <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block border rounded text-primary fw-semi-bold py-1 px-3">Our Services</p>
+            <h1 class="display-5 mb-5">Awesome Financial Services For Business</h1>
+        </div>
+        <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4">
+                <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4 active" data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Home Loan</h5>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Personal Loan</h5>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-4" data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Business Loan</h5>
+                    </button>
+                    <button class="nav-link w-100 d-flex align-items-center text-start border p-4 mb-0" data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                        <h5 class="m-0"><i class="fa fa-bars text-primary me-3"></i>Gold Loan</h5>
+                    </button>
                 </div>
-                <div class="col-lg-8">
-                    <div class="tab-content w-100">
-                        <div class="tab-pane fade show active" id="tab-pane-1">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-1.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+            </div>
+            <div class="col-lg-8">
+                <div class="tab-content w-100">
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute rounded w-100 h-100" src="img/service-1.jpg"
+                                        style="object-fit: cover;" alt="">
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-2">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-2.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
-                                </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
+                                <p class="mb-4">No matter where you are financially, quality time is always available and with just a bit of love and creativity you can easily create a home. Take Home Loan and get your own Home.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Low Intrest</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Long Tenure</p>
+                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="tab-pane-3">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-3.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-2">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute rounded w-100 h-100" src="img/service-2.jpg"
+                                        style="object-fit: cover;" alt="">
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
+                                <p class="mb-4">Financial Problem can hit you any time. It could be a short term problem OR a long term. We are with you. Come and get a personal Loan and live a tension free life.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Flexible Tenure</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Low Intrest</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Secured Loan</p>
+                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                            </div>
                         </div>
-                        <div class="tab-pane fade" id="tab-pane-4">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
-                                            style="object-fit: cover;" alt="">
-                                    </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-3">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute rounded w-100 h-100" src="img/service-3.jpg"
+                                        style="object-fit: cover;" alt="">
                                 </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
-                                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
-                                    <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
+                                <p class="mb-4">Success is achieved twice. Once in the mind and the second time in the real world. If you want to grow your Business then what are you waiting for? Come and get money and make your Business.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Long Tenure</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Cash Advanced</p>
+                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-4">
+                        <div class="row g-4">
+                            <div class="col-md-6" style="min-height: 350px;">
+                                <div class="position-relative h-100">
+                                    <img class="position-absolute rounded w-100 h-100" src="img/service-4.jpg"
+                                        style="object-fit: cover;" alt="">
                                 </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3 class="mb-4">25 Years Of Experience In Financial Support</h3>
+                                <p class="mb-4">Get a gold in low intreset. Process is very smooth. Even You can get gold loan in few hours also.</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Secured Loans</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Credit Facilities</p>
+                                <p><i class="fa fa-check text-primary me-3"></i>Gold Advance</p>
+                                <a href="" class="btn btn-primary py-3 px-5 mt-3">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +204,107 @@
             </div>
         </div>
     </div>
-    <!-- Service End -->
+</div>
+<!-- Service End -->
+
+
+<br><br>
+ <!-- How to Apply -->
+
+ <div class="container-xxl py-2">
+    <div class="container py-1">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 style="color: #2917ef;">How To Apply</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-3">
+    <div class="container py-2">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+
+
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="cursor : pointer"
+                onclick="location.href='apply.php'">
+                <div class="team-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="img/online.png" alt="">
+                    </div>
+                    <h5 class="mb-0">Via Online</h5>
+                    <p>Easy and Recommended <br> <br></p>
+                    <div class="btn-slide mt-1">
+                        <i class="fa fa-share"></i>
+                        <span>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="cursor : pointer "
+                onclick="location.href='apply.php'">
+                <div class="team-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="img/phon.jpg" alt="">
+                    </div>
+                    <h5 class="mb-0">Via Calling</h5>
+                    <p>Give a Call on <br>+91 12345678</p>
+                    <div class="btn-slide mt-1">
+                        <i class="fa fa-share"></i>
+                        <span>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" style="cursor : pointer "
+                onclick="location.href='apply.php'">
+                <div class="team-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="img/email.jpg" alt="">
+                    </div>
+                    <h5 class="mb-0">Via E mail</h5>
+                    <p>Send an Email to info@example.com <br> <br></p>
+                    <div class="btn-slide mt-1">
+                        <i class="fa fa-share"></i>
+                        <span>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.9s" style="cursor : pointer"
+                onclick="location.href='apply.php'">
+                <div class="team-item p-4">
+                    <div class="overflow-hidden mb-4">
+                        <img class="img-fluid" src="img/application.jpg" alt="">
+                    </div>
+                    <h5 class="mb-0">By Filling Application</h5>
+                    <p>Visit our office then apply</p>
+                    <div class="btn-slide mt-1">
+                        <i class="fa fa-share"></i>
+                        <span>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br>
+
 
 
     <!-- Callback Start -->
@@ -257,7 +366,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Mumbai, Maharashtra</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
@@ -269,23 +378,23 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Services</h4>
+                    <a class="btn btn-link" href="">Home Loan</a>
+                    <a class="btn btn-link" href="">Personal Loans</a>
+                    <a class="btn btn-link" href="">Business Loan</a>
                     <a class="btn btn-link" href="">Financial Planning</a>
                     <a class="btn btn-link" href="">Cash Investment</a>
-                    <a class="btn btn-link" href="">Financial Consultancy</a>
-                    <a class="btn btn-link" href="">Business Loans</a>
-                    <a class="btn btn-link" href="">Business Analysis</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                   <a class="btn btn-link" href="/">Home</a>
+                    <a class="btn btn-link" href="/apply.php">Apply Now</a>
+                    <a class="btn btn-link" href="/about.html">About Us</a>
+                    <a class="btn btn-link" href="/service.html">Our Services</a>
+                    <a class="btn btn-link" href="/contact.html">Contact Us</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-4">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <p>Sign up today for hints, tips and the latest product .</p>
                     <div class="position-relative w-100">
                         <input class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                         <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
@@ -302,7 +411,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="border-bottom" href="#">NidhiBank.com</a>, All Right Reserved.
                 </div>
                 
             </div>
@@ -324,7 +433,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
 
-    <!-- Template Javascript -->
+    <!--  Javascript -->
     <script src="js/main.js"></script>
 </body>
 
