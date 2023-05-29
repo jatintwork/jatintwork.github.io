@@ -1,4 +1,6 @@
 <?php
+
+echo '<script>alert("Your application has been submited. Pay the application fee and complete your procedure.");</script>';
 require('config.php');
 require('razorpay-php/Razorpay.php');
 session_start();

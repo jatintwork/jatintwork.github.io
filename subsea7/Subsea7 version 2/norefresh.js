@@ -7,7 +7,7 @@ $(document).ready(function () {
         var url = window.location.href ;
         var urls = url.substr(24);
          
-    //   alert(url);
+      alert(url);
        console.log(urls)
 
 

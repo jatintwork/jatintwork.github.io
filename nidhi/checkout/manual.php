@@ -116,6 +116,7 @@
 
     
                 <h2 style="text-align: center; ">OR </h2>
+                <h2>Not Recommended because then you will have to pay additional 2%. </h2>
                 <button class="btn btn-primary w-100 py-3" type="button" name="button" value="button" href="/index.html">Pay Application Fee Later</button>
         </div>
     
