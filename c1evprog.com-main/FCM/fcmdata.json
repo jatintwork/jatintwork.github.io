@@ -1,0 +1,71 @@
+{
+    "to" : "dLKcxOwMQfe8JtXsW0PR2x:APA91bEY4CZc8bPmvN5cpddJMfkF19ZFj4VCPCT5jU1ZOSKAjYPLWiwIBiJuPcwKXOAfbOcUYYNKDpaBgXsj27kx5D_HKie-Y4KMIO12AJFY0S_1-TEwcOc23jovLYa487b4BInfMuHm",
+    "priority": "high",
+    "mutable_content": true,
+    "notification": {
+        "badge": 42,
+        "title": "Huston! The eagle has landed!",
+        "body": "A small step for a man, but a giant leap to Flutter's community!"
+    },
+    "data" : {
+        "content": {
+            "id": 1,
+            "badge": 42,
+            "channelKey": "alerts",
+            "displayOnForeground": true,
+            "notificationLayout": "BigPicture",
+            "largeIcon": "https://br.web.img3.acsta.net/pictures/19/06/18/17/09/0834720.jpg",
+           
+            "showWhen": true,
+            "autoDismissible": true,
+            "privacy": "Private",
+            "payload": {
+                "secret": "Awesome Notifications Rocks!"
+            }
+        },
+        "actionButtons": [
+            {
+                "key": "REDIRECT",
+                "label": "Redirect",
+                "autoDismissible": true
+            },
+            {
+                "key": "DISMISS",
+                "label": "Dismiss",
+                "actionType": "DismissAction",
+                "isDangerousOption": true,
+                "autoDismissible": true
+            }
+        ],
+        "Android": {
+            "content": {
+                "title": "Android! The eagle has landed!",
+                "payload": {
+                    "android": "android custom content!"
+                }
+            }
+        },
+        "iOS": {
+            "content": {
+                "title": "Jobs! The eagle has landed!",
+                "payload": {
+                    "ios": "ios custom content!"
+                }
+            },
+            "actionButtons": [
+                {
+                    "key": "REDIRECT",
+                    "label": "Redirect message",
+                    "autoDismissible": true
+                },
+                {
+                    "key": "DISMISS",
+                    "label": "Dismiss message",
+                    "actionType": "DismissAction",
+                    "isDangerousOption": true,
+                    "autoDismissible": true
+                }
+            ]
+        }
+    }
+}

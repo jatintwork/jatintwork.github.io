@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="box mt-2">
+		<form action="/security/signin.html" method="post">
+			<h2>Create your account</h2>
+			<div class="inputBox">
+				<input type="text" required="required" name="username">
+				<span>Your Name</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="email" required="required" name="email">
+				<span>Your Email</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required" name="password">
+				<span>Your Password</span>
+				<i></i>
+			</div>
+			<div class="inputBox">
+				<input type="password" required="required" name="cnf_password">
+				<span>Confirm Password</span>
+				<i></i>
+			</div>
+
+            <div class="inputBox">
+                <input type="text" required="required" name="state">
+                <span>Your State</span>
+                <i></i>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" required="required" name="describe">
+                <span>Describe why you want to join us</span>
+                <i></i>
+            </div>
+			
+			
+			
+			<br>
+			<input type="submit" value="register">
+			<br>
+			<div class="links">
+				<p>Already have an account? <a href="/security/signin.html"><b style="color: red;">Login</b></a></p>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
